@@ -29,7 +29,7 @@
     ]
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-Dm2_6JDq.js",
+    "file": "assets/app-D2vX9Mpd.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -48,7 +48,7 @@
     ]
   },
   "resources/js/pages/Home.tsx": {
-    "file": "assets/Home-BGrNpu1I.js",
+    "file": "assets/Home-BqxVIXUk.js",
     "name": "Home",
     "src": "resources/js/pages/Home.tsx",
     "isDynamicEntry": true,
