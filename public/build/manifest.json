@@ -20,7 +20,7 @@
     "src": "node_modules/slick-carousel/slick/fonts/slick.woff"
   },
   "resources/css/app.css": {
-    "file": "assets/app-C_p0reYW.css",
+    "file": "assets/app-DBV-0pUI.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -28,8 +28,72 @@
       "app.css"
     ]
   },
+  "resources/fonts/FuturaPT-Demi.woff": {
+    "file": "assets/FuturaPT-Demi-XHNbLnWk.woff",
+    "src": "resources/fonts/FuturaPT-Demi.woff"
+  },
+  "resources/fonts/FuturaPT-Demi.woff2": {
+    "file": "assets/FuturaPT-Demi-BszLunWj.woff2",
+    "src": "resources/fonts/FuturaPT-Demi.woff2"
+  },
+  "resources/fonts/FuturaPT-Heavy.woff": {
+    "file": "assets/FuturaPT-Heavy-DZ88b5_a.woff",
+    "src": "resources/fonts/FuturaPT-Heavy.woff"
+  },
+  "resources/fonts/FuturaPT-Heavy.woff2": {
+    "file": "assets/FuturaPT-Heavy-D-1bf04i.woff2",
+    "src": "resources/fonts/FuturaPT-Heavy.woff2"
+  },
+  "resources/fonts/FuturaPT-Medium.woff": {
+    "file": "assets/FuturaPT-Medium-C20sEILH.woff",
+    "src": "resources/fonts/FuturaPT-Medium.woff"
+  },
+  "resources/fonts/FuturaPT-Medium.woff2": {
+    "file": "assets/FuturaPT-Medium-OaMs5itA.woff2",
+    "src": "resources/fonts/FuturaPT-Medium.woff2"
+  },
+  "resources/fonts/flaticon.eot": {
+    "file": "assets/flaticon-BU25mUdD.eot",
+    "src": "resources/fonts/flaticon.eot"
+  },
+  "resources/fonts/flaticon.svg": {
+    "file": "assets/flaticon-CSezyIOg.svg",
+    "src": "resources/fonts/flaticon.svg"
+  },
+  "resources/fonts/flaticon.ttf": {
+    "file": "assets/flaticon-Blrj1nED.ttf",
+    "src": "resources/fonts/flaticon.ttf"
+  },
+  "resources/fonts/flaticon.woff": {
+    "file": "assets/flaticon-DDUJ0qrb.woff",
+    "src": "resources/fonts/flaticon.woff"
+  },
+  "resources/fonts/flaticon.woff2": {
+    "file": "assets/flaticon-Ck3QB4_f.woff2",
+    "src": "resources/fonts/flaticon.woff2"
+  },
+  "resources/fonts/fontawesome-webfont.eot": {
+    "file": "assets/fontawesome-webfont-G5YE5S7X.eot",
+    "src": "resources/fonts/fontawesome-webfont.eot"
+  },
+  "resources/fonts/fontawesome-webfont.svg": {
+    "file": "assets/fontawesome-webfont-D13rzr4g.svg",
+    "src": "resources/fonts/fontawesome-webfont.svg"
+  },
+  "resources/fonts/fontawesome-webfont.ttf": {
+    "file": "assets/fontawesome-webfont-CQDK8MU3.ttf",
+    "src": "resources/fonts/fontawesome-webfont.ttf"
+  },
+  "resources/fonts/fontawesome-webfont.woff": {
+    "file": "assets/fontawesome-webfont-CDK5bt4p.woff",
+    "src": "resources/fonts/fontawesome-webfont.woff"
+  },
+  "resources/fonts/fontawesome-webfont.woff2": {
+    "file": "assets/fontawesome-webfont-B-jkhYfk.woff2",
+    "src": "resources/fonts/fontawesome-webfont.woff2"
+  },
   "resources/js/app.tsx": {
-    "file": "assets/app-BjPX-vSK.js",
+    "file": "assets/app-cezXxLSr.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -37,9 +101,25 @@
       "resources/js/pages/Home.tsx"
     ],
     "css": [
-      "assets/app-CBcOC6QM.css"
+      "assets/app-9sgwv-5f.css"
     ],
     "assets": [
+      "assets/flaticon-Blrj1nED.ttf",
+      "assets/flaticon-DDUJ0qrb.woff",
+      "assets/flaticon-Ck3QB4_f.woff2",
+      "assets/flaticon-BU25mUdD.eot",
+      "assets/flaticon-CSezyIOg.svg",
+      "assets/fontawesome-webfont-G5YE5S7X.eot",
+      "assets/fontawesome-webfont-B-jkhYfk.woff2",
+      "assets/fontawesome-webfont-CDK5bt4p.woff",
+      "assets/fontawesome-webfont-CQDK8MU3.ttf",
+      "assets/fontawesome-webfont-D13rzr4g.svg",
+      "assets/FuturaPT-Demi-BszLunWj.woff2",
+      "assets/FuturaPT-Demi-XHNbLnWk.woff",
+      "assets/FuturaPT-Heavy-D-1bf04i.woff2",
+      "assets/FuturaPT-Heavy-DZ88b5_a.woff",
+      "assets/FuturaPT-Medium-OaMs5itA.woff2",
+      "assets/FuturaPT-Medium-C20sEILH.woff",
       "assets/ajax-loader-BcnMEykj.gif",
       "assets/slick-Bi9J8BMx.eot",
       "assets/slick-BlUtDIuC.woff",
@@ -48,7 +128,7 @@
     ]
   },
   "resources/js/pages/Home.tsx": {
-    "file": "assets/Home-DnIrW7RC.js",
+    "file": "assets/Home-tuu0MWIp.js",
     "name": "Home",
     "src": "resources/js/pages/Home.tsx",
     "isDynamicEntry": true,
