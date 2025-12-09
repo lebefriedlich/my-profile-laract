@@ -8,7 +8,7 @@ const About: React.FC = () => {
                     <div className="col-lg-5 col-md-12 col-12">
                         <div className="tp-about-wrap">
                             <div className="tp-about-img">
-                                <img src="images/about.png" alt="" />
+                                <img src="images/about.png" alt="" loading='lazy'/>
                             </div>
                         </div>
                     </div>
