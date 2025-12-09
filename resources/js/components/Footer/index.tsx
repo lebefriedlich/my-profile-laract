@@ -1,6 +1,7 @@
 "use client"
 
 import React, { Component } from 'react';
+import { Link } from 'react-scroll'
 
 class Footer extends Component {
     render() {
@@ -10,17 +11,17 @@ class Footer extends Component {
                     <div className="row">
                         <div className="col-12">
                             <div className="footer-image">
-                                <a href="/home">
+                                <Link className="navbar-brand" to="home">
                                     <img src="/images/logo.png" alt="" />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-12">
                             <div className="footer-menu">
                                 <ul className="d-flex " >
-                                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/novalakbar38/"><i className="fa fa-instagram"></i></a></li>
-                                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/maulana-haekal/"><i className="fa fa-linkedin"></i></a></li>
-                                    <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/lebefriedlich"><i className="fa fa-github"></i></a></li>
+                                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/novalakbar38/"><i className="bi bi-instagram"></i></a></li>
+                                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/maulana-haekal/"><i className="bi bi-linkedin"></i></a></li>
+                                    <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/lebefriedlich"><i className="bi bi-github"></i></a></li>
                                 </ul>
                             </div>
                         </div>

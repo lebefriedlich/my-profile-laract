@@ -15,7 +15,7 @@ const ContactSection = () => {
                                     <div className="office-info-item">
                                         <div className="office-info-icon">
                                             <div className="info-icon">
-                                                <i className="fi flaticon-pin"></i>
+                                                <i className="bi bi-geo-alt-fill fs-1"></i>
                                             </div>
                                         </div>
                                         <div className="office-info-text">
@@ -28,7 +28,7 @@ const ContactSection = () => {
                                     <div className="office-info-item">
                                         <div className="office-info-icon">
                                             <div className="info-icon">
-                                                <i className="fi flaticon-mail"></i>
+                                                <i className="bi bi-envelope-fill fs-1"></i>
                                             </div>
                                         </div>
                                         <div className="office-info-text">

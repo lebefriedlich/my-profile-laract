@@ -3057,6 +3057,8 @@ display: none;
     margin-bottom: 20px;
 }
 .footer-image img {
+    display: block;
+    margin: auto;
     max-width: 60px;
 }
 .footer-menu ul li:hover a{

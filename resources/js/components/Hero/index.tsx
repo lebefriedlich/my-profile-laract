@@ -51,9 +51,9 @@ class Hero extends Component {
                 <div className="social-links">
                     <div className="overlay"></div>
                     <ul>
-                        <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/novalakbar38/"><i className="fa fa-instagram"></i></a></li>
-                        <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/maulana-haekal/"><i className="fa fa-linkedin"></i></a></li>
-                        <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/lebefriedlich"><i className="fa fa-github"></i></a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/novalakbar38/"><i className="bi bi-instagram"></i></a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/maulana-haekal/"><i className="bi bi-linkedin"></i></a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/lebefriedlich"><i className="bi bi-github"></i></a></li>
                     </ul>
                 </div>
                 <div className="white_svg">
