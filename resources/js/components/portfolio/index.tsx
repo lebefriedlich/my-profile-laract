@@ -6,15 +6,12 @@ interface PortfolioItem {
     Id: string;
     heading: string;
     subHeading: string;
-    authorName: string;
-    value: string;
-    date: string;
-    videosId: string;
+    role: string;
     pImg1: string;
-    pImg2: string;
-    pImg3: string;
-    vedio: string;
     des: string;
+    techStack: Array<string>;
+    linkPublish?: string;
+    linkSource?: string;
 }
 
 const Portfolio = () => {
@@ -34,87 +31,67 @@ const Portfolio = () => {
     const portfolio: PortfolioItem[] = [
         {
             Id: '1',
-            heading: 'Minimalism',
-            subHeading: 'Illustration . Art Direction',
-            authorName: 'Robert William',
-            value: '$500',
-            date: '25 Jan 2021',
-            videosId: 'LUSa3yRTB9A',
-            pImg1: 'images/portfolio/minimalism/img-1.jpg',
-            pImg2: 'images/portfolio/minimalism/img-2.jpg',
-            pImg3: 'images/portfolio/minimalism/img-3.jpg',
-            vedio: '',
-            des: 'Minimalism, Landing Page Design, App development, Mobile an Website Design an expert web designer and developer. Contrary to popular belief Lorem Ipsum is not simply random text. It has Design,',
+            heading: 'AFEKSI',
+            subHeading: 'AFEKSI.IDN',
+            role: 'Backend Developer',
+            pImg1: 'images/portfolio/Afeksi.png',
+            des: 'Afeksi is an education and consultation platform focused on healthy relationships. It provides a safe and supportive space for individuals, couples, and communities to explore emotional well-being and interpersonal dynamics. Through insightful educational content and guided consultation sessions, Afeksi helps users build healthy communication patterns and stronger connections. The platform emphasizes mindfulness, empathy, and personal growth to promote sustainable relational development. Afeksi continues to evolve as a hub for learning and support for anyone seeking a healthier relationship life.',
+            techStack: ['Laravel', 'MySQL'],
+            linkPublish: 'https://afeksiidn.com',
         },
         {
             Id: '2',
-            heading: 'Abstract Art',
-            subHeading: 'Illustration . Art Direction',
-            authorName: 'David Warner',
-            value: '$400',
-            date: '15 Jan 2021',
-            videosId: 'r_hYR53r61M',
-            pImg1: 'images/portfolio/abstract/img-1.jpg',
-            pImg2: 'images/portfolio/abstract/img-2.jpg',
-            pImg3: 'images/portfolio/abstract/img-3.jpg',
-            vedio: '',
-            des: 'Abstract Art, Landing Page Design, App development, Mobile an Website Design an expert web designer and developer. Contrary to popular belief Lorem Ipsum is not simply random text. It has Design,',
+            heading: 'SPK Pilih Asdos',
+            subHeading: 'Decision Support System',
+            role: 'Full Stack Web Developer',
+            pImg1: 'images/portfolio/SPK Pilih Asdos.png',
+            des: 'SPK Pilih Asdos is a decision support system designed to streamline the selection of teaching assistants. It uses the SAW (Simple Additive Weighting) method to evaluate candidates more objectively based on defined criteria. This system helps reduce bias and human error during the selection process. By presenting calculated recommendations, it enables institutions to make more accurate and data-driven decisions. Its user-friendly interface and automated scoring make the assistant selection process more efficient and transparent.',
+            techStack: ['Laravel', 'MySQL'],
+            linkSource: 'https://github.com/lebefriedlich/spk_asdos_saw',
         },
         {
             Id: '3',
-            heading: '3D Project',
-            subHeading: 'Illustration . Art Direction',
-            authorName: 'Ken Wiliamm',
-            value: '$900',
-            date: '12 Jan 2021',
-            videosId: 'LUSa3yRTB9A',
-            pImg1: 'images/portfolio/3d/img-1.jpg',
-            pImg2: 'images/portfolio/3d/img-2.jpg',
-            pImg3: 'images/portfolio/3d/img-3.jpg',
-            vedio: '',
-            des: '3D Project, Landing Page Design, App development, Mobile an Website Design an expert web designer and developer. Contrary to popular belief Lorem Ipsum is not simply random text. It has Design,',
+            heading: 'API Service',
+            subHeading: 'API Kode Wilayah Indonesia',
+            role: 'Backend Developer',
+            pImg1: 'images/portfolio/API Kode Wilayah Indonesia.png',
+            des: 'API Kode Wilayah Indonesia provides a comprehensive API service for accessing official Indonesian regional codes. It is designed to help developers efficiently integrate regional data into their applications without managing complex datasets manually. The API ensures consistent, accurate, and structured information for provinces, cities, districts, and villages. This service is beneficial for applications involving forms, logistics, mapping, and administrative processing. With a simple and reliable endpoint system, it enhances productivity and reduces integration time for developers.',
+            techStack: ['Laravel', 'MySQL'],
+            linkPublish: 'https://wilayah-indonesia.mhna.my.id/',
+            linkSource:
+                'https://github.com/lebefriedlich/api-kode-wilayah-indonesia',
         },
         {
             Id: '4',
-            heading: 'Modern BG',
-            subHeading: 'Illustration . Art Direction',
-            authorName: 'Lily Aney',
-            value: '$800',
-            date: '09 Jan 2021',
-            videosId: 'r_hYR53r61M',
-            pImg1: 'images/portfolio/modern/img-1.jpg',
-            pImg2: 'images/portfolio/modern/img-2.jpg',
-            pImg3: 'images/portfolio/modern/img-3.jpg',
-            vedio: '',
-            des: 'Modern BG, Landing Page Design, App development, Mobile an Website Design an expert web designer and developer. Contrary to popular belief Lorem Ipsum is not simply random text. It has Design,',
+            heading: 'EventHub',
+            subHeading: 'UIN Malang EventHub',
+            role: 'Full Stack Web Developer',
+            pImg1: 'images/portfolio/UIN Malang EventHub.png',
+            des: 'UIN Malang EventHub is a complete event management platform built to support the organization and promotion of campus events at UIN Malang. It allows administrators to create, schedule, and manage events with ease. Users can register for events, receive real-time updates, and track event information through a centralized interface. The platform enhances student engagement by providing accessible event announcements and simplified registration. With its streamlined workflow, EventHub significantly improves the efficiency of campus event coordination.',
+            techStack: ['Laravel', 'MySQL'],
+            linkPublish: 'https://eventhub.mhna.my.id/',
+            linkSource: 'https://github.com/lebefriedlich/Project-Prak-Sister',
         },
         {
             Id: '5',
-            heading: 'Visual Design',
-            subHeading: 'Illustration . Art Direction',
-            authorName: 'Aliza mart',
-            value: '$1000',
-            date: '06 Jan 2021',
-            videosId: 'LUSa3yRTB9A',
-            pImg1: 'images/portfolio/visual/img-1.jpg',
-            pImg2: 'images/portfolio/visual/img-2.jpg',
-            pImg3: 'images/portfolio/visual/img-3.jpg',
-            vedio: '',
-            des: 'Visual Design, Landing Page Design, App development, Mobile an Website Design an expert web designer and developer. Contrary to popular belief Lorem Ipsum is not simply random text. It has Design,',
+            heading: 'Weather App',
+            subHeading: 'CuacaSaja',
+            role: 'Full Stack Developer',
+            pImg1: 'images/portfolio/CuacaSaja.png',
+            des: 'CuacaSaja is a weather application designed to deliver accurate and real-time weather information to users. It features a clean and intuitive interface that enhances the overall user experience. The application supports multi-platform access, allowing users to check weather data from mobile devices easily. CuacaSaja also provides detailed information such as temperature, humidity, wind speed, and forecasts. Built with Flutter and Laravel, it offers fast performance and reliable data handling.',
+            techStack: ['Flutter', 'Laravel', 'MySQL'],
+            linkSource: 'https://github.com/lebefriedlich/CuacaSaja-Mobile',
         },
         {
             Id: '6',
-            heading: 'Product Design',
-            subHeading: 'Illustration . Art Direction',
-            authorName: 'Martin Gaptil',
-            value: '$1200',
-            date: '03 Jan 2021',
-            videosId: 'r_hYR53r61M',
-            pImg1: 'images/portfolio/pdesign/img-1.jpg',
-            pImg2: 'images/portfolio/pdesign/img-2.jpg',
-            pImg3: 'images/portfolio/pdesign/img-3.jpg',
-            vedio: '',
-            des: 'Product Design, Landing Page Design, App development, Mobile an Website Design an expert web designer and developer. Contrary to popular belief Lorem Ipsum is not simply random text. It has Design,',
+            heading: 'Game 3D',
+            subHeading: 'Quiz Of Survival',
+            role: 'Game Programmer',
+            pImg1: 'images/portfolio/Quiz Of Survival.png',
+            des: 'Quiz Of Survival is a 3D survival game that challenges players with a combination of action and knowledge-based mechanics. Players must navigate a dynamic environment while solving quiz questions to avoid threats. The game features immersive visuals, smooth controls, and engaging progression systems. Its unique blend of education and gameplay creates a fresh and exciting experience for players. Quiz Of Survival aims to provide both entertainment and mental challenge within a well-crafted 3D world.',
+            techStack: ['Unity', 'C#'],
+            linkSource:
+                'https://github.com/lebefriedlich/Quiz-Of-Survival-Game',
         },
     ];
 
@@ -174,12 +151,10 @@ const Portfolio = () => {
                 title={state?.heading ?? ''}
                 doc={state?.des ?? ''}
                 image1={state?.pImg1 ?? ''}
-                image2={state?.pImg2 ?? ''}
-                image3={state?.pImg3 ?? ''}
-                authorName={state?.authorName ?? ''}
-                videosId={state?.videosId ?? ''}
-                value={state?.value ?? ''}
-                date={state?.date ?? ''}
+                role={state?.role ?? ''}
+                techStack={state?.techStack ?? []}
+                linkPublish={state?.linkPublish}
+                linkSource={state?.linkSource}
             />
 
             <div className="white_svg svg_white">

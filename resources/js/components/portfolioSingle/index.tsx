@@ -1,26 +1,33 @@
-"use client"
+'use client';
 
-import React, { Fragment } from 'react';
-import { Dialog, Grid, } from '@mui/material'
+import { Dialog, Grid } from '@mui/material';
+import { Fragment } from 'react';
 
 interface PortfolioSingleProps {
-  maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  open: boolean;
-  onClose: () => void;
-  title: string;
-  doc: string;
-  image1: string;
-  image2: string;
-  image3: string;
-  authorName: string;
-  videosId: string;
-  value: string;
-  date: string;
+    maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    open: boolean;
+    onClose: () => void;
+    title: string;
+    doc: string;
+    image1: string;
+    role: string;
+    techStack: Array<string>;
+    linkPublish?: string;
+    linkSource?: string;
 }
 
-const PortfolioSingle = ({ maxWidth, open, onClose, title, doc, image1, image2, image3, authorName, videosId, value, date }: PortfolioSingleProps) => {
-
-
+const PortfolioSingle = ({
+    maxWidth,
+    open,
+    onClose,
+    title,
+    doc,
+    image1,
+    role,
+    techStack,
+    linkPublish,
+    linkSource,
+}: PortfolioSingleProps) => {
     return (
         <Fragment>
             <Dialog
@@ -29,9 +36,10 @@ const PortfolioSingle = ({ maxWidth, open, onClose, title, doc, image1, image2, 
                 className="modalWrapper quickview-dialog"
                 maxWidth={maxWidth}
             >
-
                 <Grid className="modalBody modal-body">
-                    <button className='modal-close' onClick={onClose}><i className='fa fa-close'></i></button>
+                    <button className="modal-close" onClick={onClose}>
+                        <i className="fa fa-close"></i>
+                    </button>
                     <div className="tp-project-details-area">
                         <div className="row">
                             <div className="col-lg-12">
@@ -41,48 +49,32 @@ const PortfolioSingle = ({ maxWidth, open, onClose, title, doc, image1, image2, 
                                     </div>
                                     <h2>{title}</h2>
                                 </div>
-                                <div className="tp-project-details-list">
-                                    <div className="row">
-                                        <div className="co-l-lg-4 col-md-4 col-sm-6 col-12">
-                                            <div className="tp-project-details-text">
-                                                <span>Client Name</span>
-                                                <h2>{authorName}</h2>
-                                            </div>
-                                        </div>
-                                        <div className="co-l-lg-4 col-md-4 col-sm-6 col-12">
-                                            <div className="tp-project-details-text-3">
-                                                <span>Project Value</span>
-                                                <h2>{value}</h2>
-                                            </div>
-                                        </div>
-                                        <div className="co-l-lg-4 col-md-4 col-sm-6 col-12">
-                                            <div className="tp-project-details-text">
-                                                <span>Date</span>
-                                                <h2>{date}</h2>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className="tp-p-role-section">
+                                    <p><i className="bi bi-person-fill"></i> Role : {role}</p>
                                 </div>
                                 <div className="tp-p-details-section">
                                     <p>{doc}</p>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. </p>
-                                    <p>It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour,sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined.</p>
-                                    <div className="row">
-                                        <div className="col-md-6 col-sm-6 col-12">
-                                            <div className="tp-p-details-img">
-                                                <img src={image2} alt="" />
-                                            </div>
+                                    <h4 className="text-white">Technology :</h4>
+                                    {techStack && techStack.length > 0 && (
+                                        <div className="tech-stack-list">
+                                            {techStack.map((item, index) => (
+                                                <span
+                                                    key={index}
+                                                    className="tech-stack-pill"
+                                                >
+                                                    {item}
+                                                </span>
+                                            ))}
                                         </div>
-                                        <div className="col-md-6 col-sm-6 col-12">
-                                            <div className="tp-p-details-img">
-                                                <img src={image3} alt="" />
-                                            </div>
-                                        </div>
-                                    </div>
+                                    )}
                                 </div>
-                                <div className="tp-p-details-quote">
-                                    <p>Sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary net Essential book for you. </p>
-                                    <span>{authorName}</span>
+                                <div className="tp-p-details-section">
+                                    {linkSource && (
+                                        <h4 className="text-white">GitHub : <a href={linkSource} target="_blank" rel="noopener noreferrer"><i className="bi bi-github text-white"></i></a></h4>
+                                    )}
+                                    {linkPublish && (
+                                        <h4 className="text-white">Published : <a href={linkPublish} target="_blank" rel="noopener noreferrer"><i className="bi bi-globe2 text-white"></i></a></h4>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -91,6 +83,5 @@ const PortfolioSingle = ({ maxWidth, open, onClose, title, doc, image1, image2, 
             </Dialog>
         </Fragment>
     );
-}
-export default PortfolioSingle
-
+};
+export default PortfolioSingle;

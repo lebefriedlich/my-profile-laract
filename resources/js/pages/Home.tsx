@@ -9,6 +9,7 @@ import Footer from '../components/Footer/index';
 import Hero from '../components/Hero/index';
 import Navbar from '../components/Navbar/index';
 import Resume from '../components/Resume/index';
+import Portfolio from '../components/portfolio/index';
 import Scrollbar from '../components/Scroolbar/index';
 
 const HomePage = () => {
@@ -25,9 +26,9 @@ const HomePage = () => {
                 <Element name="resume">
                     <Resume />
                 </Element>
-                {/* <Element name="portfolio">
+                <Element name="portfolio">
                     <Portfolio/>
-                </Element> */}
+                </Element>
                 <Element name="contact">
                     <ContactSection />
                 </Element>

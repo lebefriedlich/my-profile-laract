@@ -2816,7 +2816,7 @@ display: none;
 =======================================================*/
 .tp-contact-pg-section {
   padding-bottom: 150px;
-  background: #2a2a2a;
+  background: #202020;
 }
 .tp-contact-pg-section .tp-contact-title {
   max-width: 440px;
@@ -3977,7 +3977,7 @@ ul.smothscroll a .fi:before{
 
 .tp-minimal-wrap {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .tp-minimal-wrap h2 {
   font-size: 50px;
@@ -4076,31 +4076,30 @@ ul.smothscroll a .fi:before{
   padding-right: 20px;
 }
 
-.tp-project-details-text-3 {
+.tp-project-details-text-1 {
   text-align: center;
   border-right: 1px solid rgba(255,255,255,.2);
-  border-left: 1px solid rgba(255,255,255,.2);
 }
 
 .tp-project-details-text h2,
-.tp-project-details-text-3 h2 {
+.tp-project-details-text-1 h2 {
   font-size: 22px;
   color: #fff;
   margin-bottom: 0;
 }
 
 .tp-project-details-text span,
-.tp-project-details-text-3 span {
+.tp-project-details-text-1 span {
   font-size: 16px;
   color: #ddd;
 }
 
 .tp-p-details-section {
-  margin-top: 50px;
+  margin-top: 15px;
 }
 
 .tp-p-details-section p {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .tp-p-details-quote {
@@ -4150,7 +4149,6 @@ ul.smothscroll a .fi:before{
 
 
 @media(max-width:1200px) {
-
   .tp-project-details-text h2,
   .tp-project-details-text-3 h2 {
       font-size: 18px;
@@ -4191,6 +4189,22 @@ ul.smothscroll a .fi:before{
 padding-bottom: 30px;
 }
 
+.tech-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tech-stack-pill {
+  padding: 4px 12px;
+  border-radius: 6px;
+  background-color: #3c3c3c; /* abu-abu gelap, mirip contoh */
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.4;
+  display: inline-block;
+}
 
 /* resume-single */
 
