@@ -49,9 +49,9 @@ class Header extends Component {
                                 <li className="resume">
                                     <Link activeClass="active" to="resume" spy={true} smooth={true} duration={500}>Resume</Link>
                                 </li>
-                                {/* <li className="portfolio">
+                                <li className="portfolio">
                                     <Link activeClass="active" to="portfolio" spy={true} smooth={true} duration={500}>Portfolio</Link>
-                                </li> */}
+                                </li>
                                 <li className="contact">
                                     <Link activeClass="active" to="contact" spy={true} smooth={true} duration={500}>Contact</Link>
                                 </li>

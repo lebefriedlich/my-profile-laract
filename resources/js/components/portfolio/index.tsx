@@ -101,7 +101,7 @@ const Portfolio = () => {
                 <div className="col-12">
                     <div className="section-title text-center">
                         <span>Portfolio</span>
-                        <h2>Latest Project</h2>
+                        <h2>My Project</h2>
                     </div>
                 </div>
                 <div className="row">
