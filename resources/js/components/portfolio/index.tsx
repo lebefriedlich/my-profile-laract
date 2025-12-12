@@ -41,11 +41,11 @@ const Portfolio = () => {
         },
         {
             Id: '2',
-            heading: 'SPK Pilih Asdos',
-            subHeading: 'Decision Support System',
+            heading: 'DSS',
+            subHeading: 'PilihAsdos',
             role: 'Full Stack Web Developer',
             pImg1: 'images/portfolio/SPK Pilih Asdos.png',
-            des: 'SPK Pilih Asdos is a decision support system designed to streamline the selection of teaching assistants. It uses the SAW (Simple Additive Weighting) method to evaluate candidates more objectively based on defined criteria. This system helps reduce bias and human error during the selection process. By presenting calculated recommendations, it enables institutions to make more accurate and data-driven decisions. Its user-friendly interface and automated scoring make the assistant selection process more efficient and transparent.',
+            des: 'SPK Pilih Asdos is a Decision Support System (DSS) designed to streamline the selection of teaching assistants. It uses the SAW (Simple Additive Weighting) method to evaluate candidates more objectively based on defined criteria. This system helps reduce bias and human error during the selection process. By presenting calculated recommendations, it enables institutions to make more accurate and data-driven decisions. Its user-friendly interface and automated scoring make the assistant selection process more efficient and transparent.',
             techStack: ['Laravel', 'MySQL'],
             linkSource: 'https://github.com/lebefriedlich/spk_asdos_saw',
         },
@@ -93,6 +93,27 @@ const Portfolio = () => {
             linkSource:
                 'https://github.com/lebefriedlich/Quiz-Of-Survival-Game',
         },
+        {
+            Id: '7',
+            heading: 'API Service',
+            subHeading: 'WhatsApp Multi Account',
+            role: 'Backend Developer',
+            pImg1: 'images/portfolio/API WhatsApp Multi Account.png',
+            des: 'This API Service facilitates the management of multiple WhatsApp accounts, enabling seamless communication and automation. It provides robust backend support for handling message routing, account synchronization, and real-time notifications. Designed for scalability and reliability, the service integrates with various platforms to enhance user engagement and operational efficiency.',
+            techStack: ['Node.js', 'Express', 'SQLite', 'Prisma', 'WWebJS', 'QRCode', 'dotenv'],
+            linkSource:
+                'https://github.com/lebefriedlich/wwebjs-multiaccount',
+        },
+        {
+            Id: '8',
+            heading: 'Scheduler Thesis',
+            subHeading: 'SkripsiKu',
+            role: 'Full Stack Developer',
+            pImg1: 'images/portfolio/Project Schedulling.png',
+            des: 'SkripsiKu is a thesis scheduling application designed to streamline the management of thesis timelines for students and faculty. It offers features such as deadline tracking, progress monitoring, and communication tools to facilitate collaboration between students and advisors. The app aims to enhance productivity and ensure timely completion of thesis projects through an organized and user-friendly interface.',
+            techStack: ['Laravel', 'Livewire', 'Mail', 'Socialite', 'OAuth Google','MySQL'],
+            linkSource: 'https://github.com/lebefriedlich/project-scheduling-thesis',
+        }
     ];
 
     return (
