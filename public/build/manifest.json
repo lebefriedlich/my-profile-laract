@@ -93,7 +93,7 @@
     "src": "resources/fonts/fontawesome-webfont.woff2"
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-D09XcDVv.js",
+    "file": "assets/app-CRCjJg4c.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -101,7 +101,7 @@
       "resources/js/pages/Home.tsx"
     ],
     "css": [
-      "assets/app-Bv5TUT26.css"
+      "assets/app--B1MOkUr.css"
     ],
     "assets": [
       "assets/flaticon-Blrj1nED.ttf",
@@ -128,7 +128,7 @@
     ]
   },
   "resources/js/pages/Home.tsx": {
-    "file": "assets/Home-BwtQl1zF.js",
+    "file": "assets/Home-BynNLCNq.js",
     "name": "Home",
     "src": "resources/js/pages/Home.tsx",
     "isDynamicEntry": true,

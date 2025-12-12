@@ -3213,7 +3213,7 @@ display: none;
   .navbar-brand img{
     max-width: 50px!important;
     margin-top: 20px;
-    margin-bottom: 0;
+    margin-bottom: -20px;
   }
 }
 
