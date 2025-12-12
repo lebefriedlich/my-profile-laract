@@ -313,9 +313,9 @@ button:focus {
 .site-header .navigation > .container {
   position: relative;
 }
-.navbar-brand{
+/* .navbar-brand{
   margin-bottom: 30px;
-}
+} */
 .site-header .navigation .navbar-brand img{
   max-width: 60px;
 }
@@ -544,9 +544,9 @@ button:focus {
   }
 }
 
-.site-header .navbar-header {
+/* .site-header .navbar-header {
   margin-bottom: 20px;
-}
+} */
 
 @media (max-width: 1200px) {
   .site-header {
@@ -658,9 +658,9 @@ button:focus {
   .site-header .navbar-header {
     float: none;
   }
-  .site-header .navbar-header a{
+  /* .site-header .navbar-header a{
     margin-bottom: 10px;
-  }
+  } */
   .site-header .navbar-right {
     float: none;
   }
@@ -3211,8 +3211,8 @@ display: none;
 
 @media(max-width:991px){
   .navbar-brand img{
-    max-width: 35px!important;
-    margin-top: 10px;
+    max-width: 50px!important;
+    margin-top: 20px;
     margin-bottom: 0;
   }
 }

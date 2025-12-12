@@ -29,10 +29,10 @@ class Header extends Component {
                         </div>
                         <div id="navbar" className={this.state.isOpen ? "navbar-collapse navigation-holder active" : "navbar-collapse navigation-holder"}>
                             <button className="close-navbar" onClick={() => this.setState({ isOpen: false })}>
-                                <i className="fa fa-times" aria-hidden="true"></i>
+                                <i className="bi bi-x-lg" aria-hidden="true"></i>
                             </button>
                             <button className="close-navbar-2" onClick={() => this.setState({ isOpen: false })}>
-                                <i className="fa fa-times" aria-hidden="true"></i>
+                                <i className="bi bi-x-lg" aria-hidden="true"></i>
                             </button>
                             <ul className="nav navbar-nav">
                                 <div className="navbar-header">
