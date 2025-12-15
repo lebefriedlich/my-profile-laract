@@ -36,7 +36,7 @@ const Portfolio = () => {
             role: 'Backend Developer',
             pImg1: 'images/portfolio/Afeksi.png',
             des: 'Afeksi is an education and consultation platform focused on healthy relationships. It provides a safe and supportive space for individuals, couples, and communities to explore emotional well-being and interpersonal dynamics. Through insightful educational content and guided consultation sessions, Afeksi helps users build healthy communication patterns and stronger connections. The platform emphasizes mindfulness, empathy, and personal growth to promote sustainable relational development. Afeksi continues to evolve as a hub for learning and support for anyone seeking a healthier relationship life.',
-            techStack: ['Laravel', 'MySQL'],
+            techStack: ['Laravel', 'Bootstrap', 'MySQL'],
             linkPublish: 'https://afeksiidn.com',
         },
         {
@@ -46,7 +46,7 @@ const Portfolio = () => {
             role: 'Full Stack Web Developer',
             pImg1: 'images/portfolio/SPK Pilih Asdos.png',
             des: 'SPK Pilih Asdos is a Decision Support System (DSS) designed to streamline the selection of teaching assistants. It uses the SAW (Simple Additive Weighting) method to evaluate candidates more objectively based on defined criteria. This system helps reduce bias and human error during the selection process. By presenting calculated recommendations, it enables institutions to make more accurate and data-driven decisions. Its user-friendly interface and automated scoring make the assistant selection process more efficient and transparent.',
-            techStack: ['Laravel', 'MySQL'],
+            techStack: ['Laravel', 'Bootstrap', 'MySQL'],
             linkSource: 'https://github.com/lebefriedlich/spk_asdos_saw',
         },
         {
@@ -68,7 +68,7 @@ const Portfolio = () => {
             role: 'Full Stack Web Developer',
             pImg1: 'images/portfolio/UIN Malang EventHub.png',
             des: 'UIN Malang EventHub is a complete event management platform built to support the organization and promotion of campus events at UIN Malang. It allows administrators to create, schedule, and manage events with ease. Users can register for events, receive real-time updates, and track event information through a centralized interface. The platform enhances student engagement by providing accessible event announcements and simplified registration. With its streamlined workflow, EventHub significantly improves the efficiency of campus event coordination.',
-            techStack: ['Laravel', 'MySQL'],
+            techStack: ['Laravel', 'Bootstrap', 'MySQL'],
             linkPublish: 'https://eventhub.mhna.my.id/',
             linkSource: 'https://github.com/lebefriedlich/Project-Prak-Sister',
         },
@@ -111,7 +111,17 @@ const Portfolio = () => {
             role: 'Full Stack Developer',
             pImg1: 'images/portfolio/Project Schedulling.png',
             des: 'SkripsiKu is a thesis scheduling application designed to streamline the management of thesis timelines for students and faculty. It offers features such as deadline tracking, progress monitoring, and communication tools to facilitate collaboration between students and advisors. The app aims to enhance productivity and ensure timely completion of thesis projects through an organized and user-friendly interface.',
-            techStack: ['Laravel', 'Livewire', 'Mail', 'Socialite', 'OAuth Google','MySQL'],
+            techStack: ['Laravel','Bootstrap', 'Livewire', 'Mail', 'Socialite', 'OAuth Google','MySQL'],
+            linkSource: 'https://github.com/lebefriedlich/project-scheduling-thesis',
+        },
+        {
+            Id: '9',
+            heading: 'Donation App',
+            subHeading: 'DanaPeduli',
+            role: 'Full Stack Developer',
+            pImg1: 'images/portfolio/DanaPeduli.png',
+            des: 'DanaPeduli is a donation application aimed at facilitating charitable contributions and fundraising efforts. It provides a secure and user-friendly platform for donors to support various causes and projects. The app includes features such as campaign creation, progress tracking, and transparent fund management to ensure accountability and trust among users.',
+            techStack: ['Laravel', 'Livewire', 'Filament', 'Tailwind CSS', 'React', 'InertiaJS', 'Midtrans', 'PostgreSQL'],
             linkSource: 'https://github.com/lebefriedlich/project-scheduling-thesis',
         }
     ];
