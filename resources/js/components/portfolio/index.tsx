@@ -69,7 +69,6 @@ const Portfolio = () => {
             pImg1: 'images/portfolio/UIN Malang EventHub.png',
             des: 'UIN Malang EventHub is a complete event management platform built to support the organization and promotion of campus events at UIN Malang. It allows administrators to create, schedule, and manage events with ease. Users can register for events, receive real-time updates, and track event information through a centralized interface. The platform enhances student engagement by providing accessible event announcements and simplified registration. With its streamlined workflow, EventHub significantly improves the efficiency of campus event coordination.',
             techStack: ['Laravel', 'Bootstrap', 'MySQL'],
-            linkPublish: 'https://eventhub.mhna.my.id/',
             linkSource: 'https://github.com/lebefriedlich/Project-Prak-Sister',
         },
         {
@@ -121,7 +120,7 @@ const Portfolio = () => {
             role: 'Full Stack Developer',
             pImg1: 'images/portfolio/DanaPeduli.png',
             des: 'DanaPeduli is a donation application aimed at facilitating charitable contributions and fundraising efforts. It provides a secure and user-friendly platform for donors to support various causes and projects. The app includes features such as campaign creation, progress tracking, and transparent fund management to ensure accountability and trust among users.',
-            techStack: ['Laravel', 'Livewire', 'Filament', 'Tailwind CSS', 'React', 'InertiaJS', 'Midtrans', 'PostgreSQL'],
+            techStack: ['Laravel', 'Livewire', 'Filament', 'Tailwind CSS', 'React', 'InertiaJS', 'Payment Gateway','Midtrans', 'PostgreSQL'],
             linkSource: 'https://github.com/lebefriedlich/project-scheduling-thesis',
         }
     ];

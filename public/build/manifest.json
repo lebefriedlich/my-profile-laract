@@ -93,7 +93,7 @@
     "src": "resources/fonts/fontawesome-webfont.woff2"
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-CZmmhpXZ.js",
+    "file": "assets/app-AufCftkU.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -128,7 +128,7 @@
     ]
   },
   "resources/js/pages/Home.tsx": {
-    "file": "assets/Home-BHHEf5oM.js",
+    "file": "assets/Home--XLyRlA0.js",
     "name": "Home",
     "src": "resources/js/pages/Home.tsx",
     "isDynamicEntry": true,
