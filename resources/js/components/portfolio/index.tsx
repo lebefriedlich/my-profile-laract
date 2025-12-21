@@ -29,18 +29,18 @@ const Portfolio = () => {
     };
 
     const portfolio: PortfolioItem[] = [
+        // {
+        //     Id: '1',
+        //     heading: 'AFEKSI',
+        //     subHeading: 'AFEKSI.IDN',
+        //     role: 'Backend Developer',
+        //     pImg1: 'images/portfolio/Afeksi.png',
+        //     des: 'Afeksi is an education and consultation platform focused on healthy relationships. It provides a safe and supportive space for individuals, couples, and communities to explore emotional well-being and interpersonal dynamics. Through insightful educational content and guided consultation sessions, Afeksi helps users build healthy communication patterns and stronger connections. The platform emphasizes mindfulness, empathy, and personal growth to promote sustainable relational development. Afeksi continues to evolve as a hub for learning and support for anyone seeking a healthier relationship life.',
+        //     techStack: ['Laravel', 'Bootstrap', 'MySQL'],
+        //     linkPublish: 'https://afeksiidn.com',
+        // },
         {
             Id: '1',
-            heading: 'AFEKSI',
-            subHeading: 'AFEKSI.IDN',
-            role: 'Backend Developer',
-            pImg1: 'images/portfolio/Afeksi.png',
-            des: 'Afeksi is an education and consultation platform focused on healthy relationships. It provides a safe and supportive space for individuals, couples, and communities to explore emotional well-being and interpersonal dynamics. Through insightful educational content and guided consultation sessions, Afeksi helps users build healthy communication patterns and stronger connections. The platform emphasizes mindfulness, empathy, and personal growth to promote sustainable relational development. Afeksi continues to evolve as a hub for learning and support for anyone seeking a healthier relationship life.',
-            techStack: ['Laravel', 'Bootstrap', 'MySQL'],
-            linkPublish: 'https://afeksiidn.com',
-        },
-        {
-            Id: '2',
             heading: 'DSS',
             subHeading: 'PilihAsdos',
             role: 'Full Stack Web Developer',
@@ -50,7 +50,7 @@ const Portfolio = () => {
             linkSource: 'https://github.com/lebefriedlich/spk_asdos_saw',
         },
         {
-            Id: '3',
+            Id: '2',
             heading: 'API Service',
             subHeading: 'API Kode Wilayah Indonesia',
             role: 'Backend Developer',
@@ -62,7 +62,7 @@ const Portfolio = () => {
                 'https://github.com/lebefriedlich/api-kode-wilayah-indonesia',
         },
         {
-            Id: '4',
+            Id: '3',
             heading: 'EventHub',
             subHeading: 'UIN Malang EventHub',
             role: 'Full Stack Web Developer',
@@ -72,7 +72,7 @@ const Portfolio = () => {
             linkSource: 'https://github.com/lebefriedlich/Project-Prak-Sister',
         },
         {
-            Id: '5',
+            Id: '4',
             heading: 'Weather App',
             subHeading: 'CuacaSaja',
             role: 'Full Stack Developer',
@@ -82,7 +82,7 @@ const Portfolio = () => {
             linkSource: 'https://github.com/lebefriedlich/CuacaSaja-Mobile',
         },
         {
-            Id: '6',
+            Id: '5',
             heading: 'Game 3D',
             subHeading: 'Quiz Of Survival',
             role: 'Game Programmer',
@@ -93,7 +93,7 @@ const Portfolio = () => {
                 'https://github.com/lebefriedlich/Quiz-Of-Survival-Game',
         },
         {
-            Id: '7',
+            Id: '6',
             heading: 'API Service',
             subHeading: 'WhatsApp Multi Account',
             role: 'Backend Developer',
@@ -104,7 +104,7 @@ const Portfolio = () => {
                 'https://github.com/lebefriedlich/wwebjs-multiaccount',
         },
         {
-            Id: '8',
+            Id: '7',
             heading: 'Scheduler Thesis',
             subHeading: 'SkripsiKu',
             role: 'Full Stack Developer',
@@ -114,7 +114,7 @@ const Portfolio = () => {
             linkSource: 'https://github.com/lebefriedlich/project-scheduling-thesis',
         },
         {
-            Id: '9',
+            Id: '8',
             heading: 'Donation App',
             subHeading: 'DanaPeduli',
             role: 'Full Stack Developer',
