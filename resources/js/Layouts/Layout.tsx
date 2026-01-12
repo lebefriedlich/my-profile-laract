@@ -16,43 +16,95 @@ interface LayoutProps {
 
 const RootLayout: React.FC<LayoutProps> = ({ children }) => {
     const siteUrl = 'https://mhna.my.id';
+    const fullName = 'Maulana Haekal Noval Akbar';
+    const jobTitle = 'Software Engineer, Full-Stack Developer & Backend Developer';
+
+    const structuredData = {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        'name': fullName,
+        'jobTitle': jobTitle,
+        'url': siteUrl,
+        'image': `${siteUrl}/images/about.webp`,
+        'sameAs': [
+            'https://www.linkedin.com/in/maulana-haekal/',
+            'https://github.com/lebefriedlich',
+            'https://www.instagram.com/novalakbar38/'
+        ],
+        'worksFor': {
+            '@type': 'Organization',
+            'name': 'Kriingg'
+        },
+        'description': 'Full-Stack Developer, Software Engineer, and Backend Developer specializing in Laravel and modern web technologies. Available for collaboration and professional projects.'
+    };
 
     return (
         <>
-            <Head title="Maulana Haekal Noval Akbar - Personal Website">
+            <Head title={`${fullName} - ${jobTitle} | Personal Website`}>
+                {/* Canonical URL */}
+                <link rel="canonical" href={siteUrl} />
+
                 {/* Basic SEO */}
                 <meta
                     name="description"
-                    content="Backend & Laravel developer building modern, scalable, and maintainable web applications. Available for collaboration, freelance, and professional projects."
+                    content={`${fullName} - ${jobTitle}. Specializing in Laravel, PHP, and modern web technologies. Building scalable and maintainable systems. Available for collaboration and freelance work.`}
                 />
                 <meta
                     name="keywords"
-                    content="Maulana Haekal Noval Akbar, Backend Developer, Laravel Developer, Web Developer, Personal Website"
+                    content="Maulana Haekal Noval Akbar, Backend Developer, Laravel Developer, Software Engineer, Full-Stack Developer, PHP Developer, Web Developer, Indonesia, Malang"
                 />
-                <meta name="author" content="Maulana Haekal Noval Akbar" />
+                <meta name="author" content={fullName} />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="theme-color" content="#191919" />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
                 {/* Open Graph */}
-                <meta property="og:title" content="Maulana Haekal Noval Akbar - Personal Website" />
+                <meta property="og:title" content={`${fullName} - ${jobTitle}`} />
                 <meta
                     property="og:description"
-                    content="Complete profile, experience, and portfolio of Maulana Haekal Noval Akbar as a Backend & Laravel Developer."
+                    content={`Complete profile and portfolio of ${fullName}. Backend Developer specializing in Laravel, building modern and scalable web applications.`}
                 />
                 <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Maulana Haekal Noval Akbar" />
+                <meta property="og:site_name" content={fullName} />
                 <meta property="og:url" content={siteUrl} />
-                <meta property="og:image" content={`${siteUrl}/Images/about.webp`} />
+                <meta property="og:image" content={`${siteUrl}/images/about.webp`} />
+                <meta property="og:image:alt" content={fullName} />
+                <meta property="og:locale" content="en_US" />
 
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Maulana Haekal Noval Akbar - Personal Website" />
+                <meta name="twitter:title" content={`${fullName} - ${jobTitle}`} />
                 <meta
                     name="twitter:description"
-                    content="Backend & Laravel Developer focused on modern and scalable web applications."
+                    content={`Backend Developer & Software Engineer specializing in Laravel and modern web technologies.`}
                 />
-                <meta name="twitter:image" content={`${siteUrl}/Images/about.webp`} />
+                <meta name="twitter:image" content={`${siteUrl}/images/about.webp`} />
+                <meta name="twitter:image:alt" content={fullName} />
 
-                {/* Canonical */}
-                <link rel="canonical" href={siteUrl} />
+                {/* JSON-LD Structured Data */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+                />
+
+                {/* Additional structured data for breadcrumbs */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            '@context': 'https://schema.org',
+                            '@type': 'BreadcrumbList',
+                            'itemListElement': [
+                                {
+                                    '@type': 'ListItem',
+                                    'position': 1,
+                                    'name': 'Home',
+                                    'item': siteUrl
+                                }
+                            ]
+                        })
+                    }}
+                />
             </Head>
 
             <div className="app-layout">

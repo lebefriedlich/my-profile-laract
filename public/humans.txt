@@ -1,0 +1,19 @@
+/* AUTHOR */
+Author: Maulana Haekal Noval Akbar
+Contact: noval.akbar.906@gmail.com
+Instagram: @novalakbar38
+Location: Malang, Indonesia
+
+/* SITE */
+Last updated: 2026-01-12
+Standards: HTML5, CSS3, JavaScript (ES6+)
+Components: React, Laravel, Tailwind CSS
+Tools: VS Code, Git, Laravel Vite
+
+/* THANKS */
+Thanks to all the amazing open-source communities and developers who made this possible.
+
+/* SITE INFORMATION */
+Website: https://mhna.my.id
+Role: Software Engineer, Full-Stack Developer & Backend Developer
+Specialization: Laravel, PHP, Full-Stack Development

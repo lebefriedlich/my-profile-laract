@@ -20,7 +20,7 @@
     "src": "node_modules/slick-carousel/slick/fonts/slick.woff"
   },
   "resources/css/app.css": {
-    "file": "assets/app-B_mQh870.css",
+    "file": "assets/app-DM_fF4xL.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -93,7 +93,7 @@
     "src": "resources/fonts/fontawesome-webfont.woff2"
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-BE8H9h6Y.js",
+    "file": "assets/app-BLrqL5vp.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -101,7 +101,7 @@
       "resources/js/pages/Home.tsx"
     ],
     "css": [
-      "assets/app-C5YuwZtB.css"
+      "assets/app-C3k6dOd8.css"
     ],
     "assets": [
       "assets/flaticon-Blrj1nED.ttf",
@@ -128,7 +128,7 @@
     ]
   },
   "resources/js/pages/Home.tsx": {
-    "file": "assets/Home-C2Ibw6d4.js",
+    "file": "assets/Home-Dz79-1cj.js",
     "name": "Home",
     "src": "resources/js/pages/Home.tsx",
     "isDynamicEntry": true,

@@ -12,7 +12,7 @@ class Hero extends Component {
     componentDidMount() {
         if (typeof window !== 'undefined') {
             this.typed = new Typed(this.typedRef.current, {
-                strings: ['Full-Stack Developer', 'Software Engineer', 'Backend Developer'],
+                strings: ['Software Engineer', 'Full-Stack Developer', 'Backend Developer'],
                 typeSpeed: 100,
                 backSpeed: 100,
                 loop: true,
@@ -35,7 +35,7 @@ class Hero extends Component {
                             <div className="row">
                                 <div className="col col-md-10 col-sm-12 slide-caption">
                                     <div className="slide-subtitle">
-                                        <h4>I am Maulana Haekal Noval Akbar</h4>
+                                        <h1>Maulana Haekal Noval Akbar</h1>
                                     </div>
                                     <div className="slide-title">
                                         <h2><span ref={this.typedRef}></span></h2>

@@ -1,2 +1,14 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /admin
+Disallow: /vendor
+Disallow: /storage
+Disallow: /bootstrap
+Disallow: /resources
+Disallow: /node_modules
+
+# Crawl-delay (optional, in seconds)
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://mhna.my.id/sitemap.xml

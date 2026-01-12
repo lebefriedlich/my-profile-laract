@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import portfolioSingle from '../portfolioSingle';
+import PortfolioSingle from '../portfolioSingle';
 
 // Tipe untuk setiap item portfolio
 interface portfolioItem {
@@ -175,7 +175,7 @@ const portfolio = () => {
                     </div>
                 </div>
             </div>
-            <portfolioSingle
+            <PortfolioSingle
                 open={open}
                 onClose={handleClose}
                 title={state?.heading ?? ''}

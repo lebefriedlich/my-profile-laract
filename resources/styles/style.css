@@ -1365,7 +1365,7 @@ button:focus {
   min-height: 850px;
 }
 
-.hero-style-1 .slide-subtitle h4{
+.hero-style-1 .slide-subtitle h1{
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 8px;
@@ -1376,14 +1376,14 @@ button:focus {
 }
 
 @media (max-width: 991px) {
-  .hero-style-1 .slide-subtitle h4 {
+  .hero-style-1 .slide-subtitle h1 {
     font-size: 16px;
     font-size: 1.06667rem;
   }
 }
 
 @media (max-width: 767px) {
-  .hero-style-1 .slide-subtitle h4{
+  .hero-style-1 .slide-subtitle h1{
     font-size: 14px;
     font-size: 0.93333rem;
     letter-spacing: 4px;
@@ -1404,13 +1404,13 @@ button:focus {
 .hero-style-1 .slide-subtitle {
     margin-bottom: 0;
 }
-.hero-style-1 .slide-subtitle h4{
+.hero-style-1 .slide-subtitle h1{
     position: relative;
     margin-bottom: 0;
     display: inline-block;
 }
 
-.hero-style-1 .slide-subtitle h4:before {
+.hero-style-1 .slide-subtitle h1:before {
     content: "";
     position: absolute;
     right: -60px;
