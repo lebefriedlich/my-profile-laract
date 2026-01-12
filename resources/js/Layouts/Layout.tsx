@@ -40,7 +40,7 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="Maulana Haekal Noval Akbar" />
                 <meta property="og:url" content={siteUrl} />
-                <meta property="og:image" content={`${siteUrl}/Images/about.png`} />
+                <meta property="og:image" content={`${siteUrl}/Images/about.webp`} />
 
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
@@ -49,7 +49,7 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
                     name="twitter:description"
                     content="Backend & Laravel Developer focused on modern and scalable web applications."
                 />
-                <meta name="twitter:image" content={`${siteUrl}/Images/about.png`} />
+                <meta name="twitter:image" content={`${siteUrl}/Images/about.webp`} />
 
                 {/* Canonical */}
                 <link rel="canonical" href={siteUrl} />

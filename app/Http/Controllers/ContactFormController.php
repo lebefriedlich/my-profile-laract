@@ -29,7 +29,7 @@ class ContactFormController extends Controller
             // PAKAI Mail::html, bukan Mail::send + setBody
             Mail::html($html, function ($message) use ($request) {
                 $message->to(env('MAIL_TO'))
-                    ->from(env('MAIL_FROM_ADDRESS'), 'My Portfolio')
+                    ->from(env('MAIL_FROM_ADDRESS'), 'My portfolio')
                     ->subject($request->subject ?: 'New Contact Form Message');
             });
 

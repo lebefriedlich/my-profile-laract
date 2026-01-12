@@ -12,7 +12,7 @@ class Footer extends Component {
                         <div className="col-12">
                             <div className="footer-image">
                                 <Link className="navbar-brand" to="home">
-                                    <img src="/images/logo.png" alt="" loading='lazy'/>
+                                    <img src="/images/logo.webp" alt="Maulana Haekal Noval Akbar" loading='lazy'/>
                                 </Link>
                             </div>
                         </div>

@@ -13,7 +13,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const className = scroll > 100 ? "fixed-navbar active" : "fixed-navbar";
+  const className = scroll > 80 ? "topbar-wrapper sticky" : "topbar-wrapper";
 
   return (
     <div className={className}>

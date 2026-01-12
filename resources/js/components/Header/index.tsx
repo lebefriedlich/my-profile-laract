@@ -7,65 +7,113 @@ class Header extends Component {
 
     state = {
         isOpen: false,
+    }
 
+    toggleMenu = () => {
+        this.setState({ isOpen: !this.state.isOpen });
+    }
+
+    closeMenu = () => {
+        this.setState({ isOpen: false });
     }
 
     render() {
+        const { isOpen } = this.state;
 
         return (
-            <header id="header" className="site-header header-style-1">
-                <nav className="navigation navbar navbar-default">
-                    <div className="container-fluid">
-                        <div className="navbar-header">
-                            <button type="button" className="open-btn" onClick={() => this.setState({ isOpen: true })}>
-                                <span className="sr-only">Toggle navigation</span>
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                            </button>
-                            <Link className="navbar-brand" to="home">
-                                <img src='/images/logo.png' alt="" />
-                            </Link>
-                        </div>
-                        <div id="navbar" className={this.state.isOpen ? "navbar-collapse navigation-holder active" : "navbar-collapse navigation-holder"}>
-                            <button className="close-navbar" onClick={() => this.setState({ isOpen: false })}>
-                                <i className="bi bi-x-lg" aria-hidden="true"></i>
-                            </button>
-                            <button className="close-navbar-2" onClick={() => this.setState({ isOpen: false })}>
-                                <i className="bi bi-x-lg" aria-hidden="true"></i>
-                            </button>
-                            <ul className="nav navbar-nav">
-                                <div className="navbar-header">
-                                    <Link className="navbar-brand" to="home">
-                                        <img src='/images/logo.png' alt="" loading='lazy'/>
+            <header id="header" className="topbar-header">
+                <div className="container-fluid">
+                    <div className="topbar-content">
+                        <Link className="topbar-logo" to="home" spy={true} smooth={true} duration={500}>
+                            <img src='/images/logo.webp' alt="Maulana Haekal Noval Akbar" />
+                        </Link>
+                        
+                        <nav className={`topbar-nav ${isOpen ? 'active' : ''}`}>
+                            <ul className="topbar-menu">
+                                <li>
+                                    <Link 
+                                        className="topbar-link"
+                                        activeClass="active" 
+                                        to="home" 
+                                        spy={true} 
+                                        smooth={true} 
+                                        offset={-100}
+                                        duration={500}
+                                        onClick={this.closeMenu}
+                                    >
+                                        Home
                                     </Link>
-                                </div>
-                                <li className="home">
-                                    <Link activeClass="active" to="home" spy={true} smooth={true} duration={500} >Home</Link>
                                 </li>
-                                <li className="about">
-                                    <Link activeClass="active" to="about" spy={true} smooth={true} duration={500}>About Me</Link>
+                                <li>
+                                    <Link 
+                                        className="topbar-link"
+                                        activeClass="active" 
+                                        to="about" 
+                                        spy={true} 
+                                        smooth={true} 
+                                        offset={-100}
+                                        duration={500}
+                                        onClick={this.closeMenu}
+                                    >
+                                        About Me
+                                    </Link>
                                 </li>
-                                <li className="resume">
-                                    <Link activeClass="active" to="resume" spy={true} smooth={true} duration={500}>Resume</Link>
+                                <li>
+                                    <Link 
+                                        className="topbar-link"
+                                        activeClass="active" 
+                                        to="resume" 
+                                        spy={true} 
+                                        smooth={true} 
+                                        offset={-100}
+                                        duration={500}
+                                        onClick={this.closeMenu}
+                                    >
+                                        Resume
+                                    </Link>
                                 </li>
-                                <li className="portfolio">
-                                    <Link activeClass="active" to="portfolio" spy={true} smooth={true} duration={500}>Portfolio</Link>
+                                <li>
+                                    <Link 
+                                        className="topbar-link"
+                                        activeClass="active" 
+                                        to="portfolio" 
+                                        spy={true} 
+                                        smooth={true} 
+                                        offset={-100}
+                                        duration={500}
+                                        onClick={this.closeMenu}
+                                    >
+                                        Portfolio
+                                    </Link>
                                 </li>
-                                <li className="contact">
-                                    <Link activeClass="active" to="contact" spy={true} smooth={true} duration={500}>Contact</Link>
+                                <li>
+                                    <Link 
+                                        className="topbar-link"
+                                        activeClass="active" 
+                                        to="contact" 
+                                        spy={true} 
+                                        smooth={true} 
+                                        offset={-100}
+                                        duration={500}
+                                        onClick={this.closeMenu}
+                                    >
+                                        Contact
+                                    </Link>
                                 </li>
                             </ul>
-                        </div>
-                        <div className="menu-open-btn-holder">
-                            <button className="menu-open-btn" onClick={() => this.setState({ isOpen: true })}>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </button>
-                        </div>
+                        </nav>
+
+                        <button 
+                            className={`topbar-toggle ${isOpen ? 'active' : ''}`}
+                            onClick={this.toggleMenu}
+                            aria-label="Toggle menu"
+                        >
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                     </div>
-                </nav>
+                </div>
             </header>
         );
     }

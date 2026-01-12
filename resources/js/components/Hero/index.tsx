@@ -12,7 +12,7 @@ class Hero extends Component {
     componentDidMount() {
         if (typeof window !== 'undefined') {
             this.typed = new Typed(this.typedRef.current, {
-                strings: ['Web Developer', 'Backend Developer', 'Laravel Developer'],
+                strings: ['Full-Stack Developer', 'Software Engineer', 'Backend Developer'],
                 typeSpeed: 100,
                 backSpeed: 100,
                 loop: true,
@@ -30,7 +30,7 @@ class Hero extends Component {
         return(
             <section id="home" className="hero hero-slider-wrapper hero-style-1">
                 <div className="hero-slider">
-                    <div className="slide" style={{ backgroundImage: `url(${'images/my-slide.png'})` }}>
+                    <div className="slide" style={{ backgroundImage: `url(${'images/my-slide.webp'})` }}>
                         <div className="container">
                             <div className="row">
                                 <div className="col col-md-10 col-sm-12 slide-caption">

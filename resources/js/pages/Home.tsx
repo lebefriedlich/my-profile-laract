@@ -27,7 +27,7 @@ const HomePage = () => {
                     <Resume />
                 </Element>
                 <Element name="portfolio">
-                    <Portfolio/>
+                    <Portfolio />
                 </Element>
                 <Element name="contact">
                     <ContactSection />

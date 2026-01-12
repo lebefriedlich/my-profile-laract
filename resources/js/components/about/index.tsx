@@ -8,7 +8,7 @@ const About: React.FC = () => {
                     <div className="col-lg-5 col-md-12 col-12">
                         <div className="tp-about-wrap">
                             <div className="tp-about-img">
-                                <img src="images/about.png" alt="" loading='lazy'/>
+                                <img src="images/about.webp" alt="Maulana Haekal Noval Akbar" loading='lazy'/>
                             </div>
                         </div>
                     </div>
@@ -18,9 +18,10 @@ const About: React.FC = () => {
                                 <i className="bi bi-journal-code fs-1"></i>
                             </div>
                             <div className="tp-about-icon-content">
-                                <h2>Web Developer & Backend Developer</h2>
-                                <p>My name is Noval Akbar, a backend developer specializing in building modern web applications with Laravel. I'm active in the tech world, with internships at AFEKSI.IDN and Kriingg. And now I'm a Backend Developer at Kriingg.</p>
-                                <p>I'm passionate about building scalable, secure, and maintainable systems. I also enjoy contributing to community activities, sharing knowledge, and continuing to develop myself in the tech industry.</p>
+                                <h2>Full-Stack Developer | Software Engineer | Backend Developer</h2>
+                                <p>Hi, I'm Maulana Haekal Noval Akbar, you can call me Haekal. I'm a passionate software engineer specializing in backend development and full-stack web applications. With expertise in Laravel, PHP, and modern web technologies, I craft scalable and maintainable systems that solve real-world problems.</p>
+                                <p>Currently working as a Backend Developer at Kriingg, I focus on building robust APIs, optimizing database performance, and implementing clean architecture patterns. My journey includes internships at AFEKSI.IDN and Kriingg, where I developed strong foundations in software engineering principles, system design, and collaborative development.</p>
+                                <p>I'm committed to continuous learning and staying current with industry best practices. Beyond coding, I actively contribute to the tech community through knowledge sharing and mentoring, believing that collaborative growth makes us all better developers.</p>
                             </div>
                         </div>
                     </div>

@@ -3,7 +3,7 @@
 import { Dialog, Grid } from '@mui/material';
 import { Fragment } from 'react';
 
-interface PortfolioSingleProps {
+interface portfolioSingleProps {
     maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     open: boolean;
     onClose: () => void;
@@ -16,7 +16,7 @@ interface PortfolioSingleProps {
     linkSource?: string;
 }
 
-const PortfolioSingle = ({
+const portfolioSingle = ({
     maxWidth,
     open,
     onClose,
@@ -27,7 +27,7 @@ const PortfolioSingle = ({
     techStack,
     linkPublish,
     linkSource,
-}: PortfolioSingleProps) => {
+}: portfolioSingleProps) => {
     return (
         <Fragment>
             <Dialog
@@ -45,7 +45,7 @@ const PortfolioSingle = ({
                             <div className="col-lg-12">
                                 <div className="tp-minimal-wrap">
                                     <div className="tp-minimal-img">
-                                        <img src={image1} alt="" />
+                                        <img src={image1} alt={"Maulana Haekal Noval Akbar - " + title} />
                                     </div>
                                     <h2>{title}</h2>
                                 </div>
@@ -53,7 +53,7 @@ const PortfolioSingle = ({
                                     <p><i className="bi bi-person-fill"></i> Role : {role}</p>
                                 </div>
                                 <div className="tp-p-details-section">
-                                    <p>{doc}</p>
+                                    <p className="text-justify">{doc}</p>
                                     <h4 className="text-white">Technology :</h4>
                                     {techStack && techStack.length > 0 && (
                                         <div className="tech-stack-list">
@@ -84,4 +84,4 @@ const PortfolioSingle = ({
         </Fragment>
     );
 };
-export default PortfolioSingle;
+export default portfolioSingle;

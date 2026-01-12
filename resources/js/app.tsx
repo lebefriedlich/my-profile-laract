@@ -3,6 +3,7 @@ import '../styles/animate.css';
 import '../styles/flaticon.css';
 import "../styles/font-awesome.min.css";
 import '../styles/style.css';
+import '../styles/topbar.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

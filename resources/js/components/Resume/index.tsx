@@ -67,7 +67,7 @@ const Service = () => {
                                         <div className="resume-info">
                                             <h4 className="text-white">{item.title}</h4>
                                             <p className="resume-place"><strong>{item.place}</strong></p>
-                                            <p>{item.desc}</p>
+                                            <p className="text-justify">{item.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -89,7 +89,7 @@ const Service = () => {
                                         <div className="resume-info">
                                             <h4 className="text-white">{item.title}</h4>
                                             <p className="resume-place"><strong>{item.place}</strong></p>
-                                            <p>{item.desc}</p>
+                                            <p className="text-justify">{item.desc}</p>
                                         </div>
                                     </div>
                                 ))}

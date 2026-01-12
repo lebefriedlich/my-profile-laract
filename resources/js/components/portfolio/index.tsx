@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import PortfolioSingle from '../portfolioSingle';
+import portfolioSingle from '../portfolioSingle';
 
 // Tipe untuk setiap item portfolio
-interface PortfolioItem {
+interface portfolioItem {
     Id: string;
     heading: string;
     subHeading: string;
@@ -14,27 +14,27 @@ interface PortfolioItem {
     linkSource?: string;
 }
 
-const Portfolio = () => {
+const portfolio = () => {
     // Tipe untuk state yang menyimpan detail portfolio yang dibuka
     const [open, setOpen] = useState(false);
-    const [state, setState] = useState<PortfolioItem | undefined>(undefined); // Menyimpan detail item yang dipilih
+    const [state, setState] = useState<portfolioItem | undefined>(undefined); // Menyimpan detail item yang dipilih
 
     function handleClose() {
         setOpen(false);
     }
 
-    const handleClickOpen = (item: PortfolioItem) => {
+    const handleClickOpen = (item: portfolioItem) => {
         setOpen(true);
         setState(item); // Menyimpan item yang dipilih ke state
     };
 
-    const portfolio: PortfolioItem[] = [
+    const portfolio: portfolioItem[] = [
         // {
         //     Id: '1',
         //     heading: 'AFEKSI',
         //     subHeading: 'AFEKSI.IDN',
         //     role: 'Backend Developer',
-        //     pImg1: 'images/portfolio/Afeksi.png',
+        //     pImg1: 'images/portfolio/Afeksi.webp',
         //     des: 'Afeksi is an education and consultation platform focused on healthy relationships. It provides a safe and supportive space for individuals, couples, and communities to explore emotional well-being and interpersonal dynamics. Through insightful educational content and guided consultation sessions, Afeksi helps users build healthy communication patterns and stronger connections. The platform emphasizes mindfulness, empathy, and personal growth to promote sustainable relational development. Afeksi continues to evolve as a hub for learning and support for anyone seeking a healthier relationship life.',
         //     techStack: ['Laravel', 'Bootstrap', 'MySQL'],
         //     linkPublish: 'https://afeksiidn.com',
@@ -44,7 +44,7 @@ const Portfolio = () => {
             heading: 'DSS',
             subHeading: 'PilihAsdos',
             role: 'Full Stack Web Developer',
-            pImg1: 'images/portfolio/SPK Pilih Asdos.png',
+            pImg1: 'images/portfolio/SPK Pilih Asdos.webp',
             des: 'SPK Pilih Asdos is a Decision Support System (DSS) designed to streamline the selection of teaching assistants. It uses the SAW (Simple Additive Weighting) method to evaluate candidates more objectively based on defined criteria. This system helps reduce bias and human error during the selection process. By presenting calculated recommendations, it enables institutions to make more accurate and data-driven decisions. Its user-friendly interface and automated scoring make the assistant selection process more efficient and transparent.',
             techStack: ['Laravel', 'Bootstrap', 'MySQL'],
             linkSource: 'https://github.com/lebefriedlich/spk_asdos_saw',
@@ -54,7 +54,7 @@ const Portfolio = () => {
             heading: 'API Service',
             subHeading: 'API Kode Wilayah Indonesia',
             role: 'Backend Developer',
-            pImg1: 'images/portfolio/API Kode Wilayah Indonesia.png',
+            pImg1: 'images/portfolio/API Kode Wilayah Indonesia.webp',
             des: 'API Kode Wilayah Indonesia provides a comprehensive API service for accessing official Indonesian regional codes. It is designed to help developers efficiently integrate regional data into their applications without managing complex datasets manually. The API ensures consistent, accurate, and structured information for provinces, cities, districts, and villages. This service is beneficial for applications involving forms, logistics, mapping, and administrative processing. With a simple and reliable endpoint system, it enhances productivity and reduces integration time for developers.',
             techStack: ['Laravel', 'MySQL'],
             linkPublish: 'https://wilayah-indonesia.mhna.my.id/',
@@ -66,7 +66,7 @@ const Portfolio = () => {
             heading: 'EventHub',
             subHeading: 'UIN Malang EventHub',
             role: 'Full Stack Web Developer',
-            pImg1: 'images/portfolio/UIN Malang EventHub.png',
+            pImg1: 'images/portfolio/UIN Malang EventHub.webp',
             des: 'UIN Malang EventHub is a complete event management platform built to support the organization and promotion of campus events at UIN Malang. It allows administrators to create, schedule, and manage events with ease. Users can register for events, receive real-time updates, and track event information through a centralized interface. The platform enhances student engagement by providing accessible event announcements and simplified registration. With its streamlined workflow, EventHub significantly improves the efficiency of campus event coordination.',
             techStack: ['Laravel', 'Bootstrap', 'MySQL'],
             linkSource: 'https://github.com/lebefriedlich/Project-Prak-Sister',
@@ -76,7 +76,7 @@ const Portfolio = () => {
             heading: 'Weather App',
             subHeading: 'CuacaSaja',
             role: 'Full Stack Developer',
-            pImg1: 'images/portfolio/CuacaSaja.png',
+            pImg1: 'images/portfolio/CuacaSaja.webp',
             des: 'CuacaSaja is a weather application designed to deliver accurate and real-time weather information to users. It features a clean and intuitive interface that enhances the overall user experience. The application supports multi-platform access, allowing users to check weather data from mobile devices easily. CuacaSaja also provides detailed information such as temperature, humidity, wind speed, and forecasts. Built with Flutter and Laravel, it offers fast performance and reliable data handling.',
             techStack: ['Flutter', 'Laravel', 'MySQL'],
             linkSource: 'https://github.com/lebefriedlich/CuacaSaja-Mobile',
@@ -85,8 +85,8 @@ const Portfolio = () => {
             Id: '5',
             heading: 'Game 3D',
             subHeading: 'Quiz Of Survival',
-            role: 'Game Programmer',
-            pImg1: 'images/portfolio/Quiz Of Survival.png',
+            role: 'Game 3D Programmer',
+            pImg1: 'images/portfolio/Quiz Of Survival.webp',
             des: 'Quiz Of Survival is a 3D survival game that challenges players with a combination of action and knowledge-based mechanics. Players must navigate a dynamic environment while solving quiz questions to avoid threats. The game features immersive visuals, smooth controls, and engaging progression systems. Its unique blend of education and gameplay creates a fresh and exciting experience for players. Quiz Of Survival aims to provide both entertainment and mental challenge within a well-crafted 3D world.',
             techStack: ['Unity', 'C#'],
             linkSource:
@@ -97,7 +97,7 @@ const Portfolio = () => {
             heading: 'API Service',
             subHeading: 'WhatsApp Multi Account',
             role: 'Backend Developer',
-            pImg1: 'images/portfolio/API WhatsApp Multi Account.png',
+            pImg1: 'images/portfolio/API WhatsApp Multi Account.webp',
             des: 'This API Service facilitates the management of multiple WhatsApp accounts, enabling seamless communication and automation. It provides robust backend support for handling message routing, account synchronization, and real-time notifications. Designed for scalability and reliability, the service integrates with various platforms to enhance user engagement and operational efficiency.',
             techStack: ['Node.js', 'Express', 'SQLite', 'Prisma', 'WWebJS', 'QRCode', 'dotenv'],
             linkSource:
@@ -108,7 +108,7 @@ const Portfolio = () => {
             heading: 'Scheduler Thesis',
             subHeading: 'SkripsiKu',
             role: 'Full Stack Developer',
-            pImg1: 'images/portfolio/Project Schedulling.png',
+            pImg1: 'images/portfolio/Project Schedulling.webp',
             des: 'SkripsiKu is a thesis scheduling application designed to streamline the management of thesis timelines for students and faculty. It offers features such as deadline tracking, progress monitoring, and communication tools to facilitate collaboration between students and advisors. The app aims to enhance productivity and ensure timely completion of thesis projects through an organized and user-friendly interface.',
             techStack: ['Laravel','Bootstrap', 'Livewire', 'Mail', 'Socialite', 'OAuth Google','MySQL'],
             linkSource: 'https://github.com/lebefriedlich/project-scheduling-thesis',
@@ -118,7 +118,7 @@ const Portfolio = () => {
             heading: 'Donation App',
             subHeading: 'DanaPeduli',
             role: 'Full Stack Developer',
-            pImg1: 'images/portfolio/DanaPeduli.png',
+            pImg1: 'images/portfolio/DanaPeduli.webp',
             des: 'DanaPeduli is a donation application aimed at facilitating charitable contributions and fundraising efforts. It provides a secure and user-friendly platform for donors to support various causes and projects. The app includes features such as campaign creation, progress tracking, and transparent fund management to ensure accountability and trust among users.',
             techStack: ['Laravel', 'Livewire', 'Filament', 'Tailwind CSS', 'React', 'InertiaJS', 'Payment Gateway','Midtrans', 'PostgreSQL'],
             linkSource: 'https://github.com/lebefriedlich/project-scheduling-thesis',
@@ -148,7 +148,7 @@ const Portfolio = () => {
                                                 <div className="tp-portfolio-img">
                                                     <img
                                                         src={port.pImg1}
-                                                        alt={port.heading}
+                                                        alt={'Maulana Haekal Noval Akbar - ' + port.heading}
                                                     />
                                                 </div>
                                                 <div className="tp-portfolio-text">
@@ -175,7 +175,7 @@ const Portfolio = () => {
                     </div>
                 </div>
             </div>
-            <PortfolioSingle
+            <portfolioSingle
                 open={open}
                 onClose={handleClose}
                 title={state?.heading ?? ''}
@@ -196,4 +196,4 @@ const Portfolio = () => {
     );
 };
 
-export default Portfolio;
+export default portfolio;
