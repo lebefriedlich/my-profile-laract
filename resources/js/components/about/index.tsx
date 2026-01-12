@@ -18,7 +18,7 @@ const About: React.FC = () => {
                                 <i className="bi bi-journal-code fs-1"></i>
                             </div>
                             <div className="tp-about-icon-content">
-                                <h2>Full-Stack Developer | Software Engineer | Backend Developer</h2>
+                                <h2>Software Engineer | Full-Stack Developer | Backend Developer</h2>
                                 <p>Hi, I'm Maulana Haekal Noval Akbar, you can call me Haekal. I'm a passionate software engineer specializing in backend development and full-stack web applications. With expertise in Laravel, PHP, and modern web technologies, I craft scalable and maintainable systems that solve real-world problems.</p>
                                 <p>Currently working as a Backend Developer at Kriingg, I focus on building robust APIs, optimizing database performance, and implementing clean architecture patterns. My journey includes internships at AFEKSI.IDN and Kriingg, where I developed strong foundations in software engineering principles, system design, and collaborative development.</p>
                                 <p>I'm committed to continuous learning and staying current with industry best practices. Beyond coding, I actively contribute to the tech community through knowledge sharing and mentoring, believing that collaborative growth makes us all better developers.</p>
