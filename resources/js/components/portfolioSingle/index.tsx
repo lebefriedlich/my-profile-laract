@@ -28,6 +28,11 @@ const portfolioSingle = ({
     linkPublish,
     linkSource,
 }: portfolioSingleProps) => {
+    const paragraphs = doc
+        .split(/\n\s*\n/)
+        .map((item) => item.trim())
+        .filter(Boolean);
+
     return (
         <Fragment>
             <Dialog
@@ -53,7 +58,9 @@ const portfolioSingle = ({
                                     <p><i className="bi bi-person-fill"></i> Role : {role}</p>
                                 </div>
                                 <div className="tp-p-details-section">
-                                    <p className="text-justify">{doc}</p>
+                                    {paragraphs.map((paragraph, index) => (
+                                        <p className="text-justify" key={index}>{paragraph}</p>
+                                    ))}
                                     <h4 className="text-white">Technology :</h4>
                                     {techStack && techStack.length > 0 && (
                                         <div className="tech-stack-list">

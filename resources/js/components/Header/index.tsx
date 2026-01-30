@@ -17,19 +17,31 @@ class Header extends Component {
         this.setState({ isOpen: false });
     }
 
+    handleOverlayClick = () => {
+        this.closeMenu();
+    }
+
     render() {
         const { isOpen } = this.state;
 
         return (
-            <header id="header" className="topbar-header">
-                <div className="container-fluid">
-                    <div className="topbar-content">
-                        <Link className="topbar-logo" to="home" spy={true} smooth={true} duration={500}>
-                            <img src='/images/logo.webp' alt="Maulana Haekal Noval Akbar" />
-                        </Link>
-                        
-                        <nav className={`topbar-nav ${isOpen ? 'active' : ''}`}>
-                            <ul className="topbar-menu">
+            <>
+                {isOpen && (
+                    <div 
+                        className="topbar-overlay" 
+                        onClick={this.handleOverlayClick}
+                    ></div>
+                )}
+                <div className="topbar-wrapper">
+                <header id="header" className="topbar-header">
+                    <div className="container-fluid">
+                        <div className="topbar-content">
+                            <Link className="topbar-logo" to="home" spy={true} smooth={true} duration={500}>
+                                <img src='/images/logo.webp' alt="Maulana Haekal Noval Akbar" />
+                            </Link>
+                            
+                            <nav className={`topbar-nav ${isOpen ? 'active' : ''}`}>
+                                <ul className="topbar-menu">
                                 <li>
                                     <Link 
                                         className="topbar-link"
@@ -115,6 +127,8 @@ class Header extends Component {
                     </div>
                 </div>
             </header>
+                </div>
+            </>
         );
     }
 }

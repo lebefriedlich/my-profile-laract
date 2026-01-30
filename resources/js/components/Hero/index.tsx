@@ -12,7 +12,7 @@ class Hero extends Component {
     componentDidMount() {
         if (typeof window !== 'undefined') {
             this.typed = new Typed(this.typedRef.current, {
-                strings: ['Software Engineer', 'Full-Stack Developer', 'Backend Developer'],
+                strings: ['Full-Stack Developer', 'Backend Developer', 'Junior DevOps Engineer'],
                 typeSpeed: 100,
                 backSpeed: 100,
                 loop: true,

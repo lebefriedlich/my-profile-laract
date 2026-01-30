@@ -170,8 +170,7 @@
 
 .topbar-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
-}    max-width: 100%;
-    
+}
 
 /* ============================================
    RESPONSIVE STYLES
@@ -213,10 +212,9 @@
 
     .topbar-menu li {
         width: 100%;
-        text-align: 7px;
         font-weight: 600;
         color: #ffffff;
-        opacity: 1t;
+        opacity: 1;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
@@ -320,6 +318,24 @@
 @media (max-width: 480px) {
     .topbar-nav.active::before {
         right: 250px;
+    }
+}
+
+/* Overlay for mobile menu */
+.topbar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .topbar-overlay {
+        display: block;
     }
 }
 
