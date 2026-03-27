@@ -2,9 +2,16 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-scroll'
+import { useLanguage } from '../../contexts/LanguageContext';
 
-class Footer extends Component {
+interface FooterProps {
+    t: (key: string) => string;
+}
+
+class FooterComponent extends Component<FooterProps> {
     render() {
+        const { t } = this.props;
+
         return (
             <div className="footer-area text-center">
                 <div className="container">
@@ -27,7 +34,7 @@ class Footer extends Component {
                         </div>
                         <div className="col-12">
                             <div className="footer-sub">
-                                <p><i className="fa fa-copyright"></i> <span> 2025  All rights reserved</span></p>
+                                <p><i className="fa fa-copyright"></i> <span> 2025  {t('footer.copyright')}</span></p>
                             </div>
                         </div>
                     </div>
@@ -36,5 +43,10 @@ class Footer extends Component {
         );
     }
 }
+
+const Footer = () => {
+    const { t } = useLanguage();
+    return <FooterComponent t={t} />;
+};
 
 export default Footer;

@@ -1,16 +1,19 @@
 "use client"
 
 import React from 'react';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const Service = () => {
+    const { t } = useLanguage();
+
     const education = [
         {
             id: 'edu-1',
             icon: 'fi flaticon-graduation-cap',
-            title: 'Bachelor of Informatics Engineering',
-            place: 'UIN Maulana Malik Ibrahim Malang',
-            year: '2022 - Present',
-            desc: 'Focus on Programming, Data Structures, Algorithms, Database Systems, and Software Development.'
+            title: t('resume.gradCap'),
+            place: t('resume.gradPlace'),
+            year: t('resume.gradYear'),
+            desc: t('resume.gradDesc')
         }
     ];
 
@@ -18,26 +21,26 @@ const Service = () => {
         {
             id: 'exp-1',
             icon: 'fi flaticon-briefcase',
-            title: 'Backend Developer',
-            place: 'Kriingg',
-            year: 'April 2025 - Present',
-            desc: 'Join the core development team to build admin dashboards, maintain backend services, and migrate systems to new programming languages ​​while ensuring performance and stability.'
+            title: t('resume.exp1Title'),
+            place: t('resume.exp1Place'),
+            year: t('resume.exp1Year'),
+            desc: t('resume.exp1Desc'),
         },
         {
             id: 'exp-2',
             icon: 'fi flaticon-briefcase',
-            title: 'Backend Developer Intern',
-            place: 'Kriingg',
-            year: 'August 2024 - April 2025',
-            desc: 'Implemented backend systems from database design into fully functional APIs and collaborated closely with mobile development team.'
+            title: t('resume.exp2Title'),
+            place: t('resume.exp2Place'),
+            year: t('resume.exp2Year'),
+            desc: t('resume.exp2Desc'),
         },
         {
             id: 'exp-3',
             icon: 'fi flaticon-briefcase',
-            title: 'Backend Developer Intern',
-            place: 'AFEKSI.IDN',
-            year: 'April 2024 - July 2024',
-            desc: 'Learn and maintain backend features using Laravel, as well as implementing the Midtrans Payment Gateway.'
+            title: t('resume.exp3Title'),
+            place: t('resume.exp3Place'),
+            year: t('resume.exp3Year'),
+            desc: t('resume.exp3Desc'),
         },
     ];
 
@@ -47,15 +50,15 @@ const Service = () => {
             <div className="container">
                 <div className="col-l2">
                     <div className="section-title section-title2 text-center">
-                        <span>Resume</span>
-                        <h2>Education & Experience</h2>
+                        <span>{t('resume.title')}</span>
+                        <h2>{t('resume.subtitle')}</h2>
                     </div>
                 </div>
                 <div className="row resume-two-col ms-2">
                     <div className="col-lg-6 col-md-12">
                         <div className="resume-section">
                             <div className="section-title section-title2">
-                                <h3 className="text-white">Education</h3>
+                                <h3 className="text-white">{t('resume.education')}</h3>
                             </div>
                             <div className="resume-list">
                                 {education.map((item) => (
@@ -77,7 +80,7 @@ const Service = () => {
                     <div className="col-lg-6 col-md-12">
                         <div className="resume-section">
                             <div className="section-title section-title2">
-                                <h3 className="text-white">Experience</h3>
+                                <h3 className="text-white">{t('resume.experience')}</h3>
                             </div>
                             <div className="resume-list">
                                 {experience.map((item) => (

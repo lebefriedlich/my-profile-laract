@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLanguage } from '../../contexts/LanguageContext';
 import PortfolioSingle from '../portfolioSingle';
 
 // Tipe untuk setiap item portfolio
@@ -15,6 +16,7 @@ interface portfolioItem {
 }
 
 const portfolio = () => {
+    const { t } = useLanguage();
     // Tipe untuk state yang menyimpan detail portfolio yang dibuka
     const [open, setOpen] = useState(false);
     const [state, setState] = useState<portfolioItem | undefined>(undefined); // Menyimpan detail item yang dipilih
@@ -28,7 +30,7 @@ const portfolio = () => {
         setState(item); // Menyimpan item yang dipilih ke state
     };
 
-    const portfolio: portfolioItem[] = [
+    const portfolioItems: portfolioItem[] = [
         // {
         //     Id: '1',
         //     heading: 'AFEKSI',
@@ -45,9 +47,7 @@ const portfolio = () => {
             subHeading: 'PilihAsdos',
             role: 'Full-Stack Web Developer',
             pImg1: 'images/portfolio/SPK Pilih Asdos.webp',
-            des: `SPK Pilih Asdos is a Decision Support System for assessing teaching assistant candidates objectively using the SAW method. The system collects criteria, weights, and candidate scores then calculates ranked recommendations for transparent selection. Users get a dashboard to compare candidates and view final recommendations. The input flow is designed simple so committees can quickly enter data without errors. The end result reduces bias and accelerates the assistant selection decision process.
-
-As a Full-Stack Web Developer, I designed the data schema and implemented end-to-end SAW calculation to ensure accuracy. I built the input flow for criteria, weights, and values then validated data to prevent scoring errors. I optimized queries and indexes so calculations remain fast even with many candidates. I added recommendation summaries, export features, and activity logs for decision auditing. I implemented basic monitoring and alerts so the committee knows when calculation or input errors occur.`,
+            des: t('portfolio.dss.desc'),
             techStack: ['Laravel', 'Bootstrap', 'MySQL'],
             linkSource: 'https://github.com/lebefriedlich/spk_asdos_saw',
         },
@@ -57,9 +57,7 @@ As a Full-Stack Web Developer, I designed the data schema and implemented end-to
             subHeading: 'API Kode Wilayah Indonesia',
             role: 'Backend Developer',
             pImg1: 'images/portfolio/API Kode Wilayah Indonesia.webp',
-            des: `API Kode Wilayah Indonesia is a REST service that provides official regional codes from provinces to villages. It aims to provide a single data source for address forms, logistics, and government applications. Data is organized hierarchically so regional relationships are easy to trace and consistent. Endpoints are designed simple so other applications can use them without managing large datasets themselves. With one source of truth, address integration becomes faster and minimizes data duplication.
-
-As a Backend Developer, I designed the hierarchical schema and performed complete seeding from provinces to villages. I added caching and rate limiting so lookups remain fast and stable during high traffic. I implemented data validation and normalization to ensure regional codes are consistent across all endpoints. I also set up logging and health checks to monitor errors and performance. I documented endpoints clearly so integrators can onboard faster.`,
+            des: t('portfolio.api.desc'),
             techStack: ['Laravel', 'MySQL'],
             linkPublish: 'https://wilayah-indonesia.mhna.my.id/',
             linkSource:
@@ -71,9 +69,7 @@ As a Backend Developer, I designed the hierarchical schema and performed complet
             subHeading: 'UIN Malang EventHub',
             role: 'Full-Stack Web Developer',
             pImg1: 'images/portfolio/UIN Malang EventHub.webp',
-            des: `UIN Malang EventHub is a campus platform for publishing event schedules and managing registrations in one place. Students can view event details, quotas, and latest updates without opening multiple channels. Organizers get a dashboard to create, modify, and close events quickly. The notification system helps participants know about schedule changes in real-time. All features are designed responsive for comfortable use on mobile and desktop.
-
-As a Full-Stack Web Developer, I built event CRUD, registration flows, participant quotas, and email notifications. I optimized database indexes so event listings and searches remain fast during high registration traffic. I implemented form validation and basic protections to prevent duplicate data and quota abuse. I refined the UI/UX so the registration flow is concise and clear across different screen sizes. I added logging and error checks so the team can quickly address operational issues.`,
+            des: t('portfolio.eventhub.desc'),
             techStack: ['Laravel', 'Bootstrap', 'MySQL'],
             linkSource: 'https://github.com/lebefriedlich/Project-Prak-Sister',
         },
@@ -83,9 +79,7 @@ As a Full-Stack Web Developer, I built event CRUD, registration flows, participa
             subHeading: 'CuacaSaja',
             role: 'Full-Stack Developer',
             pImg1: 'images/portfolio/CuacaSaja.webp',
-            des: `CuacaSaja is a weather app that displays real-time forecasts with a clean cross-platform interface. Users can view temperature, humidity, wind speed, and forecasts for several days ahead. Locations can be changed quickly making it suitable for daily mobility. Data is summarized so important information appears without many clicks. The design is lightweight for comfortable use on mobile devices with limited connectivity.
-
-As a Full-Stack Developer, I connected Flutter to a Laravel backend and cached weather provider calls to keep responses fast. I streamlined JSON payloads and optimized images so loading times on mobile are shorter. I added fallbacks and network error handling so the app stays informative even with poor connections. I managed environments and API keys securely to prevent exposure to the client. I also tested performance on low-power devices to ensure the experience remains smooth.`,
+            des: t('portfolio.weather.desc'),
             techStack: ['Flutter', 'Laravel', 'MySQL'],
             linkSource: 'https://github.com/lebefriedlich/CuacaSaja-Mobile',
         },
@@ -95,9 +89,7 @@ As a Full-Stack Developer, I connected Flutter to a Laravel backend and cached w
             subHeading: 'Quiz Of Survival',
             role: 'Game 3D Programmer',
             pImg1: 'images/portfolio/Quiz Of Survival.webp',
-            des: `Quiz Of Survival is a 3D survival game that combines action with quiz mechanics. Players must survive threats while answering questions to unlock paths or bonuses. The environment is designed dynamically to maintain tension and gameplay rhythm. Challenges are staged so players learn mechanics before difficulty increases. Visuals and controls are optimized for smooth and immersive experience.
-
-As a Game 3D Programmer, I built the gameplay loop in Unity/C# and tuned physics and enemy spawn timing. I connected the quiz trigger system to player progress so questions appear at the right moments. I profiled scenes and eliminated bottlenecks to keep FPS stable even with many active objects. I iterated on damage, reward, and pacing balance so the game feels fair yet challenging. I organized the build pipeline and assets so the team can iterate and chase bugs faster.`,
+            des: t('portfolio.game.desc'),
             techStack: ['Unity', 'C#'],
             linkSource:
                 'https://github.com/lebefriedlich/Quiz-Of-Survival-Game',
@@ -199,15 +191,15 @@ As Backend Developer & Junior DevOps, I managed Linux servers with Nginx, establ
             <div className="container">
                 <div className="col-12">
                     <div className="section-title text-center">
-                        <span>Portfolio</span>
-                        <h2>My Project</h2>
+                        <span>{t('portfolio.portfolio')}</span>
+                        <h2>{t('portfolio.projects')}</h2>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-12">
                         <div className="tp-portfolio-item">
                             <div className="row">
-                                {portfolio.map((port, prt) => (
+                                {portfolioItems.map((port, prt) => (
                                     <div
                                         className="col-lg-4 col-md-6 col-sm-12 custom-grid"
                                         key={prt}

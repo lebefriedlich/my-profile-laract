@@ -4,6 +4,7 @@ import '../styles/flaticon.css';
 import "../styles/font-awesome.min.css";
 import '../styles/style.css';
 import '../styles/topbar.css';
+import '../styles/language-switcher.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -12,6 +13,7 @@ import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import Layout from './Layouts/Layout';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 // Grab the element where the app will mount
 const app = document.getElementById('app');
@@ -29,6 +31,10 @@ createInertiaApp({
       return page;
     }),
   setup({ el, App, props }) {
-    createRoot(el).render(<App {...props} />);
+    createRoot(el).render(
+      <LanguageProvider>
+        <App {...props} />
+      </LanguageProvider>
+    );
   },
 });

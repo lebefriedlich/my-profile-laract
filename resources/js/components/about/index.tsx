@@ -1,6 +1,9 @@
 import React from 'react'
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const About: React.FC = () => {
+    const { t, tArray } = useLanguage();
+
     return (
         <section id="about" className="tp-about-section">
             <div className="container">
@@ -18,10 +21,20 @@ const About: React.FC = () => {
                                 <i className="bi bi-journal-code fs-1"></i>
                             </div>
                             <div className="tp-about-icon-content">
-                                <h2>Full-Stack Developer | Backend Developer | Junior DevOps Engineer</h2>
-                                <p>Hi, I'm Maulana Haekal Noval Akbar call me Haekal. I specialize in backend development, full-stack web applications, and infrastructure operations. With hands-on experience in Laravel, Node.js (Fastify), React, and server management, I build systems that are reliable, secure, and ready for production. My work spans API design, database optimization, CI/CD pipelines, and Linux server administration, ensuring applications run efficiently from code to deployment.</p>
-                                <p>I've delivered Decision Support Systems with weighted scoring, RESTful APIs for regional data and WhatsApp automation, event platforms with real-time notifications, donation systems with payment integrations, and cross-platform mobile apps. At GenBI Malang, I combined backend development with DevOps responsibilities managing Nginx servers, setting up monitoring, handling backups, and implementing structured authentication flows. Each project taught me to balance development speed with maintainability, security, and long-term operational stability.</p>
-                                <p>I approach problems by understanding the full stack not just writing code, but considering deployment, scaling, and monitoring. I value clean architecture, automated testing, and documentation that helps teams move fast without breaking things. I'm committed to continuous learning, whether it's adopting new frameworks, refining DevOps practices, or sharing knowledge with the developer community. My goal is to build software that solves real problems and systems that teams can confidently rely on.</p>
+                                <h2>{t('about.title')}</h2>
+                                <p style={{ textAlign: 'justify' }}>{t('about.desc1')}</p>
+                                <p style={{ textAlign: 'justify' }}>{t('about.desc2')}</p>
+                                <p style={{ textAlign: 'justify' }}>{t('about.desc3')}</p>
+                                <div className="tp-about-skills">
+                                    <h4>{t('about.skillsTitle')}</h4>
+                                    <div className="skills-list">
+                                        {tArray('about.skills').map((skill: string, index: number) => (
+                                            <span key={index} className="skill-badge">
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

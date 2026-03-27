@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 // Definisikan tipe data untuk state
 interface State {
@@ -12,7 +13,11 @@ interface State {
     notification: { type: string; message: string } | null;
 }
 
-class ContactForm extends Component<{}, State> {
+interface ContactFormProps {
+    t: (key: string) => string;
+}
+
+class ContactFormComponent extends Component<ContactFormProps, State> {
     state: State = {
         name: '',
         lastname: '',
@@ -41,19 +46,22 @@ class ContactForm extends Component<{}, State> {
     };
 
     validate = () => {
+        const { t } = this.props;
         let error: { [key: string]: string } = {};
         const { name, lastname, email, subject, message } = this.state;
 
-        if (!name) error.name = 'Please enter your name';
-        if (!lastname) error.lastname = 'Please enter your Lastname';
-        if (!email) error.email = 'Please enter your email';
-        if (!subject) error.subject = 'Please enter your subject';
-        if (!message) error.message = 'Please enter your message';
+        if (!name) error.name = t('contact.form.nameError');
+        if (!lastname) error.lastname = t('contact.form.lastnameError');
+        if (!email) error.email = t('contact.form.emailError');
+        if (!subject) error.subject = t('contact.form.subjectError');
+        if (!message) error.message = t('contact.form.messageError');
 
         return error;
     };
 
     submitHandler = async (e: React.FormEvent) => {
+        const { t } = this.props;
+
         e.preventDefault();
         this.setState({ loading: true, notification: null } as Pick<
             State,
@@ -101,7 +109,7 @@ class ContactForm extends Component<{}, State> {
                 this.setState({
                     notification: {
                         type: 'success',
-                        message: 'Message sent successfully!',
+                        message: t('contact.form.success'),
                     },
                     loading: false,
                     name: '',
@@ -115,7 +123,7 @@ class ContactForm extends Component<{}, State> {
                 this.setState({
                     notification: {
                         type: 'error',
-                        message: result.message || 'Failed to send message.',
+                        message: result.message || t('contact.form.error'),
                     },
                     loading: false,
                 });
@@ -125,7 +133,7 @@ class ContactForm extends Component<{}, State> {
             this.setState({
                 notification: {
                     type: 'error',
-                    message: 'Network error, please try again.',
+                    message: t('contact.form.error'),
                 },
                 loading: false,
             });
@@ -133,6 +141,7 @@ class ContactForm extends Component<{}, State> {
     };
 
     render() {
+        const { t } = this.props;
         const {
             name,
             lastname,
@@ -169,7 +178,7 @@ class ContactForm extends Component<{}, State> {
                                     onChange={this.changeHandler}
                                     type="text"
                                     name="name"
-                                    placeholder="Name"
+                                    placeholder={t('contact.form.name')}
                                 />
                                 <p>{error.name}</p>
                             </div>
@@ -182,7 +191,7 @@ class ContactForm extends Component<{}, State> {
                                     onChange={this.changeHandler}
                                     type="text"
                                     name="lastname"
-                                    placeholder="Lastname"
+                                    placeholder={t('contact.form.lastname')}
                                 />
                                 <p>{error.lastname}</p>
                             </div>
@@ -195,7 +204,7 @@ class ContactForm extends Component<{}, State> {
                                     onChange={this.changeHandler}
                                     type="email"
                                     name="email"
-                                    placeholder="Email"
+                                    placeholder={t('contact.form.email')}
                                 />
                                 <p>{error.email}</p>
                             </div>
@@ -208,7 +217,7 @@ class ContactForm extends Component<{}, State> {
                                     onChange={this.changeHandler}
                                     type="text"
                                     name="subject"
-                                    placeholder="Subject"
+                                    placeholder={t('contact.form.subject')}
                                 />
                                 <p>{error.subject}</p>
                             </div>
@@ -220,7 +229,7 @@ class ContactForm extends Component<{}, State> {
                                     value={message}
                                     onChange={this.changeHandler}
                                     name="message"
-                                    placeholder="Message"
+                                    placeholder={t('contact.form.message')}
                                 ></textarea>
                                 <p>{error.message}</p>
                             </div>
@@ -233,7 +242,7 @@ class ContactForm extends Component<{}, State> {
                                     className="template-btn"
                                     disabled={loading}
                                 >
-                                    {loading ? 'Sending...' : 'Send Message'}
+                                    {loading ? t('contact.form.sending') : t('contact.form.send')}
                                 </button>
                             </div>
                         </div>
@@ -243,5 +252,10 @@ class ContactForm extends Component<{}, State> {
         );
     }
 }
+
+const ContactForm = () => {
+    const { t } = useLanguage();
+    return <ContactFormComponent t={t} />;
+};
 
 export default ContactForm;

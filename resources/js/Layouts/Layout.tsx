@@ -17,7 +17,7 @@ interface LayoutProps {
 const RootLayout: React.FC<LayoutProps> = ({ children }) => {
     const siteUrl = 'https://mhna.my.id';
     const fullName = 'Maulana Haekal Noval Akbar';
-    const jobTitle = 'Software Engineer, Full-Stack Developer & Backend Developer';
+    const jobTitle = 'Full-Stack Developer, Backend Developer, Junior DevOps Engineer';
 
     const structuredData = {
         '@context': 'https://schema.org',
@@ -35,7 +35,7 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
             '@type': 'Organization',
             'name': 'Kriingg'
         },
-        'description': 'Full-Stack Developer, Software Engineer, and Backend Developer specializing in Laravel and modern web technologies. Available for collaboration and professional projects.'
+        'description': 'Full-Stack Developer, Backend Developer, and Junior DevOps Engineer specializing in Laravel and modern web technologies. Building reliable, secure systems ready for production.'
     };
 
     return (
@@ -47,7 +47,7 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
                 {/* Basic SEO */}
                 <meta
                     name="description"
-                    content={`${fullName} - ${jobTitle}. Specializing in Laravel, PHP, and modern web technologies. Building scalable and maintainable systems. Available for collaboration and freelance work.`}
+                    content={`${fullName} - ${jobTitle}. Specializing in Full-Stack Development, Backend Systems, and DevOps Infrastructure. Building scalable, secure applications with Laravel, Node.js, and React.`}
                 />
                 <meta
                     name="keywords"
@@ -62,7 +62,7 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
                 <meta property="og:title" content={`${fullName} - ${jobTitle}`} />
                 <meta
                     property="og:description"
-                    content={`Complete profile and portfolio of ${fullName}. Backend Developer specializing in Laravel, building modern and scalable web applications.`}
+                    content={`Complete profile and portfolio of ${fullName}. Full-Stack Developer, Backend Developer, and Junior DevOps Engineer. Building reliable, scalable applications.`}
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content={fullName} />
@@ -76,7 +76,7 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
                 <meta name="twitter:title" content={`${fullName} - ${jobTitle}`} />
                 <meta
                     name="twitter:description"
-                    content={`Backend Developer & Software Engineer specializing in Laravel and modern web technologies.`}
+                    content={`Full-Stack Developer, Backend Developer, and Junior DevOps Engineer. Specializing in Laravel, Node.js, and modern web technologies.`}
                 />
                 <meta name="twitter:image" content={`${siteUrl}/images/about.webp`} />
                 <meta name="twitter:image:alt" content={fullName} />

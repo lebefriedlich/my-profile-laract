@@ -15,5 +15,5 @@ Thanks to all the amazing open-source communities and developers who made this p
 
 /* SITE INFORMATION */
 Website: https://mhna.my.id
-Role: Software Engineer, Full-Stack Developer & Backend Developer
-Specialization: Laravel, PHP, Full-Stack Development
+Role: Full-Stack Developer, Backend Developer, Junior DevOps Engineer
+Specialization: Full-Stack Development, Backend Systems, DevOps Infrastructure

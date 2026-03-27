@@ -2,6 +2,7 @@
 
 import { Dialog, Grid } from '@mui/material';
 import { Fragment } from 'react';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 interface portfolioSingleProps {
     maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
@@ -28,6 +29,7 @@ const portfolioSingle = ({
     linkPublish,
     linkSource,
 }: portfolioSingleProps) => {
+    const { t } = useLanguage();
     const paragraphs = doc
         .split(/\n\s*\n/)
         .map((item) => item.trim())
@@ -55,13 +57,13 @@ const portfolioSingle = ({
                                     <h2>{title}</h2>
                                 </div>
                                 <div className="tp-p-role-section">
-                                    <p><i className="bi bi-person-fill"></i> Role : {role}</p>
+                                    <p><i className="bi bi-person-fill"></i> {t('portfolio.role')} : {role}</p>
                                 </div>
                                 <div className="tp-p-details-section">
                                     {paragraphs.map((paragraph, index) => (
                                         <p className="text-justify" key={index}>{paragraph}</p>
                                     ))}
-                                    <h4 className="text-white">Technology :</h4>
+                                    <h4 className="text-white">{t('portfolio.techStack')} :</h4>
                                     {techStack && techStack.length > 0 && (
                                         <div className="tech-stack-list">
                                             {techStack.map((item, index) => (
@@ -77,10 +79,10 @@ const portfolioSingle = ({
                                 </div>
                                 <div className="tp-p-details-section">
                                     {linkSource && (
-                                        <h4 className="text-white">GitHub : <a href={linkSource} target="_blank" rel="noopener noreferrer"><i className="bi bi-github text-white"></i></a></h4>
+                                        <h4 className="text-white">{t('portfolio.viewSource')} : <a href={linkSource} target="_blank" rel="noopener noreferrer"><i className="bi bi-github text-white"></i></a></h4>
                                     )}
                                     {linkPublish && (
-                                        <h4 className="text-white">Published : <a href={linkPublish} target="_blank" rel="noopener noreferrer"><i className="bi bi-globe2 text-white"></i></a></h4>
+                                        <h4 className="text-white">{t('portfolio.viewLive')} : <a href={linkPublish} target="_blank" rel="noopener noreferrer"><i className="bi bi-globe2 text-white"></i></a></h4>
                                     )}
                                 </div>
                             </div>

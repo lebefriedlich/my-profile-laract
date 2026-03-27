@@ -1642,6 +1642,50 @@ button:focus {
   
 }
 
+  /* About Skills */
+  .tp-about-skills {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .tp-about-skills h4 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skill-badge {
+    display: inline-block;
+    background: rgba(243, 246, 254, 0.1);
+    border: 1px solid rgba(243, 246, 254, 0.3);
+    color: #f3f6fe;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+
+  .skill-badge:hover {
+    background: rgba(243, 246, 254, 0.2);
+    border-color: rgba(243, 246, 254, 0.5);
+    transform: translateY(-2px);
+  }
+
+  @media(max-width:768px) {
+    .skill-badge {
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+  }
+
 /* skill-area */
 
 .skill-area {

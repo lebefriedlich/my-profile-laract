@@ -3,16 +3,25 @@
 import React, { Component } from 'react';
 import Typed from 'typed.js';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { useLanguage } from '../../contexts/LanguageContext';
 
+interface HeroProps {
+    t: (key: string) => string;
+}
 
-class Hero extends Component {
+class HeroComponent extends Component<HeroProps> {
     typedRef = React.createRef<HTMLSpanElement>();
     typed: Typed | null = null;
 
     componentDidMount() {
         if (typeof window !== 'undefined') {
+            const { t } = this.props;
             this.typed = new Typed(this.typedRef.current, {
-                strings: ['Full-Stack Developer', 'Backend Developer', 'Junior DevOps Engineer'],
+                strings: [
+                    t('hero.role1'),
+                    t('hero.role2'),
+                    t('hero.role3')
+                ],
                 typeSpeed: 100,
                 backSpeed: 100,
                 loop: true,
@@ -27,6 +36,8 @@ class Hero extends Component {
     }
 
     render() {
+        const { t } = this.props;
+        
         return(
             <section id="home" className="hero hero-slider-wrapper hero-style-1">
                 <div className="hero-slider">
@@ -41,7 +52,7 @@ class Hero extends Component {
                                         <h2><span ref={this.typedRef}></span></h2>
                                     </div>
                                     <div className="btns">
-                                        <AnchorLink href="#contact" className="template-btn go-contact-area">Contact Me</AnchorLink>
+                                        <AnchorLink href="#contact" className="template-btn go-contact-area">{t('hero.cta')}</AnchorLink>
                                     </div>
                                 </div>
                             </div>
@@ -65,5 +76,10 @@ class Hero extends Component {
         )
     }
 }
+
+const Hero = () => {
+    const { t } = useLanguage();
+    return <HeroComponent t={t} />;
+};
 
 export default Hero;

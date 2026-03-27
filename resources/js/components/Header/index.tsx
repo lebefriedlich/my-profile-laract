@@ -2,10 +2,20 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-scroll'
+import { useLanguage } from '../../contexts/LanguageContext';
 
-class Header extends Component {
+interface HeaderProps {
+    t: (key: string) => string;
+    language: string;
+    setLanguage: (lang: string) => void;
+}
 
-    state = {
+interface HeaderState {
+    isOpen: boolean;
+}
+
+class HeaderComponent extends Component<HeaderProps, HeaderState> {
+    state: HeaderState = {
         isOpen: false,
     }
 
@@ -23,6 +33,7 @@ class Header extends Component {
 
     render() {
         const { isOpen } = this.state;
+        const { t, language, setLanguage } = this.props;
 
         return (
             <>
@@ -53,7 +64,7 @@ class Header extends Component {
                                         duration={500}
                                         onClick={this.closeMenu}
                                     >
-                                        Home
+                                        {t('nav.home')}
                                     </Link>
                                 </li>
                                 <li>
@@ -67,7 +78,7 @@ class Header extends Component {
                                         duration={500}
                                         onClick={this.closeMenu}
                                     >
-                                        About Me
+                                        {t('nav.about')}
                                     </Link>
                                 </li>
                                 <li>
@@ -81,7 +92,7 @@ class Header extends Component {
                                         duration={500}
                                         onClick={this.closeMenu}
                                     >
-                                        Resume
+                                        {t('nav.resume')}
                                     </Link>
                                 </li>
                                 <li>
@@ -95,7 +106,7 @@ class Header extends Component {
                                         duration={500}
                                         onClick={this.closeMenu}
                                     >
-                                        Portfolio
+                                        {t('nav.portfolio')}
                                     </Link>
                                 </li>
                                 <li>
@@ -109,8 +120,31 @@ class Header extends Component {
                                         duration={500}
                                         onClick={this.closeMenu}
                                     >
-                                        Contact
+                                        {t('nav.contact')}
                                     </Link>
+                                </li>
+                                <li className="language-switcher">
+                                    <button 
+                                        className={`lang-btn ${language === 'en' ? 'active' : ''}`}
+                                        onClick={() => {
+                                            setLanguage('en');
+                                            this.closeMenu();
+                                        }}
+                                        title="English"
+                                    >
+                                        ENG
+                                    </button>
+                                    <span className="lang-separator">|</span>
+                                    <button 
+                                        className={`lang-btn ${language === 'id' ? 'active' : ''}`}
+                                        onClick={() => {
+                                            setLanguage('id');
+                                            this.closeMenu();
+                                        }}
+                                        title="Bahasa Indonesia"
+                                    >
+                                        IND
+                                    </button>
                                 </li>
                             </ul>
                         </nav>
@@ -132,5 +166,10 @@ class Header extends Component {
         );
     }
 }
+
+const Header = () => {
+    const { t, language, setLanguage } = useLanguage();
+    return <HeaderComponent t={t} language={language} setLanguage={setLanguage} />;
+};
 
 export default Header;

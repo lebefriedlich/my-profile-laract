@@ -1,9 +1,12 @@
 "use client"
 
 import React from 'react';
+import { useLanguage } from '../../contexts/LanguageContext';
 import ContactForm from '../ContactFrom'
 
 const ContactSection = () => {
+    const { t } = useLanguage();
+
     return(
         <section id="contact" className="tp-contact-pg-section section-padding">
             <div className="container">
@@ -19,8 +22,8 @@ const ContactSection = () => {
                                             </div>
                                         </div>
                                         <div className="office-info-text">
-                                            <h2>Address</h2>
-                                            <p>Pasuruan Regency, East Java, Indonesia</p>
+                                            <h2>{t('contact.address')}</h2>
+                                            <p>{t('contact.addressValue')}</p>
                                         </div>
                                     </div>
                                 </div> 
@@ -32,7 +35,7 @@ const ContactSection = () => {
                                             </div>
                                         </div>
                                         <div className="office-info-text">
-                                            <h2>Email Us</h2>
+                                            <h2>{t('contact.email')}</h2>
                                             <p>
                                                 <a href="mailto:noval.akbar.906@gmail.com" className="text-white">noval.akbar.906@gmail.com</a>
                                             </p>
@@ -42,8 +45,8 @@ const ContactSection = () => {
                             </div>
                         </div>
                         <div className="section-title section-title2 text-center">
-                            <span>Contact</span>
-                            <h2>Have Any Question?</h2>
+                            <span>{t('contact.title')}</span>
+                            <h2>{t('contact.subtitle')}</h2>
                         </div>
                         <div className="tp-contact-form-area">
                             <ContactForm/>
