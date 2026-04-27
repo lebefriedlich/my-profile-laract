@@ -19,7 +19,7 @@ const translations = {
             desc2: 'I\'ve delivered Decision Support Systems with weighted scoring, RESTful APIs for regional data and WhatsApp automation, event platforms with real-time notifications, donation systems with payment integrations, and cross-platform mobile apps. At GenBI Malang, I combined backend development with DevOps responsibilities, including managing Nginx servers, setting up monitoring, handling backups, and implementing structured authentication flows. Each project taught me to balance development speed with maintainability, security, and long-term operational stability.',
             desc3: 'I approach problems with a full-stack mindset, not only writing code but also considering deployment, scaling, and monitoring from the start. I value clean architecture, automated testing, and clear documentation that helps teams move fast without breaking things. I\'m committed to continuous learning, whether adopting new frameworks, refining DevOps practices, or sharing knowledge with the developer community. My goal is to build software that solves real problems and systems that teams can rely on with confidence.',
             skillsTitle: 'Skills & Technologies',
-            skills: ['Laravel', 'Node.js (Express.js, Fastify)', 'Inertia.js', 'React', 'Next.js', 'Flask'],
+            skills: ['Laravel', 'Node.js (Express.js, Fastify)', 'Inertia.js', 'React', 'Next.js', 'Flask', 'CodeIgniter'],
         },
         resume: {
             title: 'Resume',
@@ -128,7 +128,7 @@ const translations = {
             desc2: 'Saya telah menghadirkan Sistem Pendukung Keputusan dengan penilaian berbobot, API RESTful untuk data regional dan otomasi WhatsApp, platform acara dengan notifikasi real-time, sistem donasi dengan integrasi pembayaran, serta aplikasi mobile lintas platform. Di GenBI Malang, saya menggabungkan pengembangan backend dengan tanggung jawab DevOps, termasuk mengelola server Nginx, menyiapkan monitoring, menangani backup, dan mengimplementasikan alur autentikasi terstruktur. Setiap proyek mengajarkan saya menyeimbangkan kecepatan pengembangan dengan maintainability, keamanan, dan stabilitas operasional jangka panjang.',
             desc3: 'Saya mendekati masalah dengan pola pikir full-stack, bukan hanya menulis kode, tetapi juga mempertimbangkan deployment, scaling, dan monitoring sejak awal. Saya menghargai arsitektur yang bersih, testing otomatis, dan dokumentasi yang jelas agar tim bisa bergerak cepat tanpa merusak sistem. Saya berkomitmen pada pembelajaran berkelanjutan, baik dengan mengadopsi framework baru, menyempurnakan praktik DevOps, maupun berbagi pengetahuan dengan komunitas developer. Tujuan saya adalah membangun software yang menyelesaikan masalah nyata dan sistem yang dapat diandalkan tim dengan percaya diri.',
             skillsTitle: 'Keahlian & Teknologi',
-            skills: ['Laravel', 'Node.js (Express.js, Fastify)', 'Inertia.js', 'React', 'Next.js', 'Flask'],
+            skills: ['Laravel', 'Node.js (Express.js, Fastify)', 'Inertia.js', 'React', 'Next.js', 'Flask', 'CodeIgniter'],
         },
         resume: {
             title: 'Resume',
