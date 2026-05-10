@@ -45,7 +45,7 @@ const portfolio = () => {
             Id: '1',
             heading: 'DSS',
             subHeading: 'PilihAsdos',
-            role: 'Full-Stack Web Developer',
+            role: 'Full-Stack Developer',
             pImg1: 'images/portfolio/SPK Pilih Asdos.webp',
             des: t('portfolio.dss.desc'),
             techStack: ['Laravel', 'Bootstrap', 'MySQL'],
@@ -67,7 +67,7 @@ const portfolio = () => {
             Id: '3',
             heading: 'EventHub',
             subHeading: 'UIN Malang EventHub',
-            role: 'Full-Stack Web Developer',
+            role: 'Full-Stack Developer',
             pImg1: 'images/portfolio/UIN Malang EventHub.webp',
             des: t('portfolio.eventhub.desc'),
             techStack: ['Laravel', 'Bootstrap', 'MySQL'],
@@ -166,23 +166,45 @@ As a Full-Stack Developer, I implemented campaign CRUD, Midtrans payment integra
             pImg1: 'images/portfolio/GenBI Malang.webp',
             des: `GenBI (Generasi Baru Indonesia) Koordinator Wilayah Malang is the official Bank Indonesia Scholarship Community committed to driving positive change across the Malang region. Recipients of the Bank Indonesia Scholarship don't just receive educational funding—they automatically become part of GenBI, a nationwide community focused on developing superior and competent generations. As a key component of Bank Indonesia's contribution to national human capital development, GenBI Malang serves as a platform for news, events, member engagement, and collaborative initiatives. The community website displays announcements, event registrations, educational materials, and member resources. Pages are designed lightweight for seamless access across devices, with content regularly updated to keep members informed. Form integration helps committees efficiently collect participant data for events and programs.
 
-As Backend Developer & Junior DevOps, I managed Linux servers with Nginx, established CI/CD pipelines, and configured monitoring and automated backups. I implemented authentication, RBAC, and structured API endpoints in Laravel/Fastify to ensure security and high performance. I set up comprehensive logging and alerts to detect production issues immediately. I optimized database queries and implemented strategic caching so news, event listings, and member pages load quickly even during peak traffic. I created deployment documentation and incident response SOPs so the team can confidently maintain and scale the system as the community grows.`,
+As Backend Developer & Junior DevOps, I containerized the application using Docker and Docker Compose to ensure environment consistency across development and production. I managed Linux servers with Nginx as a reverse proxy, established CI/CD pipelines with GitHub Actions, and configured monitoring and automated backups. I implemented authentication, RBAC, and structured API endpoints in Laravel/Fastify to ensure security and high performance. I set up comprehensive logging and alerts to detect production issues immediately. I optimized database queries and implemented strategic caching so news, event listings, and member pages load quickly even during peak traffic. I created deployment documentation and incident response SOPs so the team can confidently maintain and scale the system as the community grows.`,
             techStack: [
                 'Laravel',
-                'Socialite',
-                'OAuth Google',
-                'MySQL',
                 'Fastify',
                 'Prisma',
                 'MySQL',
+                'Docker',
+                'Docker Compose',
                 'Ubuntu',
                 'Nginx',
-                'PM2',
                 'GitHub Actions',
+                'Socialite',
+                'OAuth Google',
             ],
             linkSource:
                 'https://github.com/lebefriedlich/DevOps-Portfolio',
             linkPublish: 'https://www.genbi-malang.org',
+        },
+        {
+            Id: '10',
+            heading: 'Karivio',
+            subHeading: 'Job Application & CV Management',
+            role: 'Full-Stack Developer',
+            pImg1: 'images/portfolio/Karivio.webp',
+            des: `Karivio is a modern platform designed to streamline job applications and career document management. It features a dynamic CV builder and cover letter generator, allowing users to create professional documents with ease. The system integrates directly with the Google API, enabling users to send applications via Gmail without leaving the platform. It also includes tracking for application history and centralized file management for career-related documents.
+
+As a Full-Stack Developer, I built the application using Laravel 13 and Livewire 4, focusing on a reactive and seamless user experience. I implemented the Google OAuth authentication flow and integrated the Google API Client for email functionality. I also set up high-quality PDF generation for documents using DomPDF. I ensured the system was robust by implementing comprehensive form validation, secure data handling, and optimized database queries to maintain performance as the user's application history grows.`,
+            techStack: [
+                'Laravel 13',
+                'Livewire 4',
+                'Alpine.js',
+                'Google API Client',
+                'Google OAuth',
+                'DomPDF',
+                'MySQL',
+            ],
+            linkSource:
+                'https://github.com/lebefriedlich/Karivio',
+            linkPublish: 'https://karivio.mhna.my.id',
         },
     ];
 
