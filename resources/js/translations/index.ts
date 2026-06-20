@@ -8,6 +8,8 @@ const translations = {
             contact: 'Contact',
         },
         hero: {
+            hi: 'Hi Folks',
+            iam: 'I am a',
             role1: 'Software Engineer',
             role2: 'Backend Developer',
             role3: 'Full Stack Developer',
@@ -18,6 +20,23 @@ const translations = {
             desc1: "I am a Software Engineer specializing in Backend Development with experience in developing, maintaining, and optimizing web-based applications in production environments. My expertise includes REST API development, administration dashboards, system integrations, and backend services management, along with solid Full Stack Development and infrastructure management capabilities.",
             desc2: "I played a key role in the full platform migration from Laravel API and React Native architecture to a Progressive Web App (PWA) using Webman, HTMX, and Alpine.js, handling over 10 feature developments and 20 system enhancements on actively used applications. I have hands-on experience in Redis Cache implementation, database query optimization, CI/CD pipelines via GitHub Actions and Docker, as well as deployment and maintenance on Linux Server environments.",
             desc3: "Beyond my professional experience, I have led a developer team for an organization's digital platform and actively provided technical mentoring to over 40 students in web programming and software engineering. Backed by certifications in Java, JavaScript, SQL, and Software Development, I possess strong competencies in backend engineering, system architecture, database optimization, and scalable, maintainable application development.",
+            residence: 'Residence',
+            residenceValue: 'Indonesia',
+            freelance: 'Freelance',
+            available: 'Available',
+            whatIDo: 'What I Do',
+            role1: {
+                title: 'Full Stack Developer',
+                desc: 'Developing robust web applications and Progressive Web Apps (PWA) using modern technologies like Laravel, Webman, React, and Alpine.js.'
+            },
+            role2: {
+                title: 'Backend Developer',
+                desc: 'Specializing in RESTful APIs, database optimization, and high-performance architecture. Experienced in query optimization and Redis caching.'
+            },
+            role3: {
+                title: 'Junior DevOps',
+                desc: 'Continuously learning to containerize apps with Docker, automate deployments via GitHub Actions, and configure Linux servers. Always eager to grow.'
+            },
             skillsTitle: 'Competencies & Technical Skills',
             skills: [
                 'RESTful API Engineering',
@@ -154,6 +173,8 @@ const translations = {
             contact: 'Kontak',
         },
         hero: {
+            hi: 'Halo Semua',
+            iam: 'Saya seorang',
             role1: 'Software Engineer',
             role2: 'Backend Developer',
             role3: 'Full Stack Developer',
@@ -164,6 +185,23 @@ const translations = {
             desc1: 'Software Engineer dengan spesialisasi Backend Developer dengan pengalaman dalam pengembangan, pemeliharaan, dan optimasi aplikasi berbasis web pada lingkungan produksi, mencakup pengembangan REST API, dashboard administrasi, integrasi sistem, serta pengelolaan layanan backend yang mendukung operasional bisnis sekaligus memiliki kemampuan Full Stack Development dan pengelolaan infrastruktur aplikasi.',
             desc2: 'Berperan dalam migrasi penuh platform aplikasi dari arsitektur Laravel API dan React Native menjadi Progressive Web App (PWA) berbasis Webman, HTMX, dan Alpine.js, sekaligus menangani 10+ pengembangan fitur serta 20+ perbaikan dan peningkatan sistem pada aplikasi yang aktif digunakan. Memiliki pengalaman dalam implementasi Redis Cache, optimasi query database, CI/CD pipeline berbasis GitHub Actions dan Docker, serta deployment dan maintenance aplikasi pada lingkungan Linux Server.',
             desc3: 'Selain pengalaman profesional, dipercaya memimpin tim developer dalam pengembangan platform digital organisasi dan aktif memberikan technical mentoring kepada 40+ mahasiswa pada bidang pemrograman web dan software engineering. Didukung sertifikasi Java Programming, JavaScript, SQL, dan Software Development, dengan kompetensi yang kuat dalam backend engineering, system architecture, database optimization, dan pengembangan aplikasi yang scalable, maintainable serta berorientasi pada kebutuhan pengguna dan bisnis.',
+            residence: 'Tempat Tinggal',
+            residenceValue: 'Indonesia',
+            freelance: 'Pekerjaan Lepas',
+            available: 'Tersedia',
+            whatIDo: 'Apa Yang Saya Lakukan',
+            role1: {
+                title: 'Full Stack Developer',
+                desc: 'Mengembangkan aplikasi web dan Progressive Web Apps (PWA) yang tangguh menggunakan teknologi modern seperti Laravel, Webman, React, dan Alpine.js.'
+            },
+            role2: {
+                title: 'Backend Developer',
+                desc: 'Ahli dalam pengembangan RESTful API, optimasi database, dan arsitektur berkinerja tinggi. Berpengalaman dalam optimasi query dan caching menggunakan Redis.'
+            },
+            role3: {
+                title: 'Junior DevOps',
+                desc: 'Terus belajar mengemas aplikasi menggunakan Docker, mengotomatisasi deployment lewat GitHub Actions, serta mengonfigurasi server Linux. Selalu antusias untuk berkembang.'
+            },
             skillsTitle: 'Kompetensi Keahlian & Technical Skills',
             skills: [
                 'RESTful API Engineering',
@@ -268,7 +306,7 @@ const translations = {
             title: 'Kontak',
             subtitle: 'Ada Pertanyaan?',
             address: 'Alamat',
-            addressValue: 'Kabupaten Pasuruan, Jawa Timur, Indonesia',
+            addressValue: 'Kabupaten Pasuruan, Jawa Timur',
             email: 'Email',
             form: {
                 name: 'Nama',

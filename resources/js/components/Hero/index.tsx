@@ -30,13 +30,13 @@ const Hero = () => {
     return (
         <div className="flex flex-col items-center justify-center w-full h-full text-center transition-all duration-700 min-h-[400px]">
             <h3 className="text-xl md:text-2xl text-neutral-400 mb-2 font-light">
-                Hi Folks <span className="inline-block animate-wave">👋🏻</span>
+                {t('hero.hi')} <span className="inline-block animate-wave">👋🏻</span>
             </h3>
             <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold text-white mb-4 leading-tight">
                 Maulana Haekal Noval Akbar
             </h1>
             <h2 className="text-lg md:text-xl lg:text-2xl text-primary-cyan font-light h-[40px] flex items-center justify-center gap-2">
-                <span className="text-neutral-400">I am a</span> <span ref={typedRef}></span>
+                <span className="text-neutral-400">{t('hero.iam')}</span> <span ref={typedRef}></span>
             </h2>
 
             <style>{`

@@ -9,7 +9,7 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ activeSection, setActiveSection, isOpen, setIsOpen }) => {
-    const { t } = useLanguage();
+    const { t, language, setLanguage } = useLanguage();
 
     const navItems = [
         { id: 'home', icon: 'bi-house-door', label: t('nav.home') },
@@ -46,7 +46,23 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ activeSection, setActiveSection
                         />
                     </div>
                     <h2 className="text-3xl text-white font-bold mb-2 text-center">Maulana Haekal Noval Akbar</h2>
-                    <h4 className="text-neutral-300 text-sm mb-8 text-center font-light">{t('about.title')}</h4>
+                    <h4 className="text-neutral-300 text-sm mb-6 text-center font-light">{t('about.title')}</h4>
+
+                    {/* Language Switcher */}
+                    <div className="flex items-center gap-1 mb-8 bg-white/5 p-1 rounded-full border border-white/10">
+                        <button 
+                            onClick={() => { setLanguage('en'); setIsOpen(false); }}
+                            className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${language === 'en' ? 'bg-primary-cyan text-white shadow-lg' : 'text-neutral-400 hover:text-white'}`}
+                        >
+                            EN
+                        </button>
+                        <button 
+                            onClick={() => { setLanguage('id'); setIsOpen(false); }}
+                            className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${language === 'id' ? 'bg-primary-cyan text-white shadow-lg' : 'text-neutral-400 hover:text-white'}`}
+                        >
+                            ID
+                        </button>
+                    </div>
 
                     {/* Social Links */}
                     <div className="flex gap-4 mb-10">

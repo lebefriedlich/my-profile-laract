@@ -68,8 +68,8 @@ const ContactSection = () => {
                             <i className="bi bi-person-workspace text-xl text-primary-cyan"></i>
                         </div>
                         <div className="flex-1 min-w-0">
-                            <h4 className="text-white font-bold text-sm mb-1">Freelance</h4>
-                            <p className="text-primary-cyan text-[12px] xl:text-[13px] font-semibold">Available</p>
+                            <h4 className="text-white font-bold text-sm mb-1">{t('about.freelance')}</h4>
+                            <p className="text-primary-cyan text-[12px] xl:text-[13px] font-semibold">{t('about.available')}</p>
                         </div>
                     </div>
                 </div>

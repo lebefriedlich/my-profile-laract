@@ -23,52 +23,52 @@ const About = () => {
                 <div className="lg:col-span-5">
                     <ul className="flex flex-col gap-3">
                         <li className="flex justify-between items-center py-2 border-b border-neutral-700/50">
-                            <span className="text-primary-cyan font-bold text-sm uppercase tracking-wider whitespace-nowrap">Residence</span>
-                            <span className="text-neutral-300 text-sm text-right ml-4">Indonesia</span>
+                            <span className="text-primary-cyan font-bold text-sm uppercase tracking-wider whitespace-nowrap">{t('about.residence')}</span>
+                            <span className="text-neutral-300 text-sm text-right ml-4">{t('about.residenceValue')}</span>
                         </li>
                         <li className="flex justify-between items-center py-2 border-b border-neutral-700/50">
                             <span className="text-primary-cyan font-bold text-sm uppercase tracking-wider whitespace-nowrap">{t('contact.address')}</span>
-                            <span className="text-neutral-300 text-sm text-right ml-4">Kab. Pasuruan</span>
+                            <span className="text-neutral-300 text-sm text-right ml-4">{t('contact.addressValue')}</span>
                         </li>
                         <li className="flex justify-between items-center py-2 border-b border-neutral-700/50">
-                            <span className="text-primary-cyan font-bold text-sm uppercase tracking-wider whitespace-nowrap">E-mail</span>
+                            <span className="text-primary-cyan font-bold text-sm uppercase tracking-wider whitespace-nowrap">{t('contact.email')}</span>
                             <span className="text-neutral-300 text-sm text-right break-all ml-4">noval.akbar.906@gmail.com</span>
                         </li>
                         <li className="flex justify-between items-center py-2 border-b border-neutral-700/50">
-                            <span className="text-primary-cyan font-bold text-sm uppercase tracking-wider whitespace-nowrap">Freelance</span>
-                            <span className="text-primary-cyan font-semibold text-sm text-right ml-4">Available</span>
+                            <span className="text-primary-cyan font-bold text-sm uppercase tracking-wider whitespace-nowrap">{t('about.freelance')}</span>
+                            <span className="text-primary-cyan font-semibold text-sm text-right ml-4">{t('about.available')}</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
             {/* What I Do Section */}
-            <h3 className="text-2xl font-bold text-white mb-8">What I Do</h3>
+            <h3 className="text-2xl font-bold text-white mb-8">{t('about.whatIDo')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 <div className="bg-[#2a2a2a]/40 backdrop-blur-md border border-white/5 p-6 rounded-2xl flex gap-4 hover:bg-[#2a2a2a]/60 hover:border-primary-cyan/30 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out">
                     <i className="bi bi-code-slash text-4xl text-primary-cyan"></i>
                     <div>
-                        <h4 className="text-white font-bold text-lg mb-2">{t('hero.role3')}</h4>
+                        <h4 className="text-white font-bold text-lg mb-2">{t('about.role1.title')}</h4>
                         <p className="text-neutral-400 text-sm font-light leading-relaxed">
-                            Developing robust web applications and Progressive Web Apps (PWA) using modern technologies like Laravel, Webman, React, and Alpine.js.
+                            {t('about.role1.desc')}
                         </p>
                     </div>
                 </div>
                 <div className="bg-[#2a2a2a]/40 backdrop-blur-md border border-white/5 p-6 rounded-2xl flex gap-4 hover:bg-[#2a2a2a]/60 hover:border-primary-cyan/30 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out">
                     <i className="bi bi-hdd-network text-4xl text-primary-cyan"></i>
                     <div>
-                        <h4 className="text-white font-bold text-lg mb-2">{t('hero.role2')}</h4>
+                        <h4 className="text-white font-bold text-lg mb-2">{t('about.role2.title')}</h4>
                         <p className="text-neutral-400 text-sm font-light leading-relaxed">
-                            Specializing in RESTful APIs, database optimization, and high-performance architecture. Experienced in query optimization and Redis caching.
+                            {t('about.role2.desc')}
                         </p>
                     </div>
                 </div>
                 <div className="bg-[#2a2a2a]/40 backdrop-blur-md border border-white/5 p-6 rounded-2xl flex gap-4 hover:bg-[#2a2a2a]/60 hover:border-primary-cyan/30 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out md:col-span-2 lg:col-span-1">
                     <i className="bi bi-cloud-check text-4xl text-primary-cyan"></i>
                     <div>
-                        <h4 className="text-white font-bold text-lg mb-2">Junior DevOps</h4>
+                        <h4 className="text-white font-bold text-lg mb-2">{t('about.role3.title')}</h4>
                         <p className="text-neutral-400 text-sm font-light leading-relaxed">
-                            Continuously learning to containerize apps with Docker, automate deployments via GitHub Actions, and configure Linux servers. Always eager to grow.
+                            {t('about.role3.desc')}
                         </p>
                     </div>
                 </div>
