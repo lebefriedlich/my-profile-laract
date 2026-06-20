@@ -67,20 +67,20 @@ const HomePage = () => {
     };
 
     return (
-        <div className="flex flex-col w-full relative p-6 md:p-10 min-h-full">
-            <div className={`w-full transition-all duration-500 ease-in-out transform ${
+        <div className="flex flex-col w-full flex-1 relative p-6 md:p-10">
+            <div className={`w-full flex-1 flex flex-col justify-center transition-all duration-500 ease-in-out transform ${
                 isAnimating ? 'opacity-0 scale-95 -translate-x-8' : 'opacity-100 scale-100 translate-x-0'
             }`}>
                 {renderComponent()}
             </div>
-            
+
             {/* Desktop Navigation Portals */}
             {mounted && document.getElementById('desktop-controls-portal') && createPortal(
                 <>
                     <FloatingNav activeSection={activeSection} setActiveSection={setActiveSection} />
-                    
+
                     <div className="w-[70px] bg-[#444] rounded-[35px] shadow-[0_0_30px_rgba(0,0,0,0.2)] flex flex-col items-center overflow-hidden py-2 mt-auto">
-                        <button 
+                        <button
                             onClick={handlePrev}
                             className="w-full h-12 flex items-center justify-center text-neutral-400 hover:text-primary-cyan transition-colors"
                             aria-label="Previous Section"
@@ -88,7 +88,7 @@ const HomePage = () => {
                             <i className="bi bi-chevron-up text-xl"></i>
                         </button>
                         <div className="w-8 h-px bg-white/10 mx-auto"></div>
-                        <button 
+                        <button
                             onClick={handleNext}
                             className="w-full h-12 flex items-center justify-center text-neutral-400 hover:text-primary-cyan transition-colors"
                             aria-label="Next Section"
@@ -102,8 +102,8 @@ const HomePage = () => {
 
             {/* Mobile Navigation Portals */}
             {mounted && document.getElementById('mobile-menu-portal') && createPortal(
-                <MobileMenu 
-                    activeSection={activeSection} 
+                <MobileMenu
+                    activeSection={activeSection}
                     setActiveSection={setActiveSection}
                     isOpen={isMobileMenuOpen}
                     setIsOpen={setIsMobileMenuOpen}

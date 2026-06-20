@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Head } from '@inertiajs/react';
 import SidebarProfile from '../components/SidebarProfile';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -10,9 +11,11 @@ interface LayoutProps {
 
 const RootLayout: React.FC<LayoutProps> = ({ children }) => {
     const [mounted, setMounted] = useState(false);
+    const { t } = useLanguage();
+
     const siteUrl = 'https://mhna.my.id';
     const fullName = 'Maulana Haekal Noval Akbar';
-    const jobTitle = 'Full-Stack Developer, Backend Developer, Junior DevOps Engineer';
+    const description = t('about.desc1').substring(0, 150) + '...';
 
     useEffect(() => {
         setMounted(true);
@@ -20,16 +23,30 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
 
     return (
         <>
-            <Head title={`${fullName} - ${jobTitle} | Personal Website`}>
+            <Head title={`${fullName} | Personal Website`}>
                 <link rel="canonical" href={siteUrl} />
-                <meta name="description" content={`${fullName} - ${jobTitle}. Specializing in Full-Stack Development, Backend Systems, and DevOps Infrastructure.`} />
+                <meta name="description" content={description} />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
                 <meta name="theme-color" content="#171717" />
+
+                {/* Open Graph */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={siteUrl} />
+                <meta property="og:title" content={`${fullName} | Personal Website`} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={`${siteUrl}/images/about.webp`} />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content={siteUrl} />
+                <meta name="twitter:title" content={`${fullName} | Personal Website`} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={`${siteUrl}/images/about.webp`} />
             </Head>
 
             <div className="min-h-screen lg:py-[10vh] flex items-center justify-center relative bg-[#111] overflow-hidden lg:px-4">
                 <LanguageSwitcher />
-                
+
                 {/* Subtle Background Texture */}
                 <div className="fixed inset-0 z-0 opacity-10 pointer-events-none mix-blend-overlay" style={{ backgroundImage: 'url(/images/main_bg.png)', backgroundRepeat: 'repeat' }}></div>
 
@@ -40,7 +57,7 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
                     <div id="mobile-menu-portal" className="block lg:hidden z-[110]"></div>
 
                     <SidebarProfile />
-                    <div className="flex-1 h-full overflow-y-auto custom-scrollbar relative scroll-smooth lg:rounded-r-[30px] w-full">
+                    <div className="flex-1 h-full overflow-y-auto custom-scrollbar relative scroll-smooth lg:rounded-r-[30px] w-full flex flex-col">
                         {children}
                     </div>
 
