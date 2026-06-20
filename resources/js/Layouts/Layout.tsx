@@ -1,15 +1,8 @@
 // resources/js/Layouts/Layout.tsx
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
-import '../../styles/animate.css';
-import '../../styles/flaticon.css';
-import '../../styles/font-awesome.min.css';
-import '../../styles/style.css';
 import { Head } from '@inertiajs/react';
+import SidebarProfile from '../components/SidebarProfile';
 
-// Definisikan tipe untuk props komponen
 interface LayoutProps {
     children: React.ReactNode;
 }
@@ -19,96 +12,33 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
     const fullName = 'Maulana Haekal Noval Akbar';
     const jobTitle = 'Full-Stack Developer, Backend Developer, Junior DevOps Engineer';
 
-    const structuredData = {
-        '@context': 'https://schema.org',
-        '@type': 'Person',
-        'name': fullName,
-        'jobTitle': jobTitle,
-        'url': siteUrl,
-        'image': `${siteUrl}/images/about.webp`,
-        'sameAs': [
-            'https://www.linkedin.com/in/maulana-haekal/',
-            'https://github.com/lebefriedlich',
-            'https://www.instagram.com/novalakbar38/'
-        ],
-        'worksFor': {
-            '@type': 'Organization',
-            'name': 'Kriingg'
-        },
-        'description': 'Full-Stack Developer, Backend Developer, and Junior DevOps Engineer specializing in Laravel and modern web technologies. Building reliable, secure systems ready for production.'
-    };
-
     return (
         <>
             <Head title={`${fullName} - ${jobTitle} | Personal Website`}>
-                {/* Canonical URL */}
                 <link rel="canonical" href={siteUrl} />
-
-                {/* Basic SEO */}
-                <meta
-                    name="description"
-                    content={`${fullName} - ${jobTitle}. Specializing in Full-Stack Development, Backend Systems, and DevOps Infrastructure. Building scalable, secure applications with Laravel, Node.js, and React.`}
-                />
-                <meta
-                    name="keywords"
-                    content="Maulana Haekal Noval Akbar, Backend Developer, Laravel Developer, Software Engineer, Full-Stack Developer, PHP Developer, Web Developer, Indonesia, Malang"
-                />
-                <meta name="author" content={fullName} />
+                <meta name="description" content={`${fullName} - ${jobTitle}. Specializing in Full-Stack Development, Backend Systems, and DevOps Infrastructure.`} />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <meta name="theme-color" content="#191919" />
-                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-
-                {/* Open Graph */}
-                <meta property="og:title" content={`${fullName} - ${jobTitle}`} />
-                <meta
-                    property="og:description"
-                    content={`Complete profile and portfolio of ${fullName}. Full-Stack Developer, Backend Developer, and Junior DevOps Engineer. Building reliable, scalable applications.`}
-                />
-                <meta property="og:type" content="website" />
-                <meta property="og:site_name" content={fullName} />
-                <meta property="og:url" content={siteUrl} />
-                <meta property="og:image" content={`${siteUrl}/images/about.webp`} />
-                <meta property="og:image:alt" content={fullName} />
-                <meta property="og:locale" content="en_US" />
-
-                {/* Twitter Card */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={`${fullName} - ${jobTitle}`} />
-                <meta
-                    name="twitter:description"
-                    content={`Full-Stack Developer, Backend Developer, and Junior DevOps Engineer. Specializing in Laravel, Node.js, and modern web technologies.`}
-                />
-                <meta name="twitter:image" content={`${siteUrl}/images/about.webp`} />
-                <meta name="twitter:image:alt" content={fullName} />
-
-                {/* JSON-LD Structured Data */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-                />
-
-                {/* Additional structured data for breadcrumbs */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            '@context': 'https://schema.org',
-                            '@type': 'BreadcrumbList',
-                            'itemListElement': [
-                                {
-                                    '@type': 'ListItem',
-                                    'position': 1,
-                                    'name': 'Home',
-                                    'item': siteUrl
-                                }
-                            ]
-                        })
-                    }}
-                />
+                <meta name="theme-color" content="#171717" />
             </Head>
 
-            <div className="app-layout">
-                {children}
+            <div className="min-h-screen lg:py-[10vh] flex items-center justify-center relative bg-[#111] overflow-hidden lg:px-4">
+                {/* Subtle Background Texture */}
+                <div className="fixed inset-0 z-0 opacity-10 pointer-events-none mix-blend-overlay" style={{ backgroundImage: 'url(/images/main_bg.png)', backgroundRepeat: 'repeat' }}></div>
+
+                {/* Main Card (Subtle Glassmorphism) */}
+                <div className="w-full max-w-[1280px] h-full lg:h-[80vh] min-h-[600px] bg-[#222]/80 backdrop-blur-xl border border-white/5 lg:rounded-[30px] shadow-2xl flex flex-col lg:flex-row relative z-10">
+
+                    {/* Portal Target for Mobile Menu Toggle */}
+                    <div id="mobile-menu-portal" className="block lg:hidden z-[110]"></div>
+
+                    <SidebarProfile />
+                    <div className="flex-1 h-full overflow-y-auto custom-scrollbar relative scroll-smooth lg:rounded-r-[30px] w-full">
+                        {children}
+                    </div>
+
+                    {/* Portal Target for Desktop Right Controls */}
+                    <div id="desktop-controls-portal" className="hidden lg:flex flex-col justify-between absolute right-[-80px] top-0 bottom-0 py-8 z-[100] w-[70px]"></div>
+                </div>
             </div>
         </>
     );

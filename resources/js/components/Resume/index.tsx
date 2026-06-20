@@ -1,112 +1,69 @@
-"use client"
-
 import React from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 
-const Service = () => {
-    const { t } = useLanguage();
+const Resume = () => {
+    const { t, tArray } = useLanguage();
 
-    const education = [
-        {
-            id: 'edu-1',
-            icon: 'fi flaticon-graduation-cap',
-            title: t('resume.gradCap'),
-            place: t('resume.gradPlace'),
-            year: t('resume.gradYear'),
-            desc: t('resume.gradDesc')
-        }
-    ];
+    const education = tArray('resume.educationList') || [];
+    const experience = tArray('resume.experienceList') || [];
 
-    const experience = [
-        {
-            id: 'exp-1',
-            icon: 'fi flaticon-briefcase',
-            title: t('resume.exp1Title'),
-            place: t('resume.exp1Place'),
-            year: t('resume.exp1Year'),
-            desc: t('resume.exp1Desc'),
-        },
-        {
-            id: 'exp-2',
-            icon: 'fi flaticon-briefcase',
-            title: t('resume.exp2Title'),
-            place: t('resume.exp2Place'),
-            year: t('resume.exp2Year'),
-            desc: t('resume.exp2Desc'),
-        },
-        {
-            id: 'exp-3',
-            icon: 'fi flaticon-briefcase',
-            title: t('resume.exp3Title'),
-            place: t('resume.exp3Place'),
-            year: t('resume.exp3Year'),
-            desc: t('resume.exp3Desc'),
-        },
-    ];
+    const TimelineItem = ({ data }: { data: any }) => (
+        <div className="relative pl-8 mb-10 before:content-[''] before:absolute before:-left-[5px] before:top-2 before:w-3 before:h-3 before:bg-primary-cyan before:rounded-full before:shadow-[0_0_0_4px_rgba(4,180,224,0.2)]">
+            <h4 className="text-white text-lg font-bold mb-1">{data.institution}</h4>
+            <span className="text-primary-cyan text-sm font-semibold block mb-1">{data.year}</span>
+            <span className="text-neutral-400 text-sm block mb-3">{data.title}</span>
+            <p className="text-neutral-500 font-light text-sm leading-relaxed">{data.description}</p>
+        </div>
+    );
+
+    const skills = tArray('about.skills');
 
     return (
-        <div id="resume" className="resume-area section-padding">
-            <div className="borderd"></div>
-            <div className="container">
-                <div className="col-l2">
-                    <div className="section-title section-title2 text-center">
-                        <span>{t('resume.title')}</span>
-                        <h2>{t('resume.subtitle')}</h2>
+        <div className="animate-[fadeIn_0.5s_ease-in-out]">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-10 flex items-center gap-4">
+                {t('resume.title')}
+                <div className="h-px bg-primary-cyan/50 flex-1"></div>
+            </h2>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-12">
+                {/* Experience Column */}
+                <div>
+                    <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                        <i className="bi bi-briefcase text-primary-cyan text-3xl"></i>
+                        {t('resume.experience')}
+                    </h3>
+                    <div className="relative border-l border-neutral-700 pt-2">
+                        {experience.map((item, index) => (
+                            <TimelineItem key={index} data={item} />
+                        ))}
                     </div>
                 </div>
-                <div className="row resume-two-col ms-2">
-                    <div className="col-lg-6 col-md-12">
-                        <div className="resume-section">
-                            <div className="section-title section-title2">
-                                <h3 className="text-white">{t('resume.education')}</h3>
-                            </div>
-                            <div className="resume-list">
-                                {education.map((item) => (
-                                    <div className="resume-item mt-4" key={item.id}>
-                                        <div className="resume-meta">
-                                            <i className={item.icon}></i>
-                                            <span className="resume-date text-white">{item.year}</span>
-                                        </div>
-                                        <div className="resume-info">
-                                            <h4 className="text-white">{item.title}</h4>
-                                            <p className="resume-place"><strong>{item.place}</strong></p>
-                                            <p className="text-justify">{item.desc}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-md-12">
-                        <div className="resume-section">
-                            <div className="section-title section-title2">
-                                <h3 className="text-white">{t('resume.experience')}</h3>
-                            </div>
-                            <div className="resume-list">
-                                {experience.map((item) => (
-                                    <div className="resume-item mt-4" key={item.id}>
-                                        <div className="resume-meta">
-                                            <i className={item.icon}></i>
-                                            <span className="resume-date text-white">{item.year}</span>
-                                        </div>
-                                        <div className="resume-info">
-                                            <h4 className="text-white">{item.title}</h4>
-                                            <p className="resume-place"><strong>{item.place}</strong></p>
-                                            <p className="text-justify">{item.desc}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+
+                {/* Education Column */}
+                <div>
+                    <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                        <i className="bi bi-journal-bookmark text-primary-cyan text-3xl"></i>
+                        {t('resume.education')}
+                    </h3>
+                    <div className="relative border-l border-neutral-700 pt-2">
+                        {education.map((item, index) => (
+                            <TimelineItem key={index} data={item} />
+                        ))}
                     </div>
                 </div>
             </div>
-            <div className="white_svg">
-                <svg x="0px" y="0px" viewBox="0 186.5 1920 113.5">
-                    <polygon points="0,300 655.167,210.5 1432.5,300 1920,198.5 1920,300 "></polygon>
-                </svg>
+
+            {/* Skills Section */}
+            <h3 className="text-2xl font-bold text-white mb-8">{t('about.skillsTitle')}</h3>
+            <div className="flex flex-wrap gap-3">
+                {skills && skills.length > 0 && skills.map((skill: string, index: number) => (
+                    <span key={index} className="bg-transparent border border-primary-cyan text-primary-cyan px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary-cyan hover:text-white transition-colors">
+                        {skill}
+                    </span>
+                ))}
             </div>
         </div>
     );
-}
-export default Service;
+};
+
+export default Resume;

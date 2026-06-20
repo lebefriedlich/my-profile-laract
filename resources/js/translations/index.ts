@@ -8,40 +8,77 @@ const translations = {
             contact: 'Contact',
         },
         hero: {
-            role1: 'Full-Stack Developer',
+            role1: 'Software Engineer',
             role2: 'Backend Developer',
-            role3: 'Junior DevOps Engineer',
+            role3: 'Full Stack Developer',
             cta: 'Contact Me',
         },
         about: {
-            title: 'Full-Stack Developer, Backend Developer, Junior DevOps Engineer',
-            desc1: 'Hi, I\'m Maulana Haekal Noval Akbar, and you can call me Haekal. I specialize in backend development, full-stack web applications, and infrastructure operations. With hands-on experience in Laravel, Node.js (Express.js and Fastify), Inertia.js, React, Next.js, Flask, and server management, I build systems that are reliable, secure, and production-ready. My work covers API design, database optimization, CI/CD pipelines, and Linux server administration, ensuring applications run efficiently from code to deployment.',
-            desc2: 'I\'ve delivered Decision Support Systems with weighted scoring, RESTful APIs for regional data and WhatsApp automation, event platforms with real-time notifications, donation systems with payment integrations, and cross-platform mobile apps. At GenBI Malang, I combined backend development with DevOps responsibilities, including managing Nginx servers, setting up monitoring, handling backups, and implementing structured authentication flows. Each project taught me to balance development speed with maintainability, security, and long-term operational stability.',
-            desc3: 'I approach problems with a full-stack mindset, not only writing code but also considering deployment, scaling, and monitoring from the start. I value clean architecture, automated testing, and clear documentation that helps teams move fast without breaking things. I\'m committed to continuous learning, whether adopting new frameworks, refining DevOps practices, or sharing knowledge with the developer community. My goal is to build software that solves real problems and systems that teams can rely on with confidence.',
-            skillsTitle: 'Skills & Technologies',
-            skills: ['Laravel', 'Node.js (Express.js, Fastify)', 'Inertia.js', 'React', 'Next.js', 'Flask', 'CodeIgniter'],
+            title: 'Software Engineer | Backend Developer | Full Stack Developer',
+            desc1: "I am a Software Engineer specializing in Backend Development with experience in developing, maintaining, and optimizing web-based applications in production environments. My expertise includes REST API development, administration dashboards, system integrations, and backend services management, along with solid Full Stack Development and infrastructure management capabilities.",
+            desc2: "I played a key role in the full platform migration from Laravel API and React Native architecture to a Progressive Web App (PWA) using Webman, HTMX, and Alpine.js, handling over 10 feature developments and 20 system enhancements on actively used applications. I have hands-on experience in Redis Cache implementation, database query optimization, CI/CD pipelines via GitHub Actions and Docker, as well as deployment and maintenance on Linux Server environments.",
+            desc3: "Beyond my professional experience, I have led a developer team for an organization's digital platform and actively provided technical mentoring to over 40 students in web programming and software engineering. Backed by certifications in Java, JavaScript, SQL, and Software Development, I possess strong competencies in backend engineering, system architecture, database optimization, and scalable, maintainable application development.",
+            skillsTitle: 'Competencies & Technical Skills',
+            skills: [
+                'RESTful API Engineering',
+                'Full Stack Web Development',
+                'CI/CD & DevOps Implementation',
+                'Backend Application Development',
+                'Application Performance Optimization',
+                'Software Architecture & System Design',
+                'Database Engineering & Query Optimization',
+                'Technical Mentoring & Developer Enablement',
+                'PHP, JavaScript, Go, Java, Python, Dart',
+                'Laravel, Webman, Node.js, React, Next.js, Flutter',
+                'MySQL, PostgreSQL, SQLite, Redis',
+                'Git, Docker, GitHub Actions, Linux VPS'
+            ],
         },
         resume: {
             title: 'Resume',
             subtitle: 'Education & Experience',
             education: 'Education',
             experience: 'Experience',
-            gradCap: 'Bachelor of Informatics Engineering',
-            gradPlace: 'UIN Maulana Malik Ibrahim Malang',
-            gradYear: '2022 - Present',
-            gradDesc: 'Focus on Programming, Data Structures, Algorithms, Database Systems, and Software Development.',
-            exp1Title: 'Backend Developer',
-            exp1Place: 'Kriingg',
-            exp1Year: 'April 2025 - Present',
-            exp1Desc: 'Join the core development team to build admin dashboards, maintain backend services, and migrate systems to new programming languages while ensuring performance and stability.',
-            exp2Title: 'Backend Developer Intern',
-            exp2Place: 'Kriingg',
-            exp2Year: 'August 2024 - April 2025',
-            exp2Desc: 'Implemented backend systems from database design into fully functional APIs and collaborated closely with mobile development team.',
-            exp3Title: 'Backend Developer Intern',
-            exp3Place: 'AFEKSI.IDN',
-            exp3Year: 'April 2024 - July 2024',
-            exp3Desc: 'Learn and maintain backend features using Laravel, as well as implementing the Midtrans Payment Gateway.',
+            educationList: [
+                {
+                    year: 'Aug 2022 - May 2026',
+                    title: 'Bachelor of Informatics Engineering (GPA: 3.82/4.00)',
+                    institution: 'State Islamic University of Maulana Malik Ibrahim Malang',
+                    description: "Thesis: Air Quality Forecasting using Support Vector Regression.\nFocus: Algorithms, Object-Oriented Programming, Databases, Web Programming, Software Engineering.\nAchievements: Bank Indonesia Scholarship Awardee (2025), Speaker at Semarak Ta'aruf Informatics (2024), IT Incu Mentor (2023)."
+                }
+            ],
+            experienceList: [
+                {
+                    year: 'Apr 2025 - Present',
+                    title: 'Backend Developer',
+                    institution: 'PT RAWP MULTITECH INNOVATIONS (KRIINGG)',
+                    description: 'Developed backend services using Webman. Led migration from Laravel API & React Native to PWA (Webman, HTMX, Alpine.js). Optimized performance resolving N+1 Queries and implementing Redis Cache, accelerating response times up to 60%.'
+                },
+                {
+                    year: 'Feb 2026 - Jun 2026',
+                    title: 'Teaching Assistant – Web Programming',
+                    institution: 'Informatics Engineering UIN Malang',
+                    description: 'Mentored 20 students over 15 practicum sessions covering HTML, CSS, JS, PHP, and MySQL. Guided the implementation of CRUD systems, authentication, and provided code reviews and debugging assistance.'
+                },
+                {
+                    year: 'Aug 2025 - May 2026',
+                    title: 'Website Development Coordinator',
+                    institution: 'GenBI Malang',
+                    description: 'Led a team of 3 developers to build and maintain the organizational website. Developed a centralized admin dashboard and REST APIs. Implemented CI/CD pipeline using GitHub Actions and Docker to a Linux VPS.'
+                },
+                {
+                    year: 'Feb 2025 - Jul 2025',
+                    title: 'Teaching Assistant – OOP',
+                    institution: 'Informatics Engineering UIN Malang',
+                    description: 'Mentored 20 students in Java OOP concepts. Assisted in solving 80+ debugging cases and evaluating practical projects based on Encapsulation, Inheritance, and Polymorphism.'
+                },
+                {
+                    year: 'Jan 2025 - Mar 2025',
+                    title: 'Backend Developer Intern',
+                    institution: 'PT RAWP MULTITECH INNOVATIONS (KRIINGG)',
+                    description: 'Designed and implemented 20+ REST API endpoints for authentication, ordering, and payment systems. Participated in Agile development workflows including sprint planning and daily stand-ups.'
+                }
+            ]
         },
         portfolio: {
             portfolio: 'Portfolio',
@@ -53,40 +90,40 @@ const translations = {
             dss: {
                 title: 'DSS',
                 subtitle: 'PilihAsdos',
-                role: 'Full-Stack Web Developer',
-                desc: 'SPK Pilih Asdos is a Decision Support System for assessing teaching assistant candidates objectively using the SAW method. The system collects criteria, weights, and candidate scores then calculates ranked recommendations for transparent selection. Users get a dashboard to compare candidates and view final recommendations. The input flow is designed simple so committees can quickly enter data without errors. The end result reduces bias and accelerates the assistant selection decision process.\n\nAs a Full-Stack Web Developer, I designed the data schema and implemented end-to-end SAW calculation to ensure accuracy. I built the input flow for criteria, weights, and values then validated data to prevent scoring errors. I optimized queries and indexes so calculations remain fast even with many candidates. I added recommendation summaries, export features, and activity logs for decision auditing. I implemented basic monitoring and alerts so the committee knows when calculation or input errors occur.',
+                role: 'Full-Stack Developer',
+                desc: 'Decision Support System for evaluating teaching assistants. Built with scalable architecture and optimized database calculations.',
             },
             api: {
                 title: 'API Service',
                 subtitle: 'API Kode Wilayah Indonesia',
                 role: 'Backend Developer',
-                desc: 'API Kode Wilayah Indonesia is a REST service that provides official regional codes from provinces to villages. It aims to provide a single data source for address forms, logistics, and government applications. Data is organized hierarchically so regional relationships are easy to trace and consistent. Endpoints are designed simple so other applications can use them without managing large datasets themselves. With one source of truth, address integration becomes faster and minimizes data duplication.\n\nAs a Backend Developer, I designed the hierarchical schema and performed complete seeding from provinces to villages. I added caching and rate limiting so lookups remain fast and stable during high traffic. I implemented data validation and normalization to ensure regional codes are consistent across all endpoints. I also set up logging and health checks to monitor errors and performance. I documented endpoints clearly so integrators can onboard faster.',
+                desc: 'REST API providing Indonesian regional codes. Implemented caching and rate limiting for high availability.',
             },
             eventhub: {
                 title: 'EventHub',
                 subtitle: 'UIN Malang EventHub',
-                role: 'Full-Stack Web Developer',
-                desc: 'UIN Malang EventHub is a campus platform for publishing event schedules and managing registrations in one place. Students can view event details, quotas, and latest updates without opening multiple channels. Organizers get a dashboard to create, modify, and close events quickly. The notification system helps participants know about schedule changes in real-time. All features are designed responsive for comfortable use on mobile and desktop.\n\nAs a Full-Stack Web Developer, I built event CRUD, registration flows, participant quotas, and email notifications. I optimized database indexes so event listings and searches remain fast during high registration traffic. I implemented form validation and basic protections to prevent duplicate data and quota abuse. I refined the UI/UX so the registration flow is concise and clear across different screen sizes. I added logging and error checks so the team can quickly address operational issues.',
+                role: 'Full-Stack Developer',
+                desc: 'Campus event management platform featuring real-time registration and centralized admin dashboard.',
             },
             weather: {
                 title: 'Weather App',
                 subtitle: 'CuacaSaja',
                 role: 'Full-Stack Developer',
-                desc: 'CuacaSaja is a weather app that displays real-time forecasts with a clean cross-platform interface. Users can view temperature, humidity, wind speed, and forecasts for several days ahead. Locations can be changed quickly making it suitable for daily mobility. Data is summarized so important information appears without many clicks. The design is lightweight for comfortable use on mobile devices with limited connectivity.\n\nAs a Full-Stack Developer, I connected Flutter to a Laravel backend and cached weather provider calls to keep responses fast. I streamlined JSON payloads and optimized images so loading times on mobile are shorter. I added fallbacks and network error handling so the app stays informative even with poor connections. I managed environments and API keys securely to prevent exposure to the client. I also tested performance on low-power devices to ensure the experience remains smooth.',
+                desc: 'A weather forecasting app integrated with real-time public APIs, optimized for low bandwidth.',
             },
             game: {
                 title: 'Game 3D',
                 subtitle: 'Quiz Of Survival',
-                role: 'Game 3D Programmer',
-                desc: 'Quiz Of Survival is a 3D survival game that combines action with quiz mechanics. Players must survive threats while answering questions to unlock paths or bonuses. The environment is designed dynamically to maintain tension and gameplay rhythm. Challenges are staged so players learn mechanics before difficulty increases. Visuals and controls are optimized for smooth and immersive experience.\n\nAs a Game 3D Programmer, I built the gameplay loop in Unity/C# and tuned physics and enemy spawn timing. I connected the quiz trigger system to player progress so questions appear at the right moments. I profiled scenes and eliminated bottlenecks to keep FPS stable even with many active objects. I iterated on damage, reward, and pacing balance so the game feels fair yet challenging. I organized the build pipeline and assets so the team can iterate and chase bugs faster.',
+                role: 'Game Developer',
+                desc: 'A 3D educational survival game developed using Unity and C#.',
             },
         },
         contact: {
             title: 'Contact',
             subtitle: 'Have Any Question?',
             address: 'Address',
-            addressValue: 'Pasuruan Regency, East Java, Indonesia',
-            email: 'Email Us',
+            addressValue: 'Kabupaten Pasuruan, East Java, Indonesia',
+            email: 'Email',
             form: {
                 name: 'Name',
                 lastname: 'Last Name',
@@ -117,40 +154,77 @@ const translations = {
             contact: 'Kontak',
         },
         hero: {
-            role1: 'Full-Stack Developer',
+            role1: 'Software Engineer',
             role2: 'Backend Developer',
-            role3: 'Junior DevOps Engineer',
+            role3: 'Full Stack Developer',
             cta: 'Hubungi Saya',
         },
         about: {
-            title: 'Full-Stack Developer, Backend Developer, Junior DevOps Engineer',
-            desc1: 'Halo, saya Maulana Haekal Noval Akbar, panggil saja Haekal. Saya spesialis dalam pengembangan backend, aplikasi web full-stack, dan operasi infrastruktur. Dengan pengalaman praktis di Laravel, Node.js (Express.js dan Fastify), Inertia.js, React, Next.js, Flask, serta manajemen server, saya membangun sistem yang andal, aman, dan siap produksi. Pekerjaan saya mencakup desain API, optimasi database, pipeline CI/CD, dan administrasi server Linux, sehingga aplikasi berjalan efisien dari tahap coding hingga deployment.',
-            desc2: 'Saya telah menghadirkan Sistem Pendukung Keputusan dengan penilaian berbobot, API RESTful untuk data regional dan otomasi WhatsApp, platform acara dengan notifikasi real-time, sistem donasi dengan integrasi pembayaran, serta aplikasi mobile lintas platform. Di GenBI Malang, saya menggabungkan pengembangan backend dengan tanggung jawab DevOps, termasuk mengelola server Nginx, menyiapkan monitoring, menangani backup, dan mengimplementasikan alur autentikasi terstruktur. Setiap proyek mengajarkan saya menyeimbangkan kecepatan pengembangan dengan maintainability, keamanan, dan stabilitas operasional jangka panjang.',
-            desc3: 'Saya mendekati masalah dengan pola pikir full-stack, bukan hanya menulis kode, tetapi juga mempertimbangkan deployment, scaling, dan monitoring sejak awal. Saya menghargai arsitektur yang bersih, testing otomatis, dan dokumentasi yang jelas agar tim bisa bergerak cepat tanpa merusak sistem. Saya berkomitmen pada pembelajaran berkelanjutan, baik dengan mengadopsi framework baru, menyempurnakan praktik DevOps, maupun berbagi pengetahuan dengan komunitas developer. Tujuan saya adalah membangun software yang menyelesaikan masalah nyata dan sistem yang dapat diandalkan tim dengan percaya diri.',
-            skillsTitle: 'Keahlian & Teknologi',
-            skills: ['Laravel', 'Node.js (Express.js, Fastify)', 'Inertia.js', 'React', 'Next.js', 'Flask', 'CodeIgniter'],
+            title: 'Software Engineer | Backend Developer | Full Stack Developer',
+            desc1: 'Software Engineer dengan spesialisasi Backend Developer dengan pengalaman dalam pengembangan, pemeliharaan, dan optimasi aplikasi berbasis web pada lingkungan produksi, mencakup pengembangan REST API, dashboard administrasi, integrasi sistem, serta pengelolaan layanan backend yang mendukung operasional bisnis sekaligus memiliki kemampuan Full Stack Development dan pengelolaan infrastruktur aplikasi.',
+            desc2: 'Berperan dalam migrasi penuh platform aplikasi dari arsitektur Laravel API dan React Native menjadi Progressive Web App (PWA) berbasis Webman, HTMX, dan Alpine.js, sekaligus menangani 10+ pengembangan fitur serta 20+ perbaikan dan peningkatan sistem pada aplikasi yang aktif digunakan. Memiliki pengalaman dalam implementasi Redis Cache, optimasi query database, CI/CD pipeline berbasis GitHub Actions dan Docker, serta deployment dan maintenance aplikasi pada lingkungan Linux Server.',
+            desc3: 'Selain pengalaman profesional, dipercaya memimpin tim developer dalam pengembangan platform digital organisasi dan aktif memberikan technical mentoring kepada 40+ mahasiswa pada bidang pemrograman web dan software engineering. Didukung sertifikasi Java Programming, JavaScript, SQL, dan Software Development, dengan kompetensi yang kuat dalam backend engineering, system architecture, database optimization, dan pengembangan aplikasi yang scalable, maintainable serta berorientasi pada kebutuhan pengguna dan bisnis.',
+            skillsTitle: 'Kompetensi Keahlian & Technical Skills',
+            skills: [
+                'RESTful API Engineering',
+                'Full Stack Web Development',
+                'CI/CD & DevOps Implementation',
+                'Backend Application Development',
+                'Application Performance Optimization',
+                'Software Architecture & System Design',
+                'Database Engineering & Query Optimization',
+                'Technical Mentoring & Developer Enablement',
+                'PHP, JavaScript, Go, Java, Python, Dart',
+                'Laravel, Webman, Node.js, React, Next.js, Flutter',
+                'MySQL, PostgreSQL, SQLite, Redis',
+                'Git, Docker, GitHub Actions, Linux VPS'
+            ],
         },
         resume: {
             title: 'Resume',
             subtitle: 'Pendidikan & Pengalaman',
             education: 'Pendidikan',
             experience: 'Pengalaman',
-            gradCap: 'Sarjana Teknik Informatika',
-            gradPlace: 'UIN Maulana Malik Ibrahim Malang',
-            gradYear: '2022 - Sekarang',
-            gradDesc: 'Fokus pada Pemrograman, Struktur Data, Algoritma, Sistem Database, dan Pengembangan Software.',
-            exp1Title: 'Backend Developer',
-            exp1Place: 'Kriingg',
-            exp1Year: 'April 2025 - Sekarang',
-            exp1Desc: 'Bergabung dengan tim core development untuk membangun admin dashboard, memelihara backend services, dan migrasi sistem ke bahasa pemrograman baru sambil memastikan performa dan stabilitas.',
-            exp2Title: 'Backend Developer Intern',
-            exp2Place: 'Kriingg',
-            exp2Year: 'Agustus 2024 - April 2025',
-            exp2Desc: 'Implementasikan sistem backend dari desain database hingga API yang fully functional dan kolaborasi erat dengan tim mobile development.',
-            exp3Title: 'Backend Developer Intern',
-            exp3Place: 'AFEKSI.IDN',
-            exp3Year: 'April 2024 - Juli 2024',
-            exp3Desc: 'Pelajari dan maintainkan fitur backend menggunakan Laravel, serta implementasi Midtrans Payment Gateway.',
+            educationList: [
+                {
+                    year: 'Agustus 2022 – Mei 2026',
+                    title: 'S-1 Teknik Informatika (IPK: 3.82/4.00)',
+                    institution: 'Universitas Islam Negeri Maulana Malik Ibrahim Malang',
+                    description: "Skripsi: Peramalan Kualitas Udara untuk Pemantauan Berdasarkan World Air Quality Index Menggunakan Support Vector Regression.\nMinat Studi: Algoritma dan Pemrograman, OOP, Basis Data, Pemrograman Web, Rekayasa Perangkat Lunak.\nPrestasi: Penerima Beasiswa Bank Indonesia (2025), Pemateri Semarak Ta'aruf (2024), Mentor IT Incu (2023)."
+                }
+            ],
+            experienceList: [
+                {
+                    year: 'April 2025 – Sekarang',
+                    title: 'Backend Developer',
+                    institution: 'PT RAWP MULTITECH INNOVATIONS (KRIINGG)',
+                    description: 'Mengembangkan layanan backend berbasis Webman. Memimpin migrasi platform dari Laravel API & React Native menjadi PWA (Webman, HTMX, Alpine.js). Mengoptimalkan performa mengatasi N+1 Query dan implementasi Redis Cache, memperbaiki respons hingga 60%.'
+                },
+                {
+                    year: 'Februari 2026 – Juni 2026',
+                    title: 'Teaching Assistant – Web Programming',
+                    institution: 'Teknik Informatika UIN Maulana Malik Ibrahim Malang',
+                    description: 'Membimbing 20 mahasiswa dalam 15 sesi praktikum Web Programming (HTML, CSS, JS, PHP, MySQL). Mendampingi 100+ kasus debugging dan mengevaluasi implementasi CRUD serta autentikasi.'
+                },
+                {
+                    year: 'Agustus 2025 – Mei 2026',
+                    title: 'Website Development Coordinator',
+                    institution: 'GenBI Malang',
+                    description: 'Mengoordinasikan tim developer membangun dashboard administrasi dan REST API. Mengimplementasikan CI/CD pipeline menggunakan GitHub Actions dan Docker ke VPS Linux.'
+                },
+                {
+                    year: 'Februari 2025 – Juli 2025',
+                    title: 'Teaching Assistant – Object Oriented Programming',
+                    institution: 'Teknik Informatika UIN Maulana Malik Ibrahim Malang',
+                    description: 'Membimbing mahasiswa dalam praktikum Java OOP. Mendampingi penyelesaian 80+ kasus debugging serta mengulas implementasi Encapsulation, Inheritance, dan Polymorphism.'
+                },
+                {
+                    year: 'Januari 2025 – Maret 2025',
+                    title: 'Backend Developer Intern',
+                    institution: 'PT RAWP MULTITECH INNOVATIONS (KRIINGG)',
+                    description: 'Merancang dan mengimplementasikan 20+ endpoint REST API untuk fitur autentikasi, pembayaran, dan pesanan dalam lingkungan pengembangan Agile.'
+                }
+            ]
         },
         portfolio: {
             portfolio: 'Portofolio',
@@ -162,32 +236,32 @@ const translations = {
             dss: {
                 title: 'DSS',
                 subtitle: 'PilihAsdos',
-                role: 'Full-Stack Web Developer',
-                desc: 'SPK Pilih Asdos adalah Sistem Pendukung Keputusan untuk menilai calon asisten dosen secara objektif menggunakan metode SAW. Sistem ini mengumpulkan kriteria, bobot, dan skor kandidat, lalu menghitung rekomendasi peringkat untuk proses seleksi yang transparan. Pengguna mendapatkan dashboard untuk membandingkan kandidat dan melihat rekomendasi akhir. Alur input dirancang sederhana agar panitia dapat memasukkan data dengan cepat tanpa kesalahan. Hasil akhirnya mengurangi bias dan mempercepat pengambilan keputusan pemilihan asisten.\n\nSebagai Full-Stack Web Developer, saya merancang data schema dan mengimplementasikan perhitungan SAW end-to-end untuk memastikan akurasi. Saya membangun alur input kriteria, bobot, dan nilai, lalu menerapkan data validation untuk mencegah kesalahan penilaian. Saya mengoptimalkan query dan index agar perhitungan tetap cepat meskipun jumlah kandidat banyak. Saya menambahkan ringkasan rekomendasi, fitur ekspor, dan activity log untuk audit keputusan. Saya juga menerapkan monitoring dasar dan alert agar panitia segera mengetahui jika terjadi error pada proses input atau perhitungan.',
+                role: 'Full-Stack Developer',
+                desc: 'SPK Pilih Asdos adalah sistem pendukung keputusan untuk menilai calon asisten dosen. Dibangun dengan optimasi perhitungan berbobot yang andal.',
             },
             api: {
                 title: 'API Service',
                 subtitle: 'API Kode Wilayah Indonesia',
                 role: 'Backend Developer',
-                desc: 'API Kode Wilayah Indonesia adalah REST service yang menyediakan kode wilayah resmi dari tingkat provinsi hingga desa. Layanan ini menjadi satu sumber data untuk form alamat, logistik, dan aplikasi pemerintahan. Data disusun secara hierarkis agar relasi antarwilayah mudah dilacak dan tetap konsisten. Endpoint dirancang sederhana supaya aplikasi lain dapat menggunakannya tanpa harus mengelola dataset besar secara mandiri. Dengan satu source of truth, integrasi data alamat menjadi lebih cepat dan minim duplikasi.\n\nSebagai Backend Developer, saya merancang schema hierarkis dan melakukan seeding lengkap dari provinsi hingga desa. Saya menambahkan caching dan rate limiting agar proses lookup tetap cepat serta stabil saat traffic tinggi. Saya menerapkan data validation dan normalisasi untuk memastikan kode wilayah konsisten di semua endpoint. Saya juga menyiapkan logging dan health check untuk memantau error serta performa. Dokumentasi endpoint saya susun dengan jelas agar proses onboarding integrator lebih cepat.',
+                desc: 'REST API yang menyediakan data wilayah Indonesia. Menggunakan strategi caching yang dioptimalkan untuk respons cepat.',
             },
             eventhub: {
                 title: 'EventHub',
                 subtitle: 'UIN Malang EventHub',
-                role: 'Full-Stack Web Developer',
-                desc: 'UIN Malang EventHub adalah platform kampus untuk mempublikasikan jadwal acara dan mengelola registrasi dalam satu tempat. Mahasiswa dapat melihat detail acara, kuota, dan pembaruan terbaru tanpa harus membuka banyak kanal. Penyelenggara mendapatkan dashboard untuk membuat, mengubah, dan menutup acara dengan cepat. Sistem notifikasi membantu peserta mengetahui perubahan jadwal secara real-time. Semua fitur dirancang responsif untuk penggunaan yang nyaman di perangkat mobile maupun desktop.\n\nSebagai Full-Stack Web Developer, saya membangun fitur event CRUD, alur registrasi, kuota peserta, dan notifikasi email. Saya mengoptimalkan database index agar listing dan pencarian acara tetap cepat saat traffic registrasi tinggi. Saya menerapkan form validation serta proteksi dasar untuk mencegah data duplikat dan penyalahgunaan kuota. Saya menyempurnakan UI/UX agar alur registrasi tetap ringkas dan jelas di berbagai ukuran layar. Saya juga menambahkan logging dan error checking agar tim dapat menangani masalah operasional lebih cepat.',
+                role: 'Full-Stack Developer',
+                desc: 'Platform manajemen event kampus untuk publikasi dan registrasi acara secara terpusat dengan sistem notifikasi real-time.',
             },
             weather: {
                 title: 'Weather App',
                 subtitle: 'CuacaSaja',
                 role: 'Full-Stack Developer',
-                desc: 'CuacaSaja adalah aplikasi cuaca yang menampilkan prakiraan real-time dengan antarmuka cross-platform yang bersih. Pengguna dapat melihat temperatur, kelembapan, kecepatan angin, dan prakiraan beberapa hari ke depan. Lokasi dapat diubah dengan cepat sehingga cocok untuk mobilitas harian. Data diringkas agar informasi penting muncul tanpa banyak klik. Desainnya ringan untuk penggunaan nyaman di perangkat mobile dengan konektivitas terbatas.\n\nSebagai Full-Stack Developer, saya menghubungkan Flutter dengan backend Laravel dan menerapkan caching pada weather provider calls agar response time tetap cepat. Saya menyederhanakan JSON payload dan mengoptimalkan gambar agar waktu muat di mobile lebih singkat. Saya menambahkan fallback dan network error handling agar aplikasi tetap informatif meskipun koneksi tidak stabil. Saya mengelola environment variables dan API keys secara aman untuk mencegah exposure di sisi client. Saya juga menguji performa pada perangkat low-power agar user experience tetap smooth.',
+                desc: 'Aplikasi cuaca yang menampilkan informasi real-time dengan pengoptimalan muatan data untuk jaringan terbatas.',
             },
             game: {
                 title: 'Game 3D',
                 subtitle: 'Quiz Of Survival',
-                role: 'Game 3D Programmer',
-                desc: 'Quiz Of Survival adalah permainan survival 3D yang menggabungkan aksi dengan mekanik kuis. Pemain harus bertahan dari ancaman sambil menjawab pertanyaan untuk membuka jalur atau bonus. Lingkungan dirancang dinamis untuk menjaga ketegangan dan ritme gameplay. Tingkat tantangan disusun bertahap agar pemain memahami mekanik sebelum kesulitan meningkat. Visual dan kontrol dioptimalkan untuk pengalaman yang smooth dan immersive.\n\nSebagai Game 3D Programmer, saya membangun gameplay loop di Unity/C# serta melakukan tuning pada physics dan enemy spawn timing. Saya menghubungkan sistem quiz trigger dengan game progress agar pertanyaan muncul pada momen yang tepat. Saya melakukan profiling scene dan menghilangkan bottleneck untuk menjaga FPS tetap stabil meskipun banyak active object. Saya melakukan iterasi pada damage, reward, dan pacing balance agar permainan terasa fair namun tetap challenging. Saya juga menata build pipeline dan asset management agar tim dapat beriterasi dan menangani bug lebih cepat.',
+                role: 'Game Developer',
+                desc: 'Game survival edukasi 3D yang dibangun menggunakan Unity dan C#.',
             },
         },
         contact: {
@@ -195,7 +269,7 @@ const translations = {
             subtitle: 'Ada Pertanyaan?',
             address: 'Alamat',
             addressValue: 'Kabupaten Pasuruan, Jawa Timur, Indonesia',
-            email: 'Email Kami',
+            email: 'Email',
             form: {
                 name: 'Nama',
                 lastname: 'Nama Belakang',

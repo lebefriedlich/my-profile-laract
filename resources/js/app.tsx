@@ -1,12 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/animate.css';
-import '../styles/flaticon.css';
-import "../styles/font-awesome.min.css";
-import '../styles/style.css';
-import '../styles/topbar.css';
-import '../styles/language-switcher.css';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import '../css/app.css';
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';

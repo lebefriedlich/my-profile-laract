@@ -1,85 +1,62 @@
 "use client"
 
-import React, { Component } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { useLanguage } from '../../contexts/LanguageContext';
 
-interface HeroProps {
-    t: (key: string) => string;
-}
+const Hero = () => {
+    const { t } = useLanguage();
+    const typedRef = useRef<HTMLSpanElement>(null);
 
-class HeroComponent extends Component<HeroProps> {
-    typedRef = React.createRef<HTMLSpanElement>();
-    typed: Typed | null = null;
-
-    componentDidMount() {
-        if (typeof window !== 'undefined') {
-            const { t } = this.props;
-            this.typed = new Typed(this.typedRef.current, {
+    useEffect(() => {
+        if (typedRef.current) {
+            const typed = new Typed(typedRef.current, {
                 strings: [
                     t('hero.role1'),
                     t('hero.role2'),
                     t('hero.role3')
                 ],
-                typeSpeed: 100,
-                backSpeed: 100,
+                typeSpeed: 60,
+                backSpeed: 40,
                 loop: true,
             });
+
+            return () => {
+                typed.destroy();
+            };
         }
-    }
+    }, [t]);
 
-    componentWillUnmount() {
-        if (this.typed) {
-            this.typed.destroy();
-        }
-    }
+    return (
+        <div className="flex flex-col items-center justify-center w-full h-full text-center transition-all duration-700 min-h-[400px]">
+            <h3 className="text-xl md:text-2xl text-neutral-400 mb-2 font-light">
+                Hi Folks <span className="inline-block animate-wave">👋🏻</span>
+            </h3>
+            <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold text-white mb-4 leading-tight">
+                Maulana Haekal Noval Akbar
+            </h1>
+            <h2 className="text-lg md:text-xl lg:text-2xl text-primary-cyan font-light h-[40px] flex items-center justify-center gap-2">
+                <span className="text-neutral-400">I am a</span> <span ref={typedRef}></span>
+            </h2>
 
-    render() {
-        const { t } = this.props;
-        
-        return(
-            <section id="home" className="hero hero-slider-wrapper hero-style-1">
-                <div className="hero-slider">
-                    <div className="slide" style={{ backgroundImage: `url(${'images/my-slide.webp'})` }}>
-                        <div className="container">
-                            <div className="row">
-                                <div className="col col-md-10 col-sm-12 slide-caption">
-                                    <div className="slide-subtitle">
-                                        <h1>Maulana Haekal Noval Akbar</h1>
-                                    </div>
-                                    <div className="slide-title">
-                                        <h2><span ref={this.typedRef}></span></h2>
-                                    </div>
-                                    <div className="btns">
-                                        <AnchorLink href="#contact" className="template-btn go-contact-area">{t('hero.cta')}</AnchorLink>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="social-links">
-                    <div className="overlay"></div>
-                    <ul>
-                        <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/novalakbar38/"><i className="bi bi-instagram"></i></a></li>
-                        <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/maulana-haekal/"><i className="bi bi-linkedin"></i></a></li>
-                        <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/lebefriedlich"><i className="bi bi-github"></i></a></li>
-                    </ul>
-                </div>
-                <div className="white_svg">
-                    <svg x="0px" y="0px" viewBox="0 186.5 1920 113.5">
-                        <polygon points="0,300 655.167,210.5 1432.5,300 1920,198.5 1920,300 "></polygon>
-                    </svg>
-                </div>
-            </section>
-        )
-    }
-}
-
-const Hero = () => {
-    const { t } = useLanguage();
-    return <HeroComponent t={t} />;
+            <style>{`
+                @keyframes wave-animation {
+                    0% { transform: rotate( 0.0deg) }
+                    10% { transform: rotate(14.0deg) }  
+                    20% { transform: rotate(-8.0deg) }
+                    30% { transform: rotate(14.0deg) }
+                    40% { transform: rotate(-4.0deg) }
+                    50% { transform: rotate(10.0deg) }
+                    60% { transform: rotate( 0.0deg) }  
+                    100% { transform: rotate( 0.0deg) }
+                }
+                .animate-wave {
+                    animation: wave-animation 2.5s infinite;
+                    transform-origin: 70% 70%;
+                }
+            `}</style>
+        </div>
+    );
 };
 
 export default Hero;
