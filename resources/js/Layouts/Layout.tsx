@@ -34,7 +34,7 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
                 <div className="fixed inset-0 z-0 opacity-10 pointer-events-none mix-blend-overlay" style={{ backgroundImage: 'url(/images/main_bg.png)', backgroundRepeat: 'repeat' }}></div>
 
                 {/* Main Card (Subtle Glassmorphism) */}
-                <div className="w-full max-w-[1280px] h-full lg:h-[80vh] min-h-[600px] bg-[#222]/80 backdrop-blur-xl border border-white/5 lg:rounded-[30px] shadow-2xl flex flex-col lg:flex-row relative z-10">
+                <div className="w-full max-w-[1280px] min-h-screen lg:min-h-[600px] lg:h-[80vh] bg-[#222]/80 backdrop-blur-xl border border-white/5 lg:rounded-[30px] shadow-2xl flex flex-col lg:flex-row relative z-10">
 
                     {/* Portal Target for Mobile Menu Toggle */}
                     <div id="mobile-menu-portal" className="block lg:hidden z-[110]"></div>
