@@ -27,7 +27,7 @@ const Portfolio = () => {
             subHeading: 'PilihAsdos',
             role: 'Full-Stack Developer',
             pImg1: '/images/portfolio/SPK Pilih Asdos.webp',
-            des: t('portfolio.dss.desc') || 'Decision Support System for evaluating teaching assistants. Built with scalable architecture and optimized database calculations.',
+            des: t('portfolio.dss.desc') || 'A Decision Support System (DSS) designed to streamline the evaluation and selection of teaching assistants. It implements scalable architecture and optimized weighted calculation algorithms to ensure accurate, data-driven decisions.\n\nAs a Full-Stack Developer, I built the platform using Laravel and Bootstrap, focusing on a clean UI and efficient backend processing. The system handles complex matrix calculations and dynamic criteria weighting, ensuring that the final rankings are generated quickly and reliably even with large datasets.',
             techStack: ['Laravel', 'Bootstrap', 'MySQL'],
             linkSource: 'https://github.com/lebefriedlich/spk_asdos_saw',
         },
@@ -37,7 +37,7 @@ const Portfolio = () => {
             subHeading: 'API Kode Wilayah Indonesia',
             role: 'Backend Developer',
             pImg1: '/images/portfolio/API Kode Wilayah Indonesia.webp',
-            des: t('portfolio.api.desc') || 'REST API providing Indonesian regional codes. Implemented caching and rate limiting for high availability.',
+            des: t('portfolio.api.desc') || 'A reliable REST API service that provides comprehensive regional code data for Indonesia. Built with performance in mind, it implements advanced caching strategies and rate limiting to ensure high availability and fast response times.\n\nAs a Backend Developer, I designed the architecture using Laravel and MySQL to handle high-frequency requests efficiently. I implemented robust endpoint validations and response formatting, ensuring that developers integrating this API receive consistent and accurate geographical data.',
             techStack: ['Laravel', 'MySQL'],
             linkPublish: 'https://wilayah-indonesia.mhna.my.id/',
             linkSource: 'https://github.com/lebefriedlich/api-kode-wilayah-indonesia',
@@ -48,7 +48,7 @@ const Portfolio = () => {
             subHeading: 'UIN Malang EventHub',
             role: 'Full-Stack Developer',
             pImg1: '/images/portfolio/UIN Malang EventHub.webp',
-            des: t('portfolio.eventhub.desc') || 'Campus event management platform featuring real-time registration and centralized admin dashboard.',
+            des: t('portfolio.eventhub.desc') || 'A centralized campus event management platform that simplifies event publication and attendee registration. It features a comprehensive admin dashboard and real-time notifications to streamline campus activities.\n\nAs a Full-Stack Developer, I developed the system with Laravel, implementing role-based access control (RBAC) to separate student and admin privileges. The platform includes automated registration tracking and data export capabilities, significantly reducing the administrative workload for event organizers.',
             techStack: ['Laravel', 'Bootstrap', 'MySQL'],
             linkSource: 'https://github.com/lebefriedlich/Project-Prak-Sister',
         },
@@ -58,7 +58,7 @@ const Portfolio = () => {
             subHeading: 'CuacaSaja',
             role: 'Full-Stack Developer',
             pImg1: '/images/portfolio/CuacaSaja.webp',
-            des: t('portfolio.weather.desc') || 'A weather forecasting app integrated with real-time public APIs, optimized for low bandwidth.',
+            des: t('portfolio.weather.desc') || 'A responsive weather forecasting application that integrates with public APIs to deliver real-time meteorological data. The application is highly optimized for low-bandwidth networks, ensuring reliable access in varying network conditions.\n\nAs a Full-Stack Developer, I built the mobile application using Flutter and connected it to a Laravel backend for caching and data aggregation. The app features location-based updates, intuitive weather visualizations, and offline support for previously loaded forecasts.',
             techStack: ['Flutter', 'Laravel', 'MySQL'],
             linkSource: 'https://github.com/lebefriedlich/CuacaSaja-Mobile',
         },
@@ -68,7 +68,7 @@ const Portfolio = () => {
             subHeading: 'Quiz Of Survival',
             role: 'Game 3D Programmer',
             pImg1: '/images/portfolio/Quiz Of Survival.webp',
-            des: t('portfolio.game.desc') || 'A 3D educational survival game developed using Unity and C#.',
+            des: t('portfolio.game.desc') || 'An interactive 3D educational survival game developed with Unity and C#. It combines engaging survival mechanics with educational elements, offering a unique and immersive learning experience for players.\n\nAs a Game Developer, I programmed the core gameplay mechanics, enemy AI, and inventory systems. I focused on optimizing 3D assets and writing efficient scripts to maintain a stable frame rate, ensuring a smooth and enjoyable experience across different hardware specifications.',
             techStack: ['Unity', 'C#'],
             linkSource: 'https://github.com/lebefriedlich/Quiz-Of-Survival-Game',
         },
@@ -224,8 +224,12 @@ const Portfolio = () => {
                                 ))}
                             </div>
 
-                            <div className="text-neutral-300 leading-relaxed space-y-4 whitespace-pre-wrap font-light mb-8">
-                                {selectedProject.des}
+                            <div className="text-neutral-300 leading-relaxed space-y-4 font-light mb-8">
+                                {selectedProject.des.split('\n\n').map((paragraph, idx) => (
+                                    <p key={idx} className="text-justify indent-8">
+                                        {paragraph}
+                                    </p>
+                                ))}
                             </div>
 
                             <div className="flex flex-wrap gap-4 pt-6 border-t border-neutral-800">

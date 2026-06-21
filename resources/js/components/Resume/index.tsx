@@ -54,12 +54,29 @@ const Resume = () => {
             </div>
 
             {/* Skills Section */}
-            <h3 className="text-2xl font-bold text-white mb-8">{t('about.skillsTitle')}</h3>
-            <div className="flex flex-wrap gap-3">
-                {skills && skills.length > 0 && skills.map((skill: string, index: number) => (
-                    <span key={index} className="bg-transparent border border-primary-cyan text-primary-cyan px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary-cyan hover:text-white transition-colors">
-                        {skill}
-                    </span>
+            <h3 className="text-2xl font-bold text-white mb-6 uppercase tracking-wider">{t('about.competenciesTitle')}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+                {tArray('about.competencies')?.map((item: string, index: number) => (
+                    <div key={index} className="flex items-start gap-3 bg-[#2a2a2a]/30 p-3 rounded-xl border border-white/5 hover:border-primary-cyan/30 transition-colors">
+                        <i className="bi bi-check-circle-fill text-primary-cyan mt-0.5"></i>
+                        <span className="text-neutral-300 font-light">{item}</span>
+                    </div>
+                ))}
+            </div>
+
+            <h3 className="text-2xl font-bold text-white mb-6 uppercase tracking-wider">{t('about.technicalSkillsTitle')}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                {tArray('about.technicalSkills')?.map((item: any, index: number) => (
+                    <div key={index} className="bg-[#2a2a2a]/30 border border-white/5 rounded-2xl p-5 hover:border-primary-cyan/30 transition-colors">
+                        <h4 className="text-white font-semibold mb-4 text-lg">{item.category}</h4>
+                        <div className="flex flex-wrap gap-2">
+                            {item.items.split(', ').map((skill: string, i: number) => (
+                                <span key={i} className="bg-black/30 border border-neutral-700 text-neutral-300 px-3 py-1.5 rounded-lg text-sm font-medium hover:border-primary-cyan hover:text-white transition-colors">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
                 ))}
             </div>
         </div>

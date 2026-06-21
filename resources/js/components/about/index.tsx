@@ -14,9 +14,9 @@ const About = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
                 {/* Left Column: Description */}
                 <div className="lg:col-span-7 text-neutral-400 leading-relaxed space-y-4 text-justify font-light text-[15px]">
-                    <p>{t('about.desc1')}</p>
-                    <p>{t('about.desc2')}</p>
-                    <p>{t('about.desc3')}</p>
+                    <p className="indent-8">{t('about.desc1')}</p>
+                    <p className="indent-8">{t('about.desc2')}</p>
+                    <p className="indent-8">{t('about.desc3')}</p>
                 </div>
 
                 {/* Right Column: Info List */}
@@ -27,8 +27,8 @@ const About = () => {
                             <span className="text-neutral-300 text-sm text-right ml-4">{t('about.residenceValue')}</span>
                         </li>
                         <li className="flex justify-between items-center py-2 border-b border-neutral-700/50">
-                            <span className="text-primary-cyan font-bold text-sm uppercase tracking-wider whitespace-nowrap">{t('contact.address')}</span>
-                            <span className="text-neutral-300 text-sm text-right ml-4">{t('contact.addressValue')}</span>
+                            <span className="text-primary-cyan font-bold text-sm uppercase tracking-wider whitespace-nowrap">{t('about.address')}</span>
+                            <span className="text-neutral-300 text-sm text-right ml-4">{t('about.addressValue')}</span>
                         </li>
                         <li className="flex justify-between items-center py-2 border-b border-neutral-700/50">
                             <span className="text-primary-cyan font-bold text-sm uppercase tracking-wider whitespace-nowrap">{t('contact.email')}</span>
