@@ -148,7 +148,7 @@ const Portfolio = () => {
         : portfolioItems.filter(p => getCategories(p).includes(filter));
 
     return (
-        <div className="animate-[fadeIn_0.5s_ease-in-out]">
+        <div className="animate-[fadeIn_0.5s_ease-in-out] mb-auto w-full">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8 flex items-center gap-4">
                 {t('portfolio.portfolio')}
                 <div className="h-px bg-primary-cyan/50 flex-1"></div>
