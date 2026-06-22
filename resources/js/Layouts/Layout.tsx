@@ -57,7 +57,7 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
                     <div id="mobile-menu-portal" className="block lg:hidden z-[110]"></div>
 
                     <SidebarProfile />
-                    <div className="flex-1 h-full overflow-y-auto custom-scrollbar relative scroll-smooth lg:rounded-r-[30px] w-full flex flex-col">
+                    <div id="scroll-area" className="flex-1 h-full overflow-y-auto custom-scrollbar relative scroll-smooth lg:rounded-r-[30px] w-full flex flex-col">
                         {children}
                     </div>
 

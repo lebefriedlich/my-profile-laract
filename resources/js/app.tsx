@@ -2,8 +2,10 @@ import '../css/app.css';
 
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { createInertiaApp } from '@inertiajs/react';
+import { createInertiaApp, router } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+
+router.on('navigate', () => document.getElementById('scroll-area')?.scrollTo(0, 0));
 import Layout from './Layouts/Layout';
 import { LanguageProvider } from './contexts/LanguageContext';
 

@@ -28,14 +28,18 @@ const translations = {
             available: 'Available',
             whatIDo: 'What I Do',
             role1: {
-                title: 'Full Stack Developer',
-                desc: 'Developing robust web applications and Progressive Web Apps (PWA) using modern technologies like Laravel, Webman, React, and Alpine.js.'
+                title: 'Software Engineer',
+                desc: 'Building scalable, maintainable software architectures aligned with business needs.'
             },
             role2: {
                 title: 'Backend Developer',
                 desc: 'Specializing in RESTful APIs, database optimization, and high-performance architecture. Experienced in query optimization and Redis caching.'
             },
             role3: {
+                title: 'Full Stack Developer',
+                desc: 'Developing robust web applications and Progressive Web Apps (PWA) using modern technologies like Laravel, Webman, React.js, Next.js and Alpine.js.'
+            },
+            role4: {
                 title: 'Junior DevOps',
                 desc: 'Continuously learning to containerize apps with Docker, automate deployments via GitHub Actions, and configure Linux servers. Always eager to grow.'
             },
@@ -199,14 +203,18 @@ const translations = {
             available: 'Tersedia',
             whatIDo: 'Apa Yang Saya Lakukan',
             role1: {
-                title: 'Full Stack Developer',
-                desc: 'Mengembangkan aplikasi web dan Progressive Web Apps (PWA) yang tangguh menggunakan teknologi modern seperti Laravel, Webman, React, dan Alpine.js.'
+                title: 'Software Engineer',
+                desc: 'Merancang arsitektur perangkat lunak yang scalable, maintainable, dan berorientasi pada kebutuhan bisnis.'
             },
             role2: {
                 title: 'Backend Developer',
                 desc: 'Ahli dalam pengembangan RESTful API, optimasi database, dan arsitektur berkinerja tinggi. Berpengalaman dalam optimasi query dan caching menggunakan Redis.'
             },
             role3: {
+                title: 'Full Stack Developer',
+                desc: 'Mengembangkan aplikasi web dan Progressive Web Apps (PWA) yang tangguh menggunakan teknologi modern seperti Laravel, Webman, React.js, Next.js, dan Alpine.js.'
+            },
+            role4: {
                 title: 'Junior DevOps',
                 desc: 'Terus belajar mengemas aplikasi menggunakan Docker, mengotomatisasi deployment lewat GitHub Actions, serta mengonfigurasi server Linux. Selalu antusias untuk berkembang.'
             },

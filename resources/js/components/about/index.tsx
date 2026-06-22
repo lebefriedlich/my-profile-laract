@@ -46,7 +46,7 @@ const About = () => {
             <h3 className="text-2xl font-bold text-white mb-8">{t('about.whatIDo')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 <div className="bg-[#2a2a2a]/40 backdrop-blur-md border border-white/5 p-6 rounded-2xl flex gap-4 hover:bg-[#2a2a2a]/60 hover:border-primary-cyan/30 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out">
-                    <i className="bi bi-code-slash text-4xl text-primary-cyan"></i>
+                    <i className="bi bi-laptop text-4xl text-primary-cyan"></i>
                     <div>
                         <h4 className="text-white font-bold text-lg mb-2">{t('about.role1.title')}</h4>
                         <p className="text-neutral-400 text-sm font-light leading-relaxed">
@@ -63,12 +63,21 @@ const About = () => {
                         </p>
                     </div>
                 </div>
-                <div className="bg-[#2a2a2a]/40 backdrop-blur-md border border-white/5 p-6 rounded-2xl flex gap-4 hover:bg-[#2a2a2a]/60 hover:border-primary-cyan/30 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out md:col-span-2 lg:col-span-1">
-                    <i className="bi bi-cloud-check text-4xl text-primary-cyan"></i>
+                <div className="bg-[#2a2a2a]/40 backdrop-blur-md border border-white/5 p-6 rounded-2xl flex gap-4 hover:bg-[#2a2a2a]/60 hover:border-primary-cyan/30 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out">
+                    <i className="bi bi-code-slash text-4xl text-primary-cyan"></i>
                     <div>
                         <h4 className="text-white font-bold text-lg mb-2">{t('about.role3.title')}</h4>
                         <p className="text-neutral-400 text-sm font-light leading-relaxed">
                             {t('about.role3.desc')}
+                        </p>
+                    </div>
+                </div>
+                <div className="bg-[#2a2a2a]/40 backdrop-blur-md border border-white/5 p-6 rounded-2xl flex gap-4 hover:bg-[#2a2a2a]/60 hover:border-primary-cyan/30 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out">
+                    <i className="bi bi-cloud-check text-4xl text-primary-cyan"></i>
+                    <div>
+                        <h4 className="text-white font-bold text-lg mb-2">{t('about.role4.title')}</h4>
+                        <p className="text-neutral-400 text-sm font-light leading-relaxed">
+                            {t('about.role4.desc')}
                         </p>
                     </div>
                 </div>
