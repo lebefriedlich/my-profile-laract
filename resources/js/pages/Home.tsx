@@ -38,6 +38,7 @@ const HomePage = () => {
             const timer = setTimeout(() => {
                 setRenderedSection(activeSection);
                 document.getElementById('scroll-area')?.scrollTo(0, 0);
+                window.scrollTo(0, 0);
                 setIsAnimating(false);
             }, 300); // 300ms fade out
             return () => clearTimeout(timer);
