@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="favicon.ico">
 
     <meta name="description"
-        content="Backend & Laravel developer building modern, scalable, and maintainable web applications.">
+        content="I am a Software Engineer specializing in Backend Development with experience in developing, maintaining, and optimizing web-based applications in production environments. My expertise includes REST API development, administration dashboards, system integrations, and backend services management, along with solid Full Stack Development and infrastructure management capabilities.">
     <meta name="robots" content="index, follow">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -27,22 +27,28 @@
 
     {{-- JSON-LD taruh di head aja, ini lebih SEO-friendly --}}
     <script type="application/ld+json">
-@verbatim
-{
-  "@context": "https://schema.org/",
-  "@type": "Person",
-  "name": "Maulana Haekal Noval Akbar",
-  "url": "https://mhna.my.id",
-  "logo": "https://mhna.my.id/images/logo.png",
-  "jobTitle": "Web Developer, Backend Developer, Laravel Developer",
-  "image": "https://mhna.my.id/images/about.png",
-  "sameAs": [
-    "https://www.linkedin.com/in/maulana-haekal",
-    "https://github.com/lebefriedlich",
-    "https://www.instagram.com/novalakbar38/"
-  ]
-}
-@endverbatim
+        @verbatim
+            {
+            "@context": "https://schema.org/",
+            "@type": "Person",
+            "name": "Maulana Haekal Noval Akbar",
+            "url": "https://mhna.my.id",
+            "jobTitle": [
+                "Software Engineer",
+                "Backend Developer",
+                "Full Stack Developer"
+            ],
+            "description": "I am a Software Engineer specializing in Backend Development with experience in developing, maintaining, and optimizing web-based applications in production environments. My expertise includes REST API development, administration dashboards, system integrations, and backend services management, along with solid Full Stack Development and infrastructure management capabilities.",
+            "image": "https://mhna.my.id/images/about.png",
+            "sameAs": [
+                "https://www.linkedin.com/in/maulana-haekal",
+                "https://github.com/lebefriedlich",
+                "https://www.instagram.com/novalakbar38/",
+                "https://scholar.google.com/citations?user=s25zh5IAAAAJ&hl=id",
+                "https://www.kompasiana.com/maulanahaekalnovalakbar5027"
+            ]
+            }
+        @endverbatim
     </script>
 </head>
 
