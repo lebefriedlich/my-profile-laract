@@ -285,42 +285,42 @@ const translations = {
             ]
         },
         portfolio: {
-            portfolio: 'Portofolio',
-            projects: 'Proyek Saya',
-            role: 'Peran',
+            portfolio: 'Portfolio',
+            projects: 'My Projects',
+            role: 'Role',
             techStack: 'Tech Stack',
-            viewSource: 'Lihat Kode Sumber',
-            viewLive: 'Lihat Live',
+            viewSource: 'View Source Code',
+            viewLive: 'View Live',
             dss: {
                 title: 'DSS',
-                subtitle: 'PilihAsdos',
+                subtitle: 'Select Teaching Assistant',
                 role: 'Full-Stack Developer',
-                desc: 'SPK Pilih Asdos adalah sistem pendukung keputusan yang dirancang untuk mempermudah evaluasi dan seleksi calon asisten dosen. Sistem ini mengimplementasikan algoritma perhitungan berbobot yang dioptimalkan untuk menghasilkan keputusan yang akurat.\n\nSebagai Full-Stack Developer, saya membangun platform ini menggunakan Laravel dan Bootstrap dengan fokus pada UI yang bersih dan pemrosesan backend yang efisien. Sistem ini menangani perhitungan matriks kompleks dan pembobotan kriteria dinamis, memastikan peringkat akhir dihasilkan dengan cepat dan andal.',
+                desc: 'The DSS Select Teaching Assistant system is a decision support system designed to help evaluate and select candidate teaching assistants. This system uses a weighted calculation method to generate rankings based on specific criteria.\n\nAs a Full-Stack Developer, I built this application using Laravel and Bootstrap, focusing on data processing and a simple yet efficient interface. The system handles matrix calculations and criteria weighting to produce selection results.'
             },
             api: {
                 title: 'API Service',
-                subtitle: 'API Kode Wilayah Indonesia',
+                subtitle: 'Indonesian Region Code API',
                 role: 'Backend Developer',
-                desc: 'Layanan REST API andal yang menyediakan data wilayah Indonesia secara lengkap. Dibangun dengan fokus pada performa, sistem ini menggunakan strategi caching tingkat lanjut dan pembatasan akses untuk respons yang sangat cepat.\n\nSebagai Backend Developer, saya merancang arsitektur menggunakan Laravel dan MySQL untuk menangani permintaan frekuensi tinggi secara efisien. Saya mengimplementasikan validasi endpoint yang kuat dan pemformatan respons yang konsisten, memastikan developer yang mengintegrasikan API ini mendapatkan data geografis yang akurat.',
+                desc: 'A REST API that provides structured data of Indonesian regions. This API is designed for data integration needs with a focus on performance and response consistency.\n\nI built this service using Laravel and MySQL, with query optimization to improve data access efficiency.'
             },
             eventhub: {
                 title: 'EventHub',
                 subtitle: 'UIN Malang EventHub',
                 role: 'Full-Stack Developer',
-                desc: 'Platform manajemen event kampus terpusat yang menyederhanakan publikasi acara dan registrasi peserta. Dilengkapi dengan dashboard admin komprehensif dan notifikasi real-time untuk mendukung kegiatan kampus.\n\nSebagai Full-Stack Developer, saya mengembangkan sistem ini dengan Laravel, mengimplementasikan kontrol akses berbasis peran (RBAC) untuk memisahkan hak akses mahasiswa dan admin. Platform ini mencakup pelacakan registrasi otomatis dan fitur ekspor data, yang secara signifikan mengurangi beban administratif panitia.',
+                desc: 'A campus event management system to help organize events and participant registration. This system includes an admin dashboard and event data management features.\n\nI developed this system using Laravel with role-based access control (RBAC) to differentiate user and admin permissions.'
             },
             weather: {
                 title: 'Weather App',
                 subtitle: 'CuacaSaja',
                 role: 'Full-Stack Developer',
-                desc: 'Aplikasi prakiraan cuaca responsif yang terintegrasi dengan API publik untuk menampilkan data cuaca real-time. Aplikasi ini dioptimalkan untuk jaringan bandwidth rendah, memastikan akses lancar di berbagai kondisi sinyal.\n\nSebagai Full-Stack Developer, saya membangun aplikasi seluler ini menggunakan Flutter dan menghubungkannya dengan backend Laravel untuk agregasi dan caching data. Aplikasi ini dilengkapi pembaruan berbasis lokasi, visualisasi cuaca yang intuitif, dan dukungan luring untuk prakiraan yang telah dimuat sebelumnya.',
+                desc: 'A weather application that fetches data from an external API to display real-time weather information.\n\nI built this application using Flutter and a Laravel backend to process weather data more efficiently.'
             },
             game: {
-                title: 'Game 3D',
+                title: '3D Game',
                 subtitle: 'Quiz Of Survival',
                 role: 'Game Developer',
-                desc: 'Game survival edukasi 3D interaktif yang dikembangkan menggunakan Unity dan C#. Game ini menggabungkan mekanika survival yang menantang dengan elemen edukasi untuk memberikan pengalaman belajar yang menyenangkan.\n\nSebagai Game Developer, saya memprogram mekanika inti permainan, AI musuh, dan sistem inventaris. Saya berfokus pada optimasi aset 3D dan penulisan skrip yang efisien untuk mempertahankan frame rate yang stabil, memastikan pengalaman bermain yang lancar di berbagai spesifikasi perangkat.',
-            },
+                desc: 'A 3D educational game developed using Unity and C#. This game combines survival concepts with interactive learning elements.\n\nI developed the core gameplay mechanics and game logic system to ensure a stable gaming experience.'
+            }
         },
         contact: {
             title: 'Kontak',
