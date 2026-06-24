@@ -11,8 +11,13 @@
     <link rel="apple-touch-icon" href="favicon.ico">
 
     <meta name="description"
-        content="I am a Software Engineer specializing in Backend Development with experience in developing, maintaining, and optimizing web-based applications in production environments. My expertise includes REST API development, administration dashboards, system integrations, and backend services management, along with solid Full Stack Development and infrastructure management capabilities.">
+        content="Software Engineer specializing in Backend Development. Capable of full-stack web development with foundational DevOps skills.">
     <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Maulana Haekal Noval Akbar - Personal Website">
+    <meta property="og:description"
+        content="Software Engineer specializing in Backend Development. Capable of full-stack web development with foundational DevOps skills.">
+    <meta property="og:image" content="https://mhna.my.id/images/about.webp">
+    <meta property="og:url" content="https://mhna.my.id">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,7 +43,7 @@
                 "Backend Developer",
                 "Full Stack Developer"
             ],
-            "description": "I am a Software Engineer specializing in Backend Development with experience in developing, maintaining, and optimizing web-based applications in production environments. My expertise includes REST API development, administration dashboards, system integrations, and backend services management, along with solid Full Stack Development and infrastructure management capabilities.",
+            "description": "Software Engineer specializing in Backend Development. Capable of full-stack web development with foundational DevOps skills.",
             "image": "https://mhna.my.id/images/about.png",
             "sameAs": [
                 "https://www.linkedin.com/in/maulana-haekal",
