@@ -11,6 +11,19 @@ interface MobileMenuProps {
 const MobileMenu: React.FC<MobileMenuProps> = ({ activeSection, setActiveSection, isOpen, setIsOpen }) => {
     const { t, language, setLanguage } = useLanguage();
 
+    const [isDark, setIsDark] = useState(false);
+
+    React.useEffect(() => {
+        setIsDark(document.documentElement.classList.contains('dark'));
+    }, []);
+
+    const toggleTheme = () => {
+        document.documentElement.classList.toggle('dark');
+        const dark = document.documentElement.classList.contains('dark');
+        setIsDark(dark);
+        localStorage.theme = dark ? 'dark' : 'light';
+    };
+
     const navItems = [
         { id: 'home', icon: 'bi-house-door', label: t('nav.home') },
         { id: 'about', icon: 'bi-person', label: t('nav.about') },
@@ -22,6 +35,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ activeSection, setActiveSection
     const handleNavClick = (id: string) => {
         setActiveSection(id);
         setIsOpen(false);
+        // Reset mobile menu scroll position after animation
+        setTimeout(() => {
+            const menuScroll = document.getElementById('mobile-menu-scroll');
+            if (menuScroll) menuScroll.scrollTop = 0;
+        }, 300);
     };
 
     return (
@@ -36,7 +54,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ activeSection, setActiveSection
 
             {/* Overlay Menu */}
             <div className={`fixed inset-0 bg-[#111]/95 backdrop-blur-xl z-[105] transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} flex flex-col`}>
-                <div className="flex-1 overflow-y-auto py-12 px-6 flex flex-col items-center custom-scrollbar">
+                <div id="mobile-menu-scroll" className="flex-1 overflow-y-auto py-12 px-6 flex flex-col items-center custom-scrollbar">
                     {/* Header Photo & Titles */}
                     <div className="w-40 h-40 min-w-[160px] min-h-[160px] flex-shrink-0 rounded-full border-[3px] border-white/10 overflow-hidden mb-6 relative z-10 bg-[#111] flex items-center justify-center">
                         <img
@@ -48,24 +66,32 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ activeSection, setActiveSection
                     <h2 className="text-3xl text-white font-bold mb-2 text-center">Maulana Haekal Noval Akbar</h2>
                     <h4 className="text-neutral-300 text-sm mb-6 text-center font-light">{t('about.title')}</h4>
 
-                    {/* Language Switcher */}
-                    <div className="flex items-center gap-1 mb-8 bg-white/5 p-1 rounded-full border border-white/10">
-                        <button 
-                            onClick={() => { setLanguage('en'); setIsOpen(false); }}
-                            className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${language === 'en' ? 'bg-primary-cyan text-white shadow-lg' : 'text-neutral-400 hover:text-white'}`}
+                    {/* Language & Theme Switcher */}
+                    <div className="flex items-center gap-4 mb-8">
+                        <div className="flex items-center gap-1 bg-white/5 p-1 rounded-full border border-white/10">
+                            <button 
+                                onClick={() => { setLanguage('en'); setIsOpen(false); }}
+                                className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${language === 'en' ? 'bg-primary-cyan text-white shadow-lg' : 'text-neutral-400 hover:text-white'}`}
+                            >
+                                EN
+                            </button>
+                            <button 
+                                onClick={() => { setLanguage('id'); setIsOpen(false); }}
+                                className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${language === 'id' ? 'bg-primary-cyan text-white shadow-lg' : 'text-neutral-400 hover:text-white'}`}
+                            >
+                                ID
+                            </button>
+                        </div>
+                        <button
+                            onClick={toggleTheme}
+                            className="flex items-center justify-center w-10 h-10 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all text-primary-cyan"
                         >
-                            EN
-                        </button>
-                        <button 
-                            onClick={() => { setLanguage('id'); setIsOpen(false); }}
-                            className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${language === 'id' ? 'bg-primary-cyan text-white shadow-lg' : 'text-neutral-400 hover:text-white'}`}
-                        >
-                            ID
+                            <i className={`bi ${isDark ? 'bi-sun' : 'bi-moon'} text-lg`}></i>
                         </button>
                     </div>
 
                     {/* Social Links */}
-                    <div className="flex gap-4 mb-10">
+                    <div className="flex gap-4 mb-8">
                         <a href="https://www.linkedin.com/in/maulana-haekal/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-transparent border border-white/20 flex items-center justify-center text-white hover:text-primary-cyan hover:border-primary-cyan hover:bg-white/5 transition-all">
                             <i className="bi bi-linkedin"></i>
                         </a>
@@ -76,6 +102,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ activeSection, setActiveSection
                             <i className="bi bi-github"></i>
                         </a>
                     </div>
+
+                    <a href="/CV ATS_Maulana Haekal Noval Akbar.pdf" download="CV ATS_Maulana Haekal Noval Akbar.pdf" className="px-8 py-3 rounded-full border border-primary-cyan text-primary-cyan hover:bg-primary-cyan hover:text-white font-medium text-sm transition-all flex items-center gap-2 mb-10">
+                        <i className="bi bi-download"></i>
+                        Download CV
+                    </a>
 
                     {/* Menu Links */}
                     <ul className="w-full flex flex-col gap-2 mb-10">

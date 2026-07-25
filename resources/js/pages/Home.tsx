@@ -8,6 +8,7 @@ import Hero from '../components/Hero/index';
 import Resume from '../components/Resume/index';
 import Portfolio from '../components/portfolio/index';
 import FloatingNav from '../components/FloatingNav';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 import MobileMenu from '../components/MobileMenu';
 
 const sections = ['home', 'about', 'resume', 'portfolio', 'contact'];
@@ -37,8 +38,22 @@ const HomePage = () => {
             setIsAnimating(true);
             const timer = setTimeout(() => {
                 setRenderedSection(activeSection);
-                document.getElementById('scroll-area')?.scrollTo(0, 0);
-                window.scrollTo(0, 0);
+                const scrollArea = document.getElementById('scroll-area');
+                if (scrollArea) {
+                    scrollArea.style.scrollBehavior = 'auto'; // Temporarily disable smooth scroll
+                    scrollArea.scrollTop = 0;
+                    
+                    // Wait one frame to restore smooth scroll so the instant jump takes effect
+                    requestAnimationFrame(() => {
+                        scrollArea.style.scrollBehavior = ''; 
+                    });
+                }
+                
+                // For mobile browsers where body might have scrolled
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+                window.scrollTo({ top: 0, behavior: 'auto' });
+                
                 setIsAnimating(false);
             }, 300); // 300ms fade out
             return () => clearTimeout(timer);
@@ -69,7 +84,7 @@ const HomePage = () => {
     };
 
     return (
-        <div className="flex flex-col w-full flex-1 relative p-6 md:p-10">
+        <div className="flex flex-col w-full flex-1 relative p-6 md:px-10 md:py-6">
             <div className={`w-full flex-1 flex flex-col justify-center transition-all duration-500 ease-in-out transform ${
                 isAnimating ? 'opacity-0 scale-95 -translate-x-8' : 'opacity-100 scale-100 translate-x-0'
             }`}>
@@ -79,7 +94,10 @@ const HomePage = () => {
             {/* Desktop Navigation Portals */}
             {mounted && document.getElementById('desktop-controls-portal') && createPortal(
                 <>
-                    <FloatingNav activeSection={activeSection} setActiveSection={setActiveSection} />
+                    <div className="flex flex-col items-center gap-6">
+                        <LanguageSwitcher />
+                        <FloatingNav activeSection={activeSection} setActiveSection={setActiveSection} />
+                    </div>
 
                     <div className="w-[70px] bg-[#444] rounded-[35px] shadow-[0_0_30px_rgba(0,0,0,0.2)] flex flex-col items-center overflow-hidden py-2 mt-auto">
                         <button

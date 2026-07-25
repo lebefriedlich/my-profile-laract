@@ -44,20 +44,19 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
                 <meta name="twitter:image" content={`${siteUrl}/images/about.webp`} />
             </Head>
 
-            <div className="min-h-screen lg:py-[10vh] flex items-center justify-center relative bg-[#111] overflow-hidden lg:px-4">
-                <LanguageSwitcher />
+            <div className="h-[100dvh] w-full flex items-center justify-center relative bg-[#111] overflow-hidden lg:px-4">
 
                 {/* Subtle Background Texture */}
                 <div className="fixed inset-0 z-0 opacity-10 pointer-events-none mix-blend-overlay" style={{ backgroundImage: 'url(/images/main_bg.png)', backgroundRepeat: 'repeat' }}></div>
 
                 {/* Main Card (Subtle Glassmorphism) */}
-                <div className="w-full max-w-[1280px] min-h-screen lg:min-h-[600px] lg:h-[80vh] bg-[#222]/80 backdrop-blur-xl border border-white/5 lg:rounded-[30px] shadow-2xl flex flex-col lg:flex-row relative z-10">
+                <div className="w-full max-w-[1280px] h-[100dvh] lg:min-h-[600px] lg:h-[80vh] bg-[#222]/80 backdrop-blur-xl border border-white/5 lg:rounded-[30px] shadow-2xl flex flex-col lg:flex-row relative z-10">
 
                     {/* Portal Target for Mobile Menu Toggle */}
                     <div id="mobile-menu-portal" className="block lg:hidden z-[110]"></div>
 
                     <SidebarProfile />
-                    <div id="scroll-area" className="flex-1 h-full overflow-y-auto custom-scrollbar relative scroll-smooth lg:rounded-r-[30px] w-full flex flex-col">
+                    <div id="scroll-area" className="flex-1 overflow-y-auto custom-scrollbar relative scroll-smooth lg:rounded-r-[30px] w-full flex flex-col my-2 lg:my-4 lg:mr-4">
                         {children}
                     </div>
 

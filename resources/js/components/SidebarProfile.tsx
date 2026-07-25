@@ -22,7 +22,7 @@ const SidebarProfile = () => {
                     {t('about.title')}
                 </p>
 
-                <div className="flex gap-4 mb-10">
+                <div className="flex gap-4 mb-8">
                     <a href="https://www.linkedin.com/in/maulana-haekal/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-transparent border border-white/20 flex items-center justify-center text-white hover:text-primary-cyan hover:border-primary-cyan hover:bg-white/5 transition-all">
                         <i className="bi bi-linkedin"></i>
                     </a>
@@ -33,6 +33,11 @@ const SidebarProfile = () => {
                         <i className="bi bi-github"></i>
                     </a>
                 </div>
+
+                <a href="/CV ATS_Maulana Haekal Noval Akbar.pdf" download="CV ATS_Maulana Haekal Noval Akbar.pdf" className="px-6 py-2.5 rounded-full border border-primary-cyan text-primary-cyan hover:bg-primary-cyan hover:text-white font-medium text-sm transition-all flex items-center gap-2 mb-4">
+                    <i className="bi bi-download"></i>
+                    Download CV
+                </a>
             </div>
 
             <div className="w-full mt-auto">
