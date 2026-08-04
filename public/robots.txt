@@ -7,6 +7,15 @@ Disallow: /bootstrap
 Disallow: /resources
 Disallow: /node_modules
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 # Crawl-delay (optional, in seconds)
 Crawl-delay: 1
 
