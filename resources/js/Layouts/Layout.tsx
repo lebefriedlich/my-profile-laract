@@ -47,7 +47,7 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
             <div className="h-[100dvh] w-full flex items-center justify-center relative bg-[#111] overflow-hidden lg:px-4">
 
                 {/* Subtle Background Texture */}
-                <div className="fixed inset-0 z-0 opacity-10 pointer-events-none mix-blend-overlay" style={{ backgroundImage: 'url(/images/main_bg.png)', backgroundRepeat: 'repeat' }}></div>
+                <div className="fixed inset-0 z-0 opacity-60 pointer-events-none mix-blend-multiply dark:invert dark:mix-blend-screen" style={{ backgroundImage: 'url(/images/main_bg.png)', backgroundRepeat: 'repeat' }}></div>
 
                 {/* Main Card (Subtle Glassmorphism) */}
                 <div className="w-full max-w-[1280px] h-[100dvh] lg:min-h-[600px] lg:h-[80vh] bg-[#222]/80 backdrop-blur-xl border border-white/5 lg:rounded-[30px] shadow-2xl flex flex-col lg:flex-row relative z-10">
