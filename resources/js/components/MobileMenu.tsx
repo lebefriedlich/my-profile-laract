@@ -103,10 +103,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ activeSection, setActiveSection
                         </a>
                     </div>
 
-                    <a href="/CV ATS_Maulana Haekal Noval Akbar.pdf" download="CV ATS_Maulana Haekal Noval Akbar.pdf" className="px-8 py-3 rounded-full border border-primary-cyan text-primary-cyan hover:bg-primary-cyan hover:text-white font-medium text-sm transition-all flex items-center gap-2 mb-10">
-                        <i className="bi bi-download"></i>
-                        Download CV
-                    </a>
+
 
                     {/* Menu Links */}
                     <ul className="w-full flex flex-col gap-2 mb-10">

@@ -33,11 +33,6 @@ const SidebarProfile = () => {
                         <i className="bi bi-github"></i>
                     </a>
                 </div>
-
-                <a href="/CV ATS_Maulana Haekal Noval Akbar.pdf" download="CV ATS_Maulana Haekal Noval Akbar.pdf" className="px-6 py-2.5 rounded-full border border-primary-cyan text-primary-cyan hover:bg-primary-cyan hover:text-white font-medium text-sm transition-all flex items-center gap-2 mb-4">
-                    <i className="bi bi-download"></i>
-                    Download CV
-                </a>
             </div>
 
             <div className="w-full mt-auto">
